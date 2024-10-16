@@ -1,0 +1,61 @@
+-- Gui to Heynotbad
+-- Version: 1
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0,0,0)
+Frame.BorderSizePixel = 4
+Frame.Position = UDim2.new(0.211394295, 0, 0.181333318, 0)
+Frame.Size = UDim2.new(0, 150, 0, 170)
+Frame.Active = true
+Frame.Draggable = true
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(0,0,0)
+TextButton.Position = UDim2.new(0.148229166, 0, 0.176470593, 0)
+TextButton.Size = UDim2.new(0, 107, 0, 26)
+TextButton.Font = Enum.Font.Bangers
+TextButton.Text = "Speed Up X2"
+TextButton.TextColor3 = Color3.fromRGB(500, 500, 500)
+TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:Connect(function()
+game.Players.localPlayer.Character.Humanoid.WalkSpeed = 36
+end)
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(0,0,0)
+TextButton_2.Position = UDim2.new(0.149375, 0, 0.596470593, 0)
+TextButton_2.Size = UDim2.new(0, 107, 0, 26)
+TextButton_2.Font = Enum.Font.Bangers
+TextButton_2.Text = "Back to normal"
+TextButton_2.TextColor3 = Color3.fromRGB(500, 500, 500)
+TextButton_2.TextSize = 14.000
+TextButton_2.MouseButton1Down:Connect(function()
+game.Players.localPlayer.character.Humanoid.JumpPower = 50
+game.Players.localPlayer.character.Humanoid.WalkSpeed = 16
+end)
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(0,0,0)
+TextButton_3.Position = UDim2.new(0.150104127, 0, 0.376470593, 0)
+TextButton_3.Size = UDim2.new(0, 107, 0, 26)
+TextButton_3.Font = Enum.Font.Bangers
+TextButton_3.Text = "Jump Up X2"
+TextButton_3.TextColor3 = Color3.fromRGB(500,500,500)
+TextButton_3.TextSize = 14.000
+TextButton_3.MouseButton1Down:Connect(function()
+game.Players.localPlayer.character.Humanoid.JumpPower = 100
+end)
