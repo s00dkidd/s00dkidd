@@ -1,0 +1,90 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LearningWithPibbyChaosScript = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Close = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TpToSpawn = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Open = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+LearningWithPibbyChaosScript.Name = "Learning With Pibby Chaos Script"
+LearningWithPibbyChaosScript.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LearningWithPibbyChaosScript.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = LearningWithPibbyChaosScript
+Frame.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame.Position = UDim2.new(0.412053436, 0, 0.413110226, 0)
+Frame.Size = UDim2.new(0, 282, 0, 221)
+Frame.Visible = false
+
+Close.Name = "Close"
+Close.Parent = Frame
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Close.Position = UDim2.new(0.918439746, 0, 0.923076928, 0)
+Close.Size = UDim2.new(0, 23, 0, 17)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+
+UICorner.Parent = Close
+
+UICorner_2.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0496453904, 0, 0.03167421, 0)
+TextLabel.Size = UDim2.new(0, 255, 0, 50)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Leaning With Pibby: Glitched Havoc Script"
+TextLabel.TextColor3 = Color3.fromRGB(34, 255, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+TpToSpawn.Name = "Tp To Spawn"
+TpToSpawn.Parent = Frame
+TpToSpawn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TpToSpawn.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TpToSpawn.BorderSizePixel = 0
+TpToSpawn.Position = UDim2.new(0.0496453904, 0, 0.298642546, 0)
+TpToSpawn.Size = UDim2.new(0, 255, 0, 124)
+TpToSpawn.Font = Enum.Font.Unknown
+TpToSpawn.Text = "Tp To Spawn"
+TpToSpawn.TextColor3 = Color3.fromRGB(17, 255, 0)
+TpToSpawn.TextScaled = true
+TpToSpawn.TextSize = 14.000
+TpToSpawn.TextWrapped = true
+
+UICorner_3.Parent = TpToSpawn
+
+Open.Name = "Open"
+Open.Parent = LearningWithPibbyChaosScript
+Open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Open.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Open.Position = UDim2.new(0.00577845378, 0, 0.594439924, 0)
+Open.Size = UDim2.new(0, 143, 0, 32)
+Open.Font = Enum.Font.SourceSansBold
+Open.Text = "Open "
+Open.TextColor3 = Color3.fromRGB(0, 255, 8)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
+
+UICorner_4.Parent = Open
