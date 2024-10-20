@@ -1,0 +1,1190 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+
+-- Instances
+
+local s00dgui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local DecalSpam = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Skybox1 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Skybox2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local JumpScare = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Disco = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Unanchor = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local _666 = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Hint1 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Message = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local AnimatedSkeletonSky = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Music = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Destroy = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local Particles = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local KillMe = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local ChangeSpeed = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local OpenManager = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_18 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+
+-- Properties
+
+s00dgui.Name = "s00dgui"
+s00dgui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+s00dgui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = s00dgui
+Frame.BackgroundColor3 = Color3.new(0, 0, 0)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.421052635, 0, 0.24004975, 0)
+Frame.Size = UDim2.new(0, 436, 0, 530)
+Frame.Visible = false
+
+UICorner.Parent = Frame
+
+ScrollingFrame.Parent = Frame
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.new(0.0823529, 0.0823529, 0.0823529)
+ScrollingFrame.BorderColor3 = Color3.new(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.0596330278, 0, 0.0347103477, 0)
+ScrollingFrame.Size = UDim2.new(0, 389, 0, 491)
+
+TextLabel.Parent = ScrollingFrame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.221925139, 0, 0.0160727184, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "s00dgui"
+TextLabel.TextColor3 = Color3.new(0, 1, 0.968628)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = ScrollingFrame
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.221925139, 0, 0.0608743802, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_2.Font = Enum.Font.Unknown
+TextLabel_2.Text = "Made by s00dkiddz"
+TextLabel_2.TextColor3 = Color3.new(0, 1, 0.968628)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextWrapped = true
+
+DecalSpam.Name = "Decal Spam"
+DecalSpam.Parent = ScrollingFrame
+DecalSpam.BackgroundColor3 = Color3.new(0, 0, 0)
+DecalSpam.BorderColor3 = Color3.new(0, 0, 0)
+DecalSpam.BorderSizePixel = 0
+DecalSpam.Position = UDim2.new(0.0517142378, 0, 0.109158881, 0)
+DecalSpam.Size = UDim2.new(0, 112, 0, 30)
+DecalSpam.Font = Enum.Font.Unknown
+DecalSpam.Text = "Decal Spam"
+DecalSpam.TextColor3 = Color3.new(0, 1, 0.917647)
+DecalSpam.TextScaled = true
+DecalSpam.TextSize = 14
+DecalSpam.TextWrapped = true
+
+UICorner_2.Parent = DecalSpam
+
+Skybox1.Name = "Skybox #1"
+Skybox1.Parent = ScrollingFrame
+Skybox1.BackgroundColor3 = Color3.new(0, 0, 0)
+Skybox1.BorderColor3 = Color3.new(0, 0, 0)
+Skybox1.BorderSizePixel = 0
+Skybox1.Position = UDim2.new(0.40803045, 0, 0.111044571, 0)
+Skybox1.Size = UDim2.new(0, 112, 0, 30)
+Skybox1.Font = Enum.Font.Unknown
+Skybox1.Text = "Skybox #1"
+Skybox1.TextColor3 = Color3.new(0, 1, 0.917647)
+Skybox1.TextScaled = true
+Skybox1.TextSize = 14
+Skybox1.TextWrapped = true
+
+UICorner_3.Parent = Skybox1
+
+Skybox2.Name = "Skybox #2"
+Skybox2.Parent = ScrollingFrame
+Skybox2.BackgroundColor3 = Color3.new(0, 0, 0)
+Skybox2.BorderColor3 = Color3.new(0, 0, 0)
+Skybox2.BorderSizePixel = 0
+Skybox2.Position = UDim2.new(0.754193127, 0, 0.109580047, 0)
+Skybox2.Size = UDim2.new(0, 60, 0, 30)
+Skybox2.Font = Enum.Font.Unknown
+Skybox2.Text = "Skybox #2"
+Skybox2.TextColor3 = Color3.new(0, 1, 0.933333)
+Skybox2.TextScaled = true
+Skybox2.TextSize = 14
+Skybox2.TextWrapped = true
+
+UICorner_4.Parent = Skybox2
+
+JumpScare.Name = "JumpScare"
+JumpScare.Parent = ScrollingFrame
+JumpScare.BackgroundColor3 = Color3.new(0, 0, 0)
+JumpScare.BorderColor3 = Color3.new(0, 0, 0)
+JumpScare.BorderSizePixel = 0
+JumpScare.Position = UDim2.new(0.0495878011, 0, 0.164198771, 0)
+JumpScare.Size = UDim2.new(0, 178, 0, 30)
+JumpScare.Font = Enum.Font.Unknown
+JumpScare.Text = "JumpScare"
+JumpScare.TextColor3 = Color3.new(0, 1, 0.917647)
+JumpScare.TextScaled = true
+JumpScare.TextSize = 14
+JumpScare.TextWrapped = true
+
+UICorner_5.Parent = JumpScare
+
+Disco.Name = "Disco"
+Disco.Parent = ScrollingFrame
+Disco.BackgroundColor3 = Color3.new(0, 0, 0)
+Disco.BorderColor3 = Color3.new(0, 0, 0)
+Disco.BorderSizePixel = 0
+Disco.Position = UDim2.new(0.581125975, 0, 0.165965721, 0)
+Disco.Size = UDim2.new(0, 138, 0, 30)
+Disco.Font = Enum.Font.Unknown
+Disco.Text = "Disco"
+Disco.TextColor3 = Color3.new(0, 1, 1)
+Disco.TextScaled = true
+Disco.TextSize = 14
+Disco.TextWrapped = true
+
+UICorner_6.Parent = Disco
+
+Unanchor.Name = "Unanchor"
+Unanchor.Parent = ScrollingFrame
+Unanchor.BackgroundColor3 = Color3.new(0, 0, 0)
+Unanchor.BorderColor3 = Color3.new(0, 0, 0)
+Unanchor.BorderSizePixel = 0
+Unanchor.Position = UDim2.new(0.0497416928, 0, 0.213304058, 0)
+Unanchor.Size = UDim2.new(0, 112, 0, 30)
+Unanchor.Font = Enum.Font.Unknown
+Unanchor.Text = "Unanchor"
+Unanchor.TextColor3 = Color3.new(0, 1, 0.968628)
+Unanchor.TextScaled = true
+Unanchor.TextSize = 14
+Unanchor.TextWrapped = true
+
+UICorner_7.Parent = Unanchor
+
+_666.Name = "666"
+_666.Parent = ScrollingFrame
+_666.BackgroundColor3 = Color3.new(0, 0, 0)
+_666.BorderColor3 = Color3.new(0, 0, 0)
+_666.BorderSizePixel = 0
+_666.Position = UDim2.new(0.406599551, 0, 0.213000923, 0)
+_666.Size = UDim2.new(0, 112, 0, 30)
+_666.Font = Enum.Font.Unknown
+_666.Text = "666"
+_666.TextColor3 = Color3.new(0, 1, 0.85098)
+_666.TextScaled = true
+_666.TextSize = 14
+_666.TextWrapped = true
+
+UICorner_8.Parent = _666
+
+Hint1.Name = "Hint #1"
+Hint1.Parent = ScrollingFrame
+Hint1.BackgroundColor3 = Color3.new(0, 0, 0)
+Hint1.BorderColor3 = Color3.new(0, 0, 0)
+Hint1.BorderSizePixel = 0
+Hint1.Position = UDim2.new(0.742616773, 0, 0.213342354, 0)
+Hint1.Size = UDim2.new(0, 75, 0, 30)
+Hint1.Font = Enum.Font.Unknown
+Hint1.Text = "Hint"
+Hint1.TextColor3 = Color3.new(0, 0.984314, 1)
+Hint1.TextScaled = true
+Hint1.TextSize = 14
+Hint1.TextWrapped = true
+
+UICorner_9.Parent = Hint1
+
+Message.Name = "Message"
+Message.Parent = ScrollingFrame
+Message.BackgroundColor3 = Color3.new(0, 0, 0)
+Message.BorderColor3 = Color3.new(0, 0, 0)
+Message.BorderSizePixel = 0
+Message.Position = UDim2.new(0.0497416109, 0, 0.263163775, 0)
+Message.Size = UDim2.new(0, 112, 0, 30)
+Message.Font = Enum.Font.Unknown
+Message.Text = "Message"
+Message.TextColor3 = Color3.new(0, 1, 0.968628)
+Message.TextScaled = true
+Message.TextSize = 14
+Message.TextWrapped = true
+
+UICorner_10.Parent = Message
+
+AnimatedSkeletonSky.Name = "Animated Skeleton Sky"
+AnimatedSkeletonSky.Parent = ScrollingFrame
+AnimatedSkeletonSky.BackgroundColor3 = Color3.new(0, 0, 0)
+AnimatedSkeletonSky.BorderColor3 = Color3.new(0, 0, 0)
+AnimatedSkeletonSky.BorderSizePixel = 0
+AnimatedSkeletonSky.Position = UDim2.new(0.404497385, 0, 0.262860954, 0)
+AnimatedSkeletonSky.Size = UDim2.new(0, 112, 0, 30)
+AnimatedSkeletonSky.Font = Enum.Font.Unknown
+AnimatedSkeletonSky.Text = "Animated Skeleton Sky"
+AnimatedSkeletonSky.TextColor3 = Color3.new(0, 1, 0.968628)
+AnimatedSkeletonSky.TextScaled = true
+AnimatedSkeletonSky.TextSize = 14
+AnimatedSkeletonSky.TextWrapped = true
+
+UICorner_11.Parent = AnimatedSkeletonSky
+
+Music.Name = "Music"
+Music.Parent = ScrollingFrame
+Music.BackgroundColor3 = Color3.new(0, 0, 0)
+Music.BorderColor3 = Color3.new(0, 0, 0)
+Music.BorderSizePixel = 0
+Music.Position = UDim2.new(0.752899587, 0, 0.263246506, 0)
+Music.Size = UDim2.new(0, 75, 0, 30)
+Music.Font = Enum.Font.Unknown
+Music.Text = "Music"
+Music.TextColor3 = Color3.new(0, 0.984314, 1)
+Music.TextScaled = true
+Music.TextSize = 14
+Music.TextWrapped = true
+
+UICorner_12.Parent = Music
+
+Destroy.Name = "Destroy"
+Destroy.Parent = ScrollingFrame
+Destroy.BackgroundColor3 = Color3.new(0, 0, 0)
+Destroy.BorderColor3 = Color3.new(0, 0, 0)
+Destroy.BorderSizePixel = 0
+Destroy.Position = UDim2.new(0.0495878495, 0, 0.318048477, 0)
+Destroy.Size = UDim2.new(0, 178, 0, 30)
+Destroy.Font = Enum.Font.Unknown
+Destroy.Text = "DESTROY.......... 😮😲😰"
+Destroy.TextColor3 = Color3.new(0, 1, 0.917647)
+Destroy.TextScaled = true
+Destroy.TextSize = 14
+Destroy.TextWrapped = true
+
+UICorner_13.Parent = Destroy
+
+Particles.Name = "Particles"
+Particles.Parent = ScrollingFrame
+Particles.BackgroundColor3 = Color3.new(0, 0, 0)
+Particles.BorderColor3 = Color3.new(0, 0, 0)
+Particles.BorderSizePixel = 0
+Particles.Position = UDim2.new(0.578555226, 0, 0.317789793, 0)
+Particles.Size = UDim2.new(0, 138, 0, 30)
+Particles.Font = Enum.Font.Unknown
+Particles.Text = "Particles"
+Particles.TextColor3 = Color3.new(0, 1, 1)
+Particles.TextScaled = true
+Particles.TextSize = 14
+Particles.TextWrapped = true
+
+UICorner_14.Parent = Particles
+
+KillMe.Name = "Kill Me"
+KillMe.Parent = ScrollingFrame
+KillMe.BackgroundColor3 = Color3.new(0, 0, 0)
+KillMe.BorderColor3 = Color3.new(0, 0, 0)
+KillMe.BorderSizePixel = 0
+KillMe.Position = UDim2.new(0.0495878495, 0, 0.379312605, 0)
+KillMe.Size = UDim2.new(0, 178, 0, 30)
+KillMe.Font = Enum.Font.Unknown
+KillMe.Text = "Kill Me"
+KillMe.TextColor3 = Color3.new(0, 1, 0.917647)
+KillMe.TextScaled = true
+KillMe.TextSize = 14
+KillMe.TextWrapped = true
+
+UICorner_15.Parent = KillMe
+
+ChangeSpeed.Name = "Change Speed"
+ChangeSpeed.Parent = ScrollingFrame
+ChangeSpeed.BackgroundColor3 = Color3.new(0, 0, 0)
+ChangeSpeed.BorderColor3 = Color3.new(0, 0, 0)
+ChangeSpeed.BorderSizePixel = 0
+ChangeSpeed.Position = UDim2.new(0.552848279, 0, 0.380926251, 0)
+ChangeSpeed.Size = UDim2.new(0, 138, 0, 30)
+ChangeSpeed.Font = Enum.Font.Unknown
+ChangeSpeed.Text = "Change Speed"
+ChangeSpeed.TextColor3 = Color3.new(0, 1, 1)
+ChangeSpeed.TextScaled = true
+ChangeSpeed.TextSize = 14
+ChangeSpeed.TextWrapped = true
+
+UICorner_16.Parent = ChangeSpeed
+
+TextLabel_3.Parent = ScrollingFrame
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.0645676628, 0, 0.448826492, 0)
+TextLabel_3.Size = UDim2.new(0, 333, 0, 50)
+TextLabel_3.Font = Enum.Font.Unknown
+TextLabel_3.Text = "Thanks for useing beta version, new update soon..."
+TextLabel_3.TextColor3 = Color3.new(0, 1, 0.968628)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14
+TextLabel_3.TextWrapped = true
+
+ImageLabel.Parent = ScrollingFrame
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0154241649, 0, 0.511997581, 0)
+ImageLabel.Size = UDim2.new(0, 361, 0, 276)
+ImageLabel.Image = "rbxassetid://18132780949"
+
+OpenManager.Name = "OpenManager"
+OpenManager.Parent = s00dgui
+OpenManager.BackgroundColor3 = Color3.new(0.101961, 0.101961, 0.101961)
+OpenManager.BorderColor3 = Color3.new(0, 0, 0)
+OpenManager.BorderSizePixel = 0
+OpenManager.Position = UDim2.new(0.275689214, 0, 0.339552253, 0)
+OpenManager.Size = UDim2.new(0, 421, 0, 111)
+
+UICorner_17.Parent = OpenManager
+
+TextLabel_4.Parent = OpenManager
+TextLabel_4.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_4.BackgroundTransparency = 1
+TextLabel_4.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0498812348, 0, 0.0602837354, 0)
+TextLabel_4.Size = UDim2.new(0, 384, 0, 27)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "s00dkidd's Password System"
+TextLabel_4.TextColor3 = Color3.new(0, 1, 1)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14
+TextLabel_4.TextWrapped = true
+
+TextBox.Parent = OpenManager
+TextBox.BackgroundColor3 = Color3.new(0, 0, 0)
+TextBox.BorderColor3 = Color3.new(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0498812348, 0, 0.421706468, 0)
+TextBox.Size = UDim2.new(0, 384, 0, 29)
+TextBox.Font = Enum.Font.Unknown
+TextBox.Text = "Type password here! "
+TextBox.TextColor3 = Color3.new(0, 1, 0.933333)
+TextBox.TextScaled = true
+TextBox.TextSize = 14
+TextBox.TextWrapped = true
+
+UICorner_18.Parent = TextBox
+
+TextButton.Parent = OpenManager
+TextButton.BackgroundColor3 = Color3.new(0, 0, 0)
+TextButton.BorderColor3 = Color3.new(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.341090262, 0, 0.792485416, 0)
+TextButton.Size = UDim2.new(0, 132, 0, 16)
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = "Check Password"
+TextButton.TextColor3 = Color3.new(0, 1, 1)
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+
+UICorner_19.Parent = TextButton
+
+-- Scripts
+
+local function PWPLG_fake_script() -- DecalSpam.Script 
+	local script = Instance.new('Script', DecalSpam)
+
+	function click()
+		function exPro(root)
+			for _, v in pairs(root:GetChildren()) do
+				if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id=18132780949" then
+					v.Parent = nil
+				elseif v:IsA("BasePart") then
+					v.Material = "Plastic"
+					v.Transparency = 0
+					local One = Instance.new("Decal", v)
+					local Two = Instance.new("Decal", v)
+					local Three = Instance.new("Decal", v)
+					local Four = Instance.new("Decal", v)
+					local Five = Instance.new("Decal", v)
+					local Six = Instance.new("Decal", v)
+					One.Texture = "http://www.roblox.com/asset/?id=18132780949"
+					Two.Texture = "http://www.roblox.com/asset/?id=18132780949"
+					Three.Texture = "http://www.roblox.com/asset/?id=18132780949"
+					Four.Texture = "http://www.roblox.com/asset/?id=18132780949"
+					Five.Texture = "http://www.roblox.com/asset/?id=18132780949"
+					Six.Texture = "http://www.roblox.com/asset/?id=18132780949"--put your id here
+					One.Face = "Front"
+					Two.Face = "Back"
+					Three.Face = "Right"
+					Four.Face = "Left"
+					Five.Face = "Top"
+					Six.Face = "Bottom"
+				end
+				exPro(v)
+			end
+		end
+		function asdf(root)
+			for _, v in pairs(root:GetChildren()) do
+				asdf(v)
+			end
+		end
+		exPro(game.Workspace)
+		asdf(game.Workspace)
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(PWPLG_fake_script)()
+local function SBPZJNH_fake_script() -- Skybox1.Script 
+	local script = Instance.new('Script', Skybox1)
+
+	function click()
+		s = Instance.new("Sky")
+		s.Name = "Sky"
+		s.Parent = game.Lighting
+		s.SkyboxBk = "http://www.roblox.com/asset/?id=18132780949"
+		s.SkyboxDn = "http://www.roblox.com/asset/?id=18132780949"
+		s.SkyboxFt = "http://www.roblox.com/asset/?id=18132780949"
+		s.SkyboxLf = "http://www.roblox.com/asset/?id=18132780949"
+		s.SkyboxRt = "http://www.roblox.com/asset/?id=18132780949"
+		s.SkyboxUp = "http://www.roblox.com/asset/?id=18132780949"--put id here
+		game.Lighting.TimeOfDay = 12
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(SBPZJNH_fake_script)()
+local function VSXVNCA_fake_script() -- Skybox2.Script 
+	local script = Instance.new('Script', Skybox2)
+
+	function click()
+		s = Instance.new("Sky")
+		s.Name = "Sky"
+		s.Parent = game.Lighting
+		s.SkyboxBk = "http://www.roblox.com/asset/?id=17590267999"
+		s.SkyboxDn = "http://www.roblox.com/asset/?id=17590256578"
+		s.SkyboxFt = "http://www.roblox.com/asset/?id=17590256578"
+		s.SkyboxLf = "http://www.roblox.com/asset/?id=17590256578"
+		s.SkyboxRt = "http://www.roblox.com/asset/?id=17590256578"
+		s.SkyboxUp = "http://www.roblox.com/asset/?id=17590256578"
+		game.Lighting.TimeOfDay = 12
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end
+coroutine.wrap(VSXVNCA_fake_script)()
+local function SYIL_fake_script() -- JumpScare.Script 
+	local script = Instance.new('Script', JumpScare)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(game.Players:GetPlayers()) do
+			if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
+				spawn(function()
+					local newgui = Instance.new("ScreenGui",v.PlayerGui)
+					newgui.Name = "Screamer"
+					local newimage = Instance.new("ImageLabel",newgui)
+					newimage.Image = "http://www.roblox.com/asset/?id=18132780949"
+					newimage.Size = UDim2.new(1,1,1,1)
+					local s = Instance.new("Sound",newgui)
+					s.SoundId = "rbxassetid://6129291390"
+					s.Volume = 9999999999999999999999999999999999999
+					s.Looped = true
+					s:Play()
+					print("Screamed "..v.Name)
+					while wait(9) do
+	
+						newimage.Parent:Destroy()
+	
+					end
+				end)
+			end
+		end
+	end)
+end
+coroutine.wrap(SYIL_fake_script)()
+local function MTDESRD_fake_script() -- Disco.Script 
+	local script = Instance.new('Script', Disco)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Lighting = game:GetService("Lighting")
+		local ColorCorrection = Instance.new("ColorCorrectionEffect", Lighting)
+	
+		function zigzag(X) 
+			return math.acos(math.cos(X*math.pi))/math.pi
+		end
+	
+		Counter = 0
+	
+		Lighting.TimeOfDay = "12:00"
+	
+		while wait(0.1) do 
+			ColorCorrection.TintColor = Color3.fromHSV(zigzag(Counter),1,1)
+			Lighting.Ambient = Color3.fromHSV(zigzag(Counter),1,1)
+			Counter += 0.01
+		end
+	end)
+end
+coroutine.wrap(MTDESRD_fake_script)()
+local function EEZH_fake_script() -- Unanchor.Script 
+	local script = Instance.new('Script', Unanchor)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		for i,v in pairs(game.Workspace:GetDescendants()) do
+			if v:IsA("BasePart") then	
+				v.Anchored = false
+			end
+		end
+	
+	
+		for i,v in pairs(game.ReplicatedStorage:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.Anchored = false
+			end
+		end
+	
+	
+		for i,v in pairs(game.ReplicatedFirst:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.Anchored = false
+			end
+		end
+	end)
+end
+coroutine.wrap(EEZH_fake_script)()
+local function ZJLVE_fake_script() -- _666.Script 
+	local script = Instance.new('Script', _666)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in next,workspace:children''do
+			if(v:IsA'BasePart')then
+				me=v;
+				bbg=Instance.new('BillboardGui',me);
+				bbg.Name='stuf';
+				bbg.Adornee=me;
+				bbg.Size=UDim2.new(2.5,0,2.5,0)
+				--bbg.StudsOffset=Vector3.new(0,2,0)
+				tlb=Instance.new'TextLabel';
+				tlb.Text='666 666 666 666 666 666';
+				tlb.Font='SourceSansBold';
+				tlb.FontSize='Size48';
+				tlb.TextColor3=Color3.new(1,0,0);
+				tlb.Size=UDim2.new(1.25,0,1.25,0);
+				tlb.Position=UDim2.new(-0.125,-22,-1.1,0);
+				tlb.BackgroundTransparency=1;
+				tlb.Parent=bbg;
+			end;end;
+		function xds(dd)
+			for i,v in next,dd:children''do
+				if(v:IsA'BasePart')then
+					v.BrickColor=BrickColor.new'Really black';
+					v.TopSurface='Smooth';
+					v.BottomSurface='Smooth';
+					s=Instance.new('SelectionBox',v);
+					s.Adornee=v;
+					s.Color=BrickColor.new'Really red';
+					a=Instance.new('PointLight',v);
+					a.Color=Color3.new(1,0,0);
+					a.Range=15;
+					a.Brightness=5;
+					f=Instance.new('Fire',v);
+					f.Size=19;
+					f.Heat=22;
+				end;
+	
+				local dec = 'http://www.roblox.com/asset/?id=19399245';
+				local fac = {'Front', 'Back', 'Left', 'Right', 'Top', 'Bottom'}
+				--coroutine.wrap(function()
+				--for ,_ in pairs(fac) do
+				--local ddec = Instance.new("Decal", v)
+				--ddec.Face = 
+				--ddec.Texture = dec
+				--end end)()
+				if #(v:GetChildren())>0 then
+					xds(v) 
+				end
+			end
+		end
+		xds(game.Workspace)
+	end)
+	
+end
+coroutine.wrap(ZJLVE_fake_script)()
+local function TRMOMA_fake_script() -- Hint1.Script 
+	local script = Instance.new('Script', Hint1)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local function write(text,object)
+			if object:IsA("Hint") == true then
+				local count = object:FindFirstChild("Count")
+				if count == nil then
+					count = Instance.new("NumberValue")
+					count.Parent = object
+					count.Name = "Count"
+					count.Value = count.Value + 1
+				else
+					count.Value = count.Value + 1
+				end
+				local startcount = count.Value
+				for i = 1,#text do
+					if count.Value == startcount then
+						local letter = string.sub(text,i,i)
+						object.Text = string.sub(text,1,i)
+						wait(0.06)
+					else
+						break
+					end
+				end
+			end
+		end
+		local bro = Instance.new("Hint",workspace)
+		write("s00dkidd backdoored this game!",bro)
+	end)
+	
+	
+end
+coroutine.wrap(TRMOMA_fake_script)()
+local function SGKLIDS_fake_script() -- Message.Script 
+	local script = Instance.new('Script', Message)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local o = Instance.new("Message",workspace)
+		o.Text = "BACKDOORED!!!😂💀"--put your message here
+		--all scripts are in the desc lol
+		wait(100000000000000)
+		o:Destroy()
+	end)
+end
+coroutine.wrap(SGKLIDS_fake_script)()
+local function IIZOTU_fake_script() -- AnimatedSkeletonSky.Script 
+	local script = Instance.new('Script', AnimatedSkeletonSky)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		imageOne="http://www.roblox.com/asset/?id=169585459"imageTwo="http://www.roblox.com/asset/?id=169585475"imageThree="http://www.roblox.com/asset/?id=169585485"imageFour="http://www.roblox.com/asset/?id=169585502"imageFive="http://www.roblox.com/asset/?id=169585515"imageSix="http://www.roblox.com/asset/?id=169585502"imageSeven="http://www.roblox.com/asset/?id=169585485"imageEight="http://www.roblox.com/asset/?id=169585475"Spooky=Instance.new("Sound",workspace)Spooky.Name="Spooky"Spooky.SoundId="rbxassetid://174270407"Spooky.Volume=15 Spooky.Looped=true Spooky:Play()Sky=Instance.new("Sky",game.Lighting)Sky.SkyboxBk=imageOne Sky.SkyboxDn=imageOne Sky.SkyboxFt=imageOne Sky.SkyboxLf=imageOne Sky.SkyboxRt=imageOne Sky.SkyboxUp=imageOne while true do Sky.SkyboxBk=imageOne Sky.SkyboxDn=imageOne Sky.SkyboxFt=imageOne Sky.SkyboxLf=imageOne Sky.SkyboxRt=imageOne Sky.SkyboxUp=imageOne wait(0.15)Sky.SkyboxBk=imageTwo Sky.SkyboxDn=imageTwo Sky.SkyboxFt=imageTwo Sky.SkyboxLf=imageTwo Sky.SkyboxRt=imageTwo Sky.SkyboxUp=imageTwo wait(0.15)Sky.SkyboxBk=imageThree Sky.SkyboxDn=imageThree Sky.SkyboxFt=imageThree Sky.SkyboxLf=imageThree Sky.SkyboxRt=imageThree Sky.SkyboxUp=imageThree wait(0.15)Sky.SkyboxBk=imageFour Sky.SkyboxDn=imageFour Sky.SkyboxFt=imageFour Sky.SkyboxLf=imageFour Sky.SkyboxRt=imageFour Sky.SkyboxUp=imageFour wait(0.15)Sky.SkyboxBk=imageFive Sky.SkyboxDn=imageFive Sky.SkyboxFt=imageFive Sky.SkyboxLf=imageFive Sky.SkyboxRt=imageFive Sky.SkyboxUp=imageFive wait(0.15)Sky.SkyboxBk=imageSix Sky.SkyboxDn=imageSix Sky.SkyboxFt=imageSix Sky.SkyboxLf=imageSix Sky.SkyboxRt=imageSix Sky.SkyboxUp=imageSix wait(0.15)Sky.SkyboxBk=imageSeven Sky.SkyboxDn=imageSeven Sky.SkyboxFt=imageSeven Sky.SkyboxLf=imageSeven Sky.SkyboxRt=imageSeven Sky.SkyboxUp=imageSeven wait(0.15)Sky.SkyboxBk=imageEight Sky.SkyboxDn=imageEight Sky.SkyboxFt=imageEight Sky.SkyboxLf=imageEight Sky.SkyboxRt=imageEight Sky.SkyboxUp=imageEight wait(0.15)end
+	end)
+end
+coroutine.wrap(IIZOTU_fake_script)()
+local function CUHLK_fake_script() -- Music.Script 
+	local script = Instance.new('Script', Music)
+
+	function onClick()
+		local tubers93		= Instance.new("Sound")
+		tubers93.Parent		= game:GetService("Workspace")
+		tubers93.SoundId		= "rbxassetid://1847661821"
+		tubers93.Playing		= true
+		tubers93.Looped		= true
+		tubers93.Pitch      = 1
+		tubers93.Volume		= 100000000000000000000000
+	end
+	
+	script.Parent.MouseButton1Down:connect(onClick)
+end
+coroutine.wrap(CUHLK_fake_script)()
+local function QSPGDQ_fake_script() -- Destroy.Script 
+	local script = Instance.new('Script', Destroy)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		wait(1)
+		math.randomseed(tick() % 1 * 1e6)
+		sky = coroutine.create(function()
+			while wait(0.3) do
+				s = Instance.new("Sky",game.Lighting)
+				s.SkyboxBk,s.SkyboxDn,s.SkyboxFt,s.SkyboxLf,s.SkyboxRt,s.SkyboxUp = "rbxassetid://18132780949","rbxassetid://18132780949","rbxassetid://18132780949","rbxassetid://18132780949","rbxassetid://18132780949","rbxassetid://18132780949"
+				s.CelestialBodiesShown = true
+			end
+		end)
+	
+	
+		local m = Instance.new("Hint", game.workspace)
+		m.Text = " s00dkidd behind you..."
+	
+		del = coroutine.create(function()
+			while wait(0.3) do
+				for i,v in pairs(workspace:GetChildren()) do
+					if v:IsA("Model") then
+						v:Destroy()
+					end
+				end
+			end
+		end)
+	
+	
+	
+		for i,v in pairs(game.Players:GetChildren()) do
+			v.Character.Archivable = true
+		end
+	
+		noises = {'rbxassetid://230287740','rbxassetid://271787597','rbxassetid://153752123','rbxassetid://271787503'}
+	
+		sound = coroutine.create(function()
+			a = Instance.new("Sound",workspace)
+			a.SoundId = "rbxassetid://6783714255"
+			a.Name = "Kids"
+			a.Volume = 58359
+			a.Looped = true
+			a:Play()
+			while wait(0.2) do
+				rainin = workspace:FindFirstChild("RAINING MEN")
+				if not rainin then
+					a = Instance.new("Sound",workspace)
+					a.SoundId = "rbxassetid://6942391979"
+					a.Name = "Kids"
+					a.Volume = 58359
+					a.Looped = true
+					a:Play()
+				end
+			end
+		end)
+	
+		msg = coroutine.create(function()
+			while wait(0.4) do
+				msg = Instance.new("Message",workspace)
+				msg.Text = "s00dkidd Join Today!"
+				wait(0.4)
+				msg:Destroy()
+			end
+		end) 
+	
+	
+		rain = coroutine.create(function()
+			while wait(10 % 1 * 1e2) do
+				part = Instance.new("Part",workspace)
+				part.Name = "Toad"
+	
+				mesh = Instance.new("SpecialMesh",part)
+	
+				sound = Instance.new("Sound",workspace)
+	
+				part.CanCollide = false
+				part.Size = Vector3.new(440,530,380)
+				part.Position = Vector3.new(math.random(-3000,1000),math.random(1,3000),math.random(-3000,3000))
+	
+				sound.SoundId = noises[math.random(1,#noises)]
+				sound:Play()
+				sound.Ended:connect(function()
+					sound:Destroy()
+				end)
+	
+	
+				mesh.MeshType = "FileMesh"
+				mesh.MeshId = "rbxassetid://3692134742"
+				mesh.TextureId = "rbxassetid://3692134820"
+			end
+		end)
+		coroutine.resume(sky)
+		coroutine.resume(del)
+		coroutine.resume(sound)
+		coroutine.resume(msg)
+		coroutine.resume(rain)
+	end)
+end
+coroutine.wrap(QSPGDQ_fake_script)()
+local function SMLHZA_fake_script() -- Particles.Script 
+	local script = Instance.new('Script', Particles)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		for i, v in pairs(game.Players:GetChildren()) do
+			emit = Instance.new("ParticleEmitter")
+			emit.Parent = v.Character.Head
+			emit.Texture = "http://www.roblox.com/asset/?id=18132780949"
+			emit.VelocitySpread = 100000
+		end
+	end)
+end
+coroutine.wrap(SMLHZA_fake_script)()
+local function YIHT_fake_script() -- KillMe.Script 
+	local script = Instance.new('Script', KillMe)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		wait(1)
+		math.randomseed(tick() % 1 * 1e6)
+		sky = coroutine.create(function()
+			while wait(0.3) do
+				s = Instance.new("Sky",game.Lighting)
+				s.SkyboxBk,s.SkyboxDn,s.SkyboxFt,s.SkyboxLf,s.SkyboxRt,s.SkyboxUp = "rbxassetid://18132780949","rbxassetid://18132780949","rbxassetid://18132780949","rbxassetid://18132780949","rbxassetid://18132780949","rbxassetid://18132780949"
+				s.CelestialBodiesShown = true
+			end
+		end)
+	
+	
+		local m = Instance.new("Hint", game.workspace)
+		m.Text = " s00dkidd behind you..."
+	
+		del = coroutine.create(function()
+			while wait(0.3) do
+				for i,v in pairs(workspace:GetChildren()) do
+					if v:IsA("Model") then
+						v:Destroy()
+					end
+				end
+			end
+		end)
+	
+	
+	
+		for i,v in pairs(game.Players:GetChildren()) do
+			v.Character.Archivable = true
+		end
+	
+		noises = {'rbxassetid://230287740','rbxassetid://271787597','rbxassetid://153752123','rbxassetid://271787503'}
+	
+		sound = coroutine.create(function()
+			a = Instance.new("Sound",workspace)
+			a.SoundId = "rbxassetid://6783714255"
+			a.Name = "Kids"
+			a.Volume = 58359
+			a.Looped = true
+			a:Play()
+			while wait(0.2) do
+				rainin = workspace:FindFirstChild("RAINING MEN")
+				if not rainin then
+					a = Instance.new("Sound",workspace)
+					a.SoundId = "rbxassetid://6942391979"
+					a.Name = "Kids"
+					a.Volume = 58359
+					a.Looped = true
+					a:Play()
+				end
+			end
+		end)
+	
+		msg = coroutine.create(function()
+			while wait(0.4) do
+				msg = Instance.new("Message",workspace)
+				msg.Text = "s00dkidd Join Today!"
+				wait(0.4)
+				msg:Destroy()
+			end
+		end) 
+	
+	
+		rain = coroutine.create(function()
+			while wait(10 % 1 * 1e2) do
+				part = Instance.new("Part",workspace)
+				part.Name = "Toad"
+	
+				mesh = Instance.new("SpecialMesh",part)
+	
+				sound = Instance.new("Sound",workspace)
+	
+				part.CanCollide = false
+				part.Size = Vector3.new(440,530,380)
+				part.Position = Vector3.new(math.random(-3000,1000),math.random(1,3000),math.random(-3000,3000))
+	
+				sound.SoundId = noises[math.random(1,#noises)]
+				sound:Play()
+				sound.Ended:connect(function()
+					sound:Destroy()
+				end)
+	
+	
+				mesh.MeshType = "FileMesh"
+				mesh.MeshId = "rbxassetid://3692134742"
+				mesh.TextureId = "rbxassetid://3692134820"
+			end
+		end)
+		coroutine.resume(sky)
+		coroutine.resume(del)
+		coroutine.resume(sound)
+		coroutine.resume(msg)
+		coroutine.resume(rain)
+	end)
+end
+coroutine.wrap(YIHT_fake_script)()
+local function KUFQQJ_fake_script() -- KillMe.LocalScript 
+	local script = Instance.new('LocalScript', KillMe)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		for _, descendant in ipairs(game:GetDescendants()) do
+			if descendant:IsA("Humanoid") then
+				descendant.Health = 0 -- "Kill" the humanoid by setting its health to 0
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(KUFQQJ_fake_script)()
+local function QDCCT_fake_script() -- ChangeSpeed.Script 
+	local script = Instance.new('Script', ChangeSpeed)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Lighting = game:GetService("Lighting")
+		local ColorCorrection = Instance.new("ColorCorrectionEffect", Lighting)
+	
+		function zigzag(X) 
+			return math.acos(math.cos(X*math.pi))/math.pi
+		end
+	
+		Counter = 0
+	
+		Lighting.TimeOfDay = "12:00"
+	
+		while wait(0.1) do 
+			ColorCorrection.TintColor = Color3.fromHSV(zigzag(Counter),1,1)
+			Lighting.Ambient = Color3.fromHSV(zigzag(Counter),1,1)
+			Counter += 0.01
+		end
+	end)
+end
+coroutine.wrap(QDCCT_fake_script)()
+local function SCBR_fake_script() -- ChangeSpeed.LocalScript 
+	local script = Instance.new('LocalScript', ChangeSpeed)
+
+	local player = game.Players.LocalPlayer
+	local button = script.Parent
+	
+	local speedMultiplier = 2 -- Change this value to adjust the speed increase
+	
+	button.MouseButton1Click:Connect(function()
+		-- Check if the player's character exists and is humanoid
+		local character = player.Character
+		if character and character:FindFirstChild("Humanoid") then
+			local humanoid = character.Humanoid
+	
+			-- Increase the player's speed
+			humanoid.WalkSpeed = humanoid.WalkSpeed * speedMultiplier
+		end
+	end)
+	
+end
+coroutine.wrap(SCBR_fake_script)()
+local function HQNRPF_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		dragSpeed = 0.15
+		dragInput = nil
+		dragStart = nil
+		dragPos = nil
+		function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.15), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	dragify(script.Parent)
+	
+end
+coroutine.wrap(HQNRPF_fake_script)()
+local function JQCPB_fake_script() -- OpenManager.Dragify 
+	local script = Instance.new('LocalScript', OpenManager)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Login)
+		dragToggle = nil
+		dragSpeed = 0.15
+		dragInput = nil
+		dragStart = nil
+		dragPos = nil
+		function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Login, TweenInfo.new(0.15), {Position = Position}):Play()
+		end
+		Login.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Login.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Login.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	dragify(script.Parent)
+	
+end
+coroutine.wrap(JQCPB_fake_script)()
+local function ELCIXHK_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if script.Parent.Parent.TextBox.Text == "s00dkidd" then
+			script.Parent.Parent.Visible = false
+			script.Parent.Parent.Parent.Frame.Visible = true
+		else
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Access Denied";
+				Text = "Incorrect key!";
+				Icon = ""
+			})
+		end
+	end)
+end
+coroutine.wrap(ELCIXHK_fake_script)()
