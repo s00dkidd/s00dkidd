@@ -1,9 +1,7 @@
 --[[
 
-		Gui2Lua™
-		10zOfficial
-		Version 1.0.0
-
+             s00dgui
+     by Official s00dkidd's team
 ]]
 
 
@@ -57,11 +55,11 @@ local UICorner_19 = Instance.new("UICorner")
 
 -- Properties
 
-s00dgui.Name = "s00dgui [Client Version]"
+s00dgui.Name = "s00dgui"
 s00dgui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 s00dgui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = s00dgui [Client Version]
+Frame.Parent = s00dgui
 Frame.BackgroundColor3 = Color3.new(0, 0, 0)
 Frame.BorderColor3 = Color3.new(0, 0, 0)
 Frame.BorderSizePixel = 0
