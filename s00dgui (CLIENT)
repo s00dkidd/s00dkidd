@@ -57,11 +57,11 @@ local UICorner_19 = Instance.new("UICorner")
 
 -- Properties
 
-s00dgui.Name = "s00dgui"
+s00dgui.Name = "s00dgui [Client Version]"
 s00dgui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 s00dgui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = s00dgui
+Frame.Parent = s00dgui [Client Version]
 Frame.BackgroundColor3 = Color3.new(0, 0, 0)
 Frame.BorderColor3 = Color3.new(0, 0, 0)
 Frame.BorderSizePixel = 0
@@ -87,7 +87,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.221925139, 0, 0.0160727184, 0)
 TextLabel.Size = UDim2.new(0, 200, 0, 50)
 TextLabel.Font = Enum.Font.Unknown
-TextLabel.Text = "s00dgui"
+TextLabel.Text = "s00dgui [Client Version]"
 TextLabel.TextColor3 = Color3.new(0, 1, 0.968628)
 TextLabel.TextScaled = true
 TextLabel.TextSize = 14
