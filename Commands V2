@@ -1,0 +1,1524 @@
+local Commands = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Corners = Instance.new("UICorner")
+local MainFrame = Instance.new("Frame")
+local Corners_2 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Corners_3 = Instance.new("UICorner")
+local FF = Instance.new("TextButton")
+local Corners_4 = Instance.new("UICorner")
+local Effects = Instance.new("Folder")
+local Click = Instance.new("ImageLabel")
+local Follow = Instance.new("ImageLabel")
+local JailAll = Instance.new("TextButton")
+local Corners_5 = Instance.new("UICorner")
+local Effects_2 = Instance.new("Folder")
+local Click_2 = Instance.new("ImageLabel")
+local Follow_2 = Instance.new("ImageLabel")
+local Music = Instance.new("TextButton")
+local Corners_6 = Instance.new("UICorner")
+local Effects_3 = Instance.new("Folder")
+local Click_3 = Instance.new("ImageLabel")
+local Follow_3 = Instance.new("ImageLabel")
+local SpinAll = Instance.new("TextButton")
+local Corners_7 = Instance.new("UICorner")
+local Effects_4 = Instance.new("Folder")
+local Click_4 = Instance.new("ImageLabel")
+local Follow_4 = Instance.new("ImageLabel")
+local Fly = Instance.new("TextButton")
+local Corners_8 = Instance.new("UICorner")
+local Effects_5 = Instance.new("Folder")
+local Click_5 = Instance.new("ImageLabel")
+local Follow_5 = Instance.new("ImageLabel")
+local RespawnAll = Instance.new("TextButton")
+local Corners_9 = Instance.new("UICorner")
+local Effects_6 = Instance.new("Folder")
+local Click_6 = Instance.new("ImageLabel")
+local Follow_6 = Instance.new("ImageLabel")
+local F3X = Instance.new("TextButton")
+local Corners_10 = Instance.new("UICorner")
+local Effects_7 = Instance.new("Folder")
+local Click_7 = Instance.new("ImageLabel")
+local Follow_7 = Instance.new("ImageLabel")
+local PoopAll = Instance.new("TextButton")
+local Corners_11 = Instance.new("UICorner")
+local Effects_8 = Instance.new("Folder")
+local Click_8 = Instance.new("ImageLabel")
+local Follow_8 = Instance.new("ImageLabel")
+local KillAll = Instance.new("TextButton")
+local Corners_12 = Instance.new("UICorner")
+local Effects_9 = Instance.new("Folder")
+local Click_9 = Instance.new("ImageLabel")
+local Follow_9 = Instance.new("ImageLabel")
+local GiveAll = Instance.new("TextButton")
+local Corners_13 = Instance.new("UICorner")
+local Effects_10 = Instance.new("Folder")
+local Click_10 = Instance.new("ImageLabel")
+local Follow_10 = Instance.new("ImageLabel")
+local DuckAll = Instance.new("TextButton")
+local Corners_14 = Instance.new("UICorner")
+local Effects_11 = Instance.new("Folder")
+local Click_11 = Instance.new("ImageLabel")
+local Follow_11 = Instance.new("ImageLabel")
+local SparklesAll = Instance.new("TextButton")
+local Corners_15 = Instance.new("UICorner")
+local Effects_12 = Instance.new("Folder")
+local Click_12 = Instance.new("ImageLabel")
+local Follow_12 = Instance.new("ImageLabel")
+local NameAll = Instance.new("TextButton")
+local Corners_16 = Instance.new("UICorner")
+local Effects_13 = Instance.new("Folder")
+local Click_13 = Instance.new("ImageLabel")
+local Follow_13 = Instance.new("ImageLabel")
+local ExplodeAll = Instance.new("TextButton")
+local Corners_17 = Instance.new("UICorner")
+local Effects_14 = Instance.new("Folder")
+local Click_14 = Instance.new("ImageLabel")
+local Follow_14 = Instance.new("ImageLabel")
+local IceAll = Instance.new("TextButton")
+local Corners_18 = Instance.new("UICorner")
+local Effects_15 = Instance.new("Folder")
+local Click_15 = Instance.new("ImageLabel")
+local Follow_15 = Instance.new("ImageLabel")
+
+Commands.Name = "Commands"
+Commands.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Commands.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Commands.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = Commands
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.344795525, 0, 0.339743584, 0)
+Main.Size = UDim2.new(0, 334, 0, 236)
+
+Corners.Name = "Corners"
+Corners.Parent = Main
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Main
+MainFrame.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.0316651836, 0, 0.0347985737, 0)
+MainFrame.Size = UDim2.new(0, 312, 0, 215)
+
+Corners_2.Name = "Corners"
+Corners_2.Parent = MainFrame
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 312, 0, 17)
+Title.Font = Enum.Font.Cartoon
+Title.Text = "Commands"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Corners_3.Name = "Corners"
+Corners_3.Parent = Title
+
+FF.Name = "FF"
+FF.Parent = MainFrame
+FF.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+FF.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FF.BorderSizePixel = 0
+FF.Position = UDim2.new(0.0320512839, 0, 0.105882369, 0)
+FF.Size = UDim2.new(0, 101, 0, 31)
+FF.Font = Enum.Font.Cartoon
+FF.Text = "FF"
+FF.TextColor3 = Color3.fromRGB(255, 255, 255)
+FF.TextScaled = true
+FF.TextSize = 14.000
+FF.TextWrapped = true
+
+Corners_4.Name = "Corners"
+Corners_4.Parent = FF
+
+Effects.Name = "Effects"
+Effects.Parent = FF
+
+Click.Name = "Click"
+Click.Parent = Effects
+Click.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click.BackgroundTransparency = 1.000
+Click.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click.Image = "rbxassetid://967145807"
+
+Follow.Name = "Follow"
+Follow.Parent = Effects
+Follow.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow.BackgroundTransparency = 1.000
+Follow.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow.Position = UDim2.new(0, 329, 0, 83)
+Follow.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow.Visible = false
+Follow.Image = "rbxassetid://2267692278"
+
+JailAll.Name = "Jail All"
+JailAll.Parent = MainFrame
+JailAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+JailAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JailAll.BorderSizePixel = 0
+JailAll.Position = UDim2.new(0.378205121, 0, 0.105882369, 0)
+JailAll.Size = UDim2.new(0, 85, 0, 31)
+JailAll.Font = Enum.Font.Cartoon
+JailAll.Text = "Jail All"
+JailAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+JailAll.TextScaled = true
+JailAll.TextSize = 14.000
+JailAll.TextWrapped = true
+
+Corners_5.Name = "Corners"
+Corners_5.Parent = JailAll
+
+Effects_2.Name = "Effects"
+Effects_2.Parent = JailAll
+
+Click_2.Name = "Click"
+Click_2.Parent = Effects_2
+Click_2.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_2.BackgroundTransparency = 1.000
+Click_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_2.Image = "rbxassetid://967145807"
+
+Follow_2.Name = "Follow"
+Follow_2.Parent = Effects_2
+Follow_2.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_2.BackgroundTransparency = 1.000
+Follow_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_2.Position = UDim2.new(0, 329, 0, 83)
+Follow_2.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_2.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_2.Visible = false
+Follow_2.Image = "rbxassetid://2267692278"
+
+Music.Name = "Music"
+Music.Parent = MainFrame
+Music.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Music.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Music.BorderSizePixel = 0
+Music.Position = UDim2.new(0.68910259, 0, 0.105882354, 0)
+Music.Size = UDim2.new(0, 89, 0, 31)
+Music.Font = Enum.Font.Cartoon
+Music.Text = "Music"
+Music.TextColor3 = Color3.fromRGB(255, 255, 255)
+Music.TextScaled = true
+Music.TextSize = 14.000
+Music.TextWrapped = true
+
+Corners_6.Name = "Corners"
+Corners_6.Parent = Music
+
+Effects_3.Name = "Effects"
+Effects_3.Parent = Music
+
+Click_3.Name = "Click"
+Click_3.Parent = Effects_3
+Click_3.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_3.BackgroundTransparency = 1.000
+Click_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_3.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_3.Image = "rbxassetid://967145807"
+
+Follow_3.Name = "Follow"
+Follow_3.Parent = Effects_3
+Follow_3.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_3.BackgroundTransparency = 1.000
+Follow_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_3.Position = UDim2.new(0, 329, 0, 83)
+Follow_3.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_3.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_3.Visible = false
+Follow_3.Image = "rbxassetid://2267692278"
+
+SpinAll.Name = "Spin All"
+SpinAll.Parent = MainFrame
+SpinAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SpinAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpinAll.BorderSizePixel = 0
+SpinAll.Position = UDim2.new(0.0320512839, 0, 0.287460119, 0)
+SpinAll.Size = UDim2.new(0, 101, 0, 31)
+SpinAll.Font = Enum.Font.Cartoon
+SpinAll.Text = "Spin All"
+SpinAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpinAll.TextScaled = true
+SpinAll.TextSize = 14.000
+SpinAll.TextWrapped = true
+
+Corners_7.Name = "Corners"
+Corners_7.Parent = SpinAll
+
+Effects_4.Name = "Effects"
+Effects_4.Parent = SpinAll
+
+Click_4.Name = "Click"
+Click_4.Parent = Effects_4
+Click_4.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_4.BackgroundTransparency = 1.000
+Click_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_4.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_4.Image = "rbxassetid://967145807"
+
+Follow_4.Name = "Follow"
+Follow_4.Parent = Effects_4
+Follow_4.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_4.BackgroundTransparency = 1.000
+Follow_4.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_4.Position = UDim2.new(0, 329, 0, 83)
+Follow_4.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_4.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_4.Visible = false
+Follow_4.Image = "rbxassetid://2267692278"
+
+Fly.Name = "Fly"
+Fly.Parent = MainFrame
+Fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.378205121, 0, 0.287460119, 0)
+Fly.Size = UDim2.new(0, 85, 0, 31)
+Fly.Font = Enum.Font.Cartoon
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(255, 255, 255)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+
+Corners_8.Name = "Corners"
+Corners_8.Parent = Fly
+
+Effects_5.Name = "Effects"
+Effects_5.Parent = Fly
+
+Click_5.Name = "Click"
+Click_5.Parent = Effects_5
+Click_5.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_5.BackgroundTransparency = 1.000
+Click_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_5.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_5.Image = "rbxassetid://967145807"
+
+Follow_5.Name = "Follow"
+Follow_5.Parent = Effects_5
+Follow_5.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_5.BackgroundTransparency = 1.000
+Follow_5.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_5.Position = UDim2.new(0, 329, 0, 83)
+Follow_5.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_5.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_5.Visible = false
+Follow_5.Image = "rbxassetid://2267692278"
+
+RespawnAll.Name = "Respawn All"
+RespawnAll.Parent = MainFrame
+RespawnAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+RespawnAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RespawnAll.BorderSizePixel = 0
+RespawnAll.Position = UDim2.new(0.68910259, 0, 0.287460119, 0)
+RespawnAll.Size = UDim2.new(0, 89, 0, 31)
+RespawnAll.Font = Enum.Font.Cartoon
+RespawnAll.Text = "Respawn All"
+RespawnAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+RespawnAll.TextScaled = true
+RespawnAll.TextSize = 14.000
+RespawnAll.TextWrapped = true
+
+Corners_9.Name = "Corners"
+Corners_9.Parent = RespawnAll
+
+Effects_6.Name = "Effects"
+Effects_6.Parent = RespawnAll
+
+Click_6.Name = "Click"
+Click_6.Parent = Effects_6
+Click_6.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_6.BackgroundTransparency = 1.000
+Click_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_6.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_6.Image = "rbxassetid://967145807"
+
+Follow_6.Name = "Follow"
+Follow_6.Parent = Effects_6
+Follow_6.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_6.BackgroundTransparency = 1.000
+Follow_6.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_6.Position = UDim2.new(0, 329, 0, 83)
+Follow_6.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_6.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_6.Visible = false
+Follow_6.Image = "rbxassetid://2267692278"
+
+F3X.Name = "F3X"
+F3X.Parent = MainFrame
+F3X.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+F3X.BorderColor3 = Color3.fromRGB(0, 0, 0)
+F3X.BorderSizePixel = 0
+F3X.Position = UDim2.new(0.0320512839, 0, 0.467578679, 0)
+F3X.Size = UDim2.new(0, 101, 0, 31)
+F3X.Font = Enum.Font.Cartoon
+F3X.Text = "F3X"
+F3X.TextColor3 = Color3.fromRGB(255, 255, 255)
+F3X.TextScaled = true
+F3X.TextSize = 14.000
+F3X.TextWrapped = true
+
+Corners_10.Name = "Corners"
+Corners_10.Parent = F3X
+
+Effects_7.Name = "Effects"
+Effects_7.Parent = F3X
+
+Click_7.Name = "Click"
+Click_7.Parent = Effects_7
+Click_7.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_7.BackgroundTransparency = 1.000
+Click_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_7.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_7.Image = "rbxassetid://967145807"
+
+Follow_7.Name = "Follow"
+Follow_7.Parent = Effects_7
+Follow_7.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_7.BackgroundTransparency = 1.000
+Follow_7.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_7.Position = UDim2.new(0, 329, 0, 83)
+Follow_7.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_7.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_7.Visible = false
+Follow_7.Image = "rbxassetid://2267692278"
+
+PoopAll.Name = "Poop All"
+PoopAll.Parent = MainFrame
+PoopAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PoopAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PoopAll.BorderSizePixel = 0
+PoopAll.Position = UDim2.new(0.378205121, 0, 0.467578679, 0)
+PoopAll.Size = UDim2.new(0, 85, 0, 31)
+PoopAll.Font = Enum.Font.Cartoon
+PoopAll.Text = "Poop All"
+PoopAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+PoopAll.TextScaled = true
+PoopAll.TextSize = 14.000
+PoopAll.TextWrapped = true
+
+Corners_11.Name = "Corners"
+Corners_11.Parent = PoopAll
+
+Effects_8.Name = "Effects"
+Effects_8.Parent = PoopAll
+
+Click_8.Name = "Click"
+Click_8.Parent = Effects_8
+Click_8.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_8.BackgroundTransparency = 1.000
+Click_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_8.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_8.Image = "rbxassetid://967145807"
+
+Follow_8.Name = "Follow"
+Follow_8.Parent = Effects_8
+Follow_8.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_8.BackgroundTransparency = 1.000
+Follow_8.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_8.Position = UDim2.new(0, 329, 0, 83)
+Follow_8.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_8.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_8.Visible = false
+Follow_8.Image = "rbxassetid://2267692278"
+
+KillAll.Name = "Kill All"
+KillAll.Parent = MainFrame
+KillAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+KillAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KillAll.BorderSizePixel = 0
+KillAll.Position = UDim2.new(0.68910259, 0, 0.467578679, 0)
+KillAll.Size = UDim2.new(0, 89, 0, 31)
+KillAll.Font = Enum.Font.Cartoon
+KillAll.Text = "Kill All"
+KillAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+KillAll.TextScaled = true
+KillAll.TextSize = 14.000
+KillAll.TextWrapped = true
+
+Corners_12.Name = "Corners"
+Corners_12.Parent = KillAll
+
+Effects_9.Name = "Effects"
+Effects_9.Parent = KillAll
+
+Click_9.Name = "Click"
+Click_9.Parent = Effects_9
+Click_9.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_9.BackgroundTransparency = 1.000
+Click_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_9.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_9.Image = "rbxassetid://967145807"
+
+Follow_9.Name = "Follow"
+Follow_9.Parent = Effects_9
+Follow_9.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_9.BackgroundTransparency = 1.000
+Follow_9.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_9.Position = UDim2.new(0, 329, 0, 83)
+Follow_9.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_9.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_9.Visible = false
+Follow_9.Image = "rbxassetid://2267692278"
+
+GiveAll.Name = "Give All"
+GiveAll.Parent = MainFrame
+GiveAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+GiveAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GiveAll.BorderSizePixel = 0
+GiveAll.Position = UDim2.new(0.0320512839, 0, 0.643775702, 0)
+GiveAll.Size = UDim2.new(0, 101, 0, 31)
+GiveAll.Font = Enum.Font.Cartoon
+GiveAll.Text = "Give All"
+GiveAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+GiveAll.TextScaled = true
+GiveAll.TextSize = 14.000
+GiveAll.TextWrapped = true
+
+Corners_13.Name = "Corners"
+Corners_13.Parent = GiveAll
+
+Effects_10.Name = "Effects"
+Effects_10.Parent = GiveAll
+
+Click_10.Name = "Click"
+Click_10.Parent = Effects_10
+Click_10.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_10.BackgroundTransparency = 1.000
+Click_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_10.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_10.Image = "rbxassetid://967145807"
+
+Follow_10.Name = "Follow"
+Follow_10.Parent = Effects_10
+Follow_10.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_10.BackgroundTransparency = 1.000
+Follow_10.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_10.Position = UDim2.new(0, 329, 0, 83)
+Follow_10.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_10.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_10.Visible = false
+Follow_10.Image = "rbxassetid://2267692278"
+
+DuckAll.Name = "Duck All"
+DuckAll.Parent = MainFrame
+DuckAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DuckAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DuckAll.BorderSizePixel = 0
+DuckAll.Position = UDim2.new(0.378205121, 0, 0.643775702, 0)
+DuckAll.Size = UDim2.new(0, 85, 0, 31)
+DuckAll.Font = Enum.Font.Cartoon
+DuckAll.Text = "Duck All"
+DuckAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+DuckAll.TextScaled = true
+DuckAll.TextSize = 14.000
+DuckAll.TextWrapped = true
+
+Corners_14.Name = "Corners"
+Corners_14.Parent = DuckAll
+
+Effects_11.Name = "Effects"
+Effects_11.Parent = DuckAll
+
+Click_11.Name = "Click"
+Click_11.Parent = Effects_11
+Click_11.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_11.BackgroundTransparency = 1.000
+Click_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_11.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_11.Image = "rbxassetid://967145807"
+
+Follow_11.Name = "Follow"
+Follow_11.Parent = Effects_11
+Follow_11.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_11.BackgroundTransparency = 1.000
+Follow_11.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_11.Position = UDim2.new(0, 329, 0, 83)
+Follow_11.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_11.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_11.Visible = false
+Follow_11.Image = "rbxassetid://2267692278"
+
+SparklesAll.Name = "Sparkles All"
+SparklesAll.Parent = MainFrame
+SparklesAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SparklesAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SparklesAll.BorderSizePixel = 0
+SparklesAll.Position = UDim2.new(0.68910259, 0, 0.643775702, 0)
+SparklesAll.Size = UDim2.new(0, 89, 0, 31)
+SparklesAll.Font = Enum.Font.Cartoon
+SparklesAll.Text = "Sparkles All"
+SparklesAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+SparklesAll.TextScaled = true
+SparklesAll.TextSize = 14.000
+SparklesAll.TextWrapped = true
+
+Corners_15.Name = "Corners"
+Corners_15.Parent = SparklesAll
+
+Effects_12.Name = "Effects"
+Effects_12.Parent = SparklesAll
+
+Click_12.Name = "Click"
+Click_12.Parent = Effects_12
+Click_12.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_12.BackgroundTransparency = 1.000
+Click_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_12.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_12.Image = "rbxassetid://967145807"
+
+Follow_12.Name = "Follow"
+Follow_12.Parent = Effects_12
+Follow_12.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_12.BackgroundTransparency = 1.000
+Follow_12.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_12.Position = UDim2.new(0, 329, 0, 83)
+Follow_12.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_12.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_12.Visible = false
+Follow_12.Image = "rbxassetid://2267692278"
+
+NameAll.Name = "Name All"
+NameAll.Parent = MainFrame
+NameAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+NameAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+NameAll.BorderSizePixel = 0
+NameAll.Position = UDim2.new(0.0320512839, 0, 0.818513513, 0)
+NameAll.Size = UDim2.new(0, 101, 0, 31)
+NameAll.Font = Enum.Font.Cartoon
+NameAll.Text = "Name All"
+NameAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+NameAll.TextScaled = true
+NameAll.TextSize = 14.000
+NameAll.TextWrapped = true
+
+Corners_16.Name = "Corners"
+Corners_16.Parent = NameAll
+
+Effects_13.Name = "Effects"
+Effects_13.Parent = NameAll
+
+Click_13.Name = "Click"
+Click_13.Parent = Effects_13
+Click_13.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_13.BackgroundTransparency = 1.000
+Click_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_13.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_13.Image = "rbxassetid://967145807"
+
+Follow_13.Name = "Follow"
+Follow_13.Parent = Effects_13
+Follow_13.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_13.BackgroundTransparency = 1.000
+Follow_13.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_13.Position = UDim2.new(0, 329, 0, 83)
+Follow_13.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_13.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_13.Visible = false
+Follow_13.Image = "rbxassetid://2267692278"
+
+ExplodeAll.Name = "Explode All"
+ExplodeAll.Parent = MainFrame
+ExplodeAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ExplodeAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ExplodeAll.BorderSizePixel = 0
+ExplodeAll.Position = UDim2.new(0.378205121, 0, 0.818513513, 0)
+ExplodeAll.Size = UDim2.new(0, 85, 0, 31)
+ExplodeAll.Font = Enum.Font.Cartoon
+ExplodeAll.Text = "Explode All"
+ExplodeAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+ExplodeAll.TextScaled = true
+ExplodeAll.TextSize = 14.000
+ExplodeAll.TextWrapped = true
+
+Corners_17.Name = "Corners"
+Corners_17.Parent = ExplodeAll
+
+Effects_14.Name = "Effects"
+Effects_14.Parent = ExplodeAll
+
+Click_14.Name = "Click"
+Click_14.Parent = Effects_14
+Click_14.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_14.BackgroundTransparency = 1.000
+Click_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_14.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_14.Image = "rbxassetid://967145807"
+
+Follow_14.Name = "Follow"
+Follow_14.Parent = Effects_14
+Follow_14.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_14.BackgroundTransparency = 1.000
+Follow_14.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_14.Position = UDim2.new(0, 329, 0, 83)
+Follow_14.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_14.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_14.Visible = false
+Follow_14.Image = "rbxassetid://2267692278"
+
+IceAll.Name = "Ice All"
+IceAll.Parent = MainFrame
+IceAll.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+IceAll.BorderColor3 = Color3.fromRGB(0, 0, 0)
+IceAll.BorderSizePixel = 0
+IceAll.Position = UDim2.new(0.68910259, 0, 0.818513513, 0)
+IceAll.Size = UDim2.new(0, 89, 0, 31)
+IceAll.Font = Enum.Font.Cartoon
+IceAll.Text = "Ice All"
+IceAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+IceAll.TextScaled = true
+IceAll.TextSize = 14.000
+IceAll.TextWrapped = true
+
+Corners_18.Name = "Corners"
+Corners_18.Parent = IceAll
+
+Effects_15.Name = "Effects"
+Effects_15.Parent = IceAll
+
+Click_15.Name = "Click"
+Click_15.Parent = Effects_15
+Click_15.AnchorPoint = Vector2.new(0.600000024, 0.600000024)
+Click_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Click_15.BackgroundTransparency = 1.000
+Click_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Click_15.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Click_15.Image = "rbxassetid://967145807"
+
+Follow_15.Name = "Follow"
+Follow_15.Parent = Effects_15
+Follow_15.AnchorPoint = Vector2.new(0.699999988, 0.699999988)
+Follow_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Follow_15.BackgroundTransparency = 1.000
+Follow_15.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Follow_15.Position = UDim2.new(0, 329, 0, 83)
+Follow_15.Size = UDim2.new(0.300000012, 0, 0.300000012, 0)
+Follow_15.SizeConstraint = Enum.SizeConstraint.RelativeXX
+Follow_15.Visible = false
+Follow_15.Image = "rbxassetid://2267692278"
+
+local function QHVET_fake_script() -- Effects.ClickEffect 
+	local script = Instance.new('LocalScript', Effects)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(QHVET_fake_script)()
+local function KPXRPT_fake_script() -- FF.Script 
+	local script = Instance.new('Script', FF)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";ff")
+	end)
+end
+coroutine.wrap(KPXRPT_fake_script)()
+local function AKXC_fake_script() -- Effects_2.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_2)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(AKXC_fake_script)()
+local function TMBGBF_fake_script() -- JailAll.Script 
+	local script = Instance.new('Script', JailAll)
+
+	local JailAll = script.Parent.Parent["Jail All"]
+	local players = game:GetService("Players")
+	
+	JailAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";jail " .. player.Name)
+		end
+	end)
+end
+coroutine.wrap(TMBGBF_fake_script)()
+local function YHCW_fake_script() -- Effects_3.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_3)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(YHCW_fake_script)()
+local function VRAOGX_fake_script() -- Music.Script 
+	local script = Instance.new('Script', Music)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";music 15689443663")
+	end)
+end
+coroutine.wrap(VRAOGX_fake_script)()
+local function EVWWE_fake_script() -- Effects_4.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_4)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(EVWWE_fake_script)()
+local function KBTZHZ_fake_script() -- SpinAll.Script 
+	local script = Instance.new('Script', SpinAll)
+
+	local SpinAll = script.Parent.Parent["Spin All"]
+	local players = game:GetService("Players")
+	
+	SpinAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";spin " .. player.Name .. " 1001")
+		end
+	end)
+end
+coroutine.wrap(KBTZHZ_fake_script)()
+local function MKEDBDG_fake_script() -- Effects_5.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_5)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(MKEDBDG_fake_script)()
+local function DSSJK_fake_script() -- Fly.Script 
+	local script = Instance.new('Script', Fly)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";fly")
+	end)
+end
+coroutine.wrap(DSSJK_fake_script)()
+local function KWBLQ_fake_script() -- Effects_6.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_6)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(KWBLQ_fake_script)()
+local function UYVGA_fake_script() -- RespawnAll.Script 
+	local script = Instance.new('Script', RespawnAll)
+
+	local ReAll = script.Parent.Parent["Reset All"]
+	local players = game:GetService("Players")
+	
+	ReAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";res " .. player.Name)
+		end
+	end)
+end
+coroutine.wrap(UYVGA_fake_script)()
+local function LPCQQ_fake_script() -- Effects_7.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_7)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(LPCQQ_fake_script)()
+local function ZDITRU_fake_script() -- F3X.Script 
+	local script = Instance.new('Script', F3X)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";give me F3X")
+	end)
+	
+end
+coroutine.wrap(ZDITRU_fake_script)()
+local function JHHC_fake_script() -- Effects_8.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_8)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(JHHC_fake_script)()
+local function IWJLJ_fake_script() -- PoopAll.LocalScript 
+	local script = Instance.new('LocalScript', PoopAll)
+
+	local PoopAll = script.Parent.Parent["Poop All"]
+	local players = game:GetService("Players")
+	
+	PoopAll.MouseButton1Click:Connect(function()
+	for _, player in ipairs(players:GetPlayers()) do
+		game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";poop " .. player.Name)
+		end
+	end)
+end
+coroutine.wrap(IWJLJ_fake_script)()
+local function JVBFZ_fake_script() -- Effects_9.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_9)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(JVBFZ_fake_script)()
+local function IQERQOX_fake_script() -- KillAll.Script 
+	local script = Instance.new('Script', KillAll)
+
+	local KillAll = script.Parent.Parent["Kill All"]
+	local players = game:GetService("Players")
+	
+	KillAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";kill " .. player.Name)
+		end
+	end)
+end
+coroutine.wrap(IQERQOX_fake_script)()
+local function HJITCX_fake_script() -- Effects_10.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_10)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(HJITCX_fake_script)()
+local function BHJYHL_fake_script() -- GiveAll.Script 
+	local script = Instance.new('Script', GiveAll)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";give me all")
+	end)
+end
+coroutine.wrap(BHJYHL_fake_script)()
+local function AJUVKDP_fake_script() -- Effects_11.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_11)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(AJUVKDP_fake_script)()
+local function DWCE_fake_script() -- DuckAll.Script 
+	local script = Instance.new('Script', DuckAll)
+
+	local DuckAll = script.Parent.Parent["Duck All"]
+	local players = game:GetService("Players")
+	
+	DuckAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";morph " .. player.Name .. " lordduck")
+		end
+	end)
+end
+coroutine.wrap(DWCE_fake_script)()
+local function QPLYXPE_fake_script() -- Effects_12.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_12)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(QPLYXPE_fake_script)()
+local function WCTLMN_fake_script() -- SparklesAll.Script 
+	local script = Instance.new('Script', SparklesAll)
+
+	local SparklesAll = script.Parent.Parent["Sparkles All"]
+	local players = game:GetService("Players")
+	
+	SparklesAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";sparkles " .. player.Name)
+		end
+	end)
+end
+coroutine.wrap(WCTLMN_fake_script)()
+local function LJOVBV_fake_script() -- Effects_13.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_13)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(LJOVBV_fake_script)()
+local function SLMSKJ_fake_script() -- NameAll.Script 
+	local script = Instance.new('Script', NameAll)
+
+	local NameAll = script.Parent.Parent["Name All"]
+	local players = game:GetService("Players")
+	
+	NameAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";name " .. player.Name .. " Sussy Guy 🥵")
+		end
+	end)
+end
+coroutine.wrap(SLMSKJ_fake_script)()
+local function BETZG_fake_script() -- Effects_14.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_14)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(BETZG_fake_script)()
+local function NRJKO_fake_script() -- ExplodeAll.Script 
+	local script = Instance.new('Script', ExplodeAll)
+
+	local ExplodeAll = script.Parent.Parent["Explode All"]
+	local players = game:GetService("Players")
+	
+	ExplodeAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";explode " .. player.Name)
+		end
+	end)
+end
+coroutine.wrap(NRJKO_fake_script)()
+local function JXQUER_fake_script() -- Effects_15.ClickEffect 
+	local script = Instance.new('LocalScript', Effects_15)
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local button = script.Parent.Parent
+	local SK = false
+	local Plus = script.Parent.Follow
+	local Zone = script.Parent.Click
+	local SpeedS = 1
+	local TweenService = game:GetService("TweenService") 
+	local tweenClick = TweenInfo.new(SpeedS,Enum.EasingStyle.Quint,Enum.EasingDirection.Out,0,false,0)
+	
+	button.MouseButton1Click:connect(function()	
+		local G = Zone:Clone()
+		G.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+		G.Parent = button
+		local tween = TweenService:Create(G, tweenClick, {Size = UDim2.new(1,0,1,0),ImageTransparency = 1})
+		tween:Play()
+		wait(SpeedS)
+		G:Destroy()
+	end)
+	
+	--button.MouseEnter:Connect(function()
+	--	SK = false
+	--	Plus.Visible = true
+	--	repeat wait()
+	--		Plus.Position = UDim2.new(0,Mouse.X-button.AbsolutePosition.X,0,Mouse.Y-button.AbsolutePosition.Y)
+	--		until SK == true do
+	--	end
+	--end)
+	
+	--button.MouseLeave:Connect(function()
+	--	SK = true
+	--	Plus.Visible = false
+	--end)
+	
+end
+coroutine.wrap(JXQUER_fake_script)()
+local function LFNXSN_fake_script() -- IceAll.LocalScript 
+	local script = Instance.new('LocalScript', IceAll)
+
+	local IceAll = script.Parent.Parent["Ice All"]
+	local players = game:GetService("Players")
+	
+	IceAll.MouseButton1Click:Connect(function()
+		for _, player in ipairs(players:GetPlayers()) do
+			game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";ice " .. player.Name)
+		end
+	end)
+end
+coroutine.wrap(LFNXSN_fake_script)()
+local function UEEAWX_fake_script() -- Main.Dragify 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Main)
+		dragToggle = nil
+		dragSpeed = 0.15
+		dragInput = nil
+		dragStart = nil
+		dragPos = nil
+		function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Main, TweenInfo.new(0.15), {Position = Position}):Play()
+		end
+		Main.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Main.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Main.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	dragify(script.Parent)
+	
+end
+coroutine.wrap(UEEAWX_fake_script)()
