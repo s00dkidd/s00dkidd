@@ -1,0 +1,191 @@
+local Developers = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Corners = Instance.new("UICorner")
+local MainFrame = Instance.new("Frame")
+local Corners_2 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Corners_3 = Instance.new("UICorner")
+local _1 = Instance.new("Frame")
+local Corners_4 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local Corners_5 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local Corners_6 = Instance.new("UICorner")
+local _2 = Instance.new("Frame")
+local Corners_7 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local Corners_8 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
+local Corners_9 = Instance.new("UICorner")
+
+Developers.Name = "Developers"
+Developers.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Developers.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Developers.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = Developers
+Main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.29368031, 0, 0.294871807, 0)
+Main.Size = UDim2.new(0, 444, 0, 256)
+
+Corners.Name = "Corners"
+Corners.Parent = Main
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = Main
+MainFrame.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.0189055018, 0, 0.0370593071, 0)
+MainFrame.Size = UDim2.new(0, 426, 0, 235)
+
+Corners_2.Name = "Corners"
+Corners_2.Parent = MainFrame
+
+Title.Name = "Title"
+Title.Parent = MainFrame
+Title.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 426, 0, 15)
+Title.Font = Enum.Font.Cartoon
+Title.Text = "Developers"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+Corners_3.Name = "Corners"
+Corners_3.Parent = Title
+
+_1.Name = "#1"
+_1.Parent = MainFrame
+_1.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_1.BorderSizePixel = 0
+_1.Position = UDim2.new(0.0258215964, 0, 0.0978723392, 0)
+_1.Size = UDim2.new(0, 400, 0, 95)
+
+Corners_4.Name = "Corners"
+Corners_4.Parent = _1
+
+TextLabel.Parent = _1
+TextLabel.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0274999999, 0, 0.0736842081, 0)
+TextLabel.Size = UDim2.new(0, 378, 0, 37)
+TextLabel.Font = Enum.Font.Cartoon
+TextLabel.Text = "Scripters, designers, programmers :"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+Corners_5.Name = "Corners"
+Corners_5.Parent = TextLabel
+
+TextLabel_2.Parent = _1
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0274999999, 0, 0.526315808, 0)
+TextLabel_2.Size = UDim2.new(0, 378, 0, 37)
+TextLabel_2.Font = Enum.Font.Cartoon
+TextLabel_2.Text = "Egorik125713, ProjectBlackify, C0ML0CAL"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+Corners_6.Name = "Corners"
+Corners_6.Parent = TextLabel_2
+
+_2.Name = "#2"
+_2.Parent = MainFrame
+_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+_2.BorderSizePixel = 0
+_2.Position = UDim2.new(0.0258215964, 0, 0.548936188, 0)
+_2.Size = UDim2.new(0, 400, 0, 95)
+
+Corners_7.Name = "Corners"
+Corners_7.Parent = _2
+
+TextLabel_3.Parent = _2
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.0274999999, 0, 0.0736842081, 0)
+TextLabel_3.Size = UDim2.new(0, 378, 0, 37)
+TextLabel_3.Font = Enum.Font.Cartoon
+TextLabel_3.Text = "Creators, developers, cool persons :"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+Corners_8.Name = "Corners"
+Corners_8.Parent = TextLabel_3
+
+TextLabel_4.Parent = _2
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0274999999, 0, 0.526315808, 0)
+TextLabel_4.Size = UDim2.new(0, 378, 0, 37)
+TextLabel_4.Font = Enum.Font.Cartoon
+TextLabel_4.Text = "Andrey555999S, Games_Studios02, s00dkiddz"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextScaled = true
+TextLabel_4.TextSize = 14.000
+TextLabel_4.TextWrapped = true
+
+Corners_9.Name = "Corners"
+Corners_9.Parent = TextLabel_4
+
+local function HJVY_fake_script()
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Main)
+		dragToggle = nil
+		dragSpeed = 0.15
+		dragInput = nil
+		dragStart = nil
+		dragPos = nil
+		function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Main, TweenInfo.new(0.15), {Position = Position}):Play()
+		end
+		Main.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Main.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Main.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	dragify(script.Parent)
+
+end
+coroutine.wrap(HJVY_fake_script)()
