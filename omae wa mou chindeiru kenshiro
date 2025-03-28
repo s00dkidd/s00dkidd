@@ -1,0 +1,285 @@
+	local oldtick = tick()
+	warn("Omae Wa Mou Shinderu")
+	local plr = game:GetService("Players").LocalPlayer
+	local char, mouse = plr.Character, plr:GetMouse()
+	local hitTab = {}
+	local fadeTab = {}
+	local spd = 0.2 * char:FindFirstChild("Humanoid").WalkSpeed / 16
+	local sound1 = Instance.new("Sound", char.HumanoidRootPart)
+	local sound2 = Instance.new("Sound", char.HumanoidRootPart)
+	local sound3 = Instance.new("Sound")
+	sound1.SoundId = "rbxassetid://130767866"
+	sound1.Volume = 10
+	sound2.SoundId = "rbxassetid://142684400"
+	sound2.Volume = 10
+	sound3.SoundId = "rbxassetid://985132972"
+	sound3.Volume = 10
+	local particle = Instance.new("ParticleEmitter")
+	particle.LightEmission = 0.2
+	particle.Texture = "rbxassetid://50263573"
+	particle.Size = NumberSequence.new({
+		NumberSequenceKeypoint.new(0, 0),
+		NumberSequenceKeypoint.new(0.5, 1),
+		NumberSequenceKeypoint.new(1, 0)
+	})
+	particle.Acceleration = Vector3.new(0, 0, 0)
+	particle.Lifetime = NumberRange.new(0.15, 0.3)
+	particle.Rate = 50
+	particle.Rotation = NumberRange.new(0, 360)
+	particle.RotSpeed = NumberRange.new(0, 0)
+	particle.Speed = NumberRange.new(0, 0)
+	local dfj = {}
+	char:WaitForChild("Animate"):Destroy()
+	char:WaitForChild("Humanoid"):WaitForChild("Animator"):Destroy()
+	for i, v in pairs(char:FindFirstChild("Torso"):GetChildren()) do
+		if v:IsA("Motor6D") and v.Name ~= "Neck" then
+			table.insert(dfj, v:Clone())
+			v:Destroy()
+		end
+	end
+	local state = "idle"
+	local rootpart = char:FindFirstChild("HumanoidRootPart")
+	local rootjoint = rootpart:FindFirstChild("RootJoint")
+	rootjoint.C1 = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(-90), math.rad(0), math.rad(180))
+	local rarm = Instance.new("Weld", char:FindFirstChild("Right Arm") or nil)
+	rarm.Part0 = char:FindFirstChild("Torso") or nil
+	rarm.Part1 = char:FindFirstChild("Right Arm") or nil
+	rarm.C0 = CFrame.new(1, 0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	rarm.C1 = CFrame.new(-0.5, 0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	local larm = Instance.new("Weld", char:FindFirstChild("Left Arm") or nil)
+	larm.Part0 = char:FindFirstChild("Torso") or nil
+	larm.Part1 = char:FindFirstChild("Left Arm") or nil
+	larm.C0 = CFrame.new(-1, 0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	larm.C1 = CFrame.new(0.5, 0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	local rleg = Instance.new("Weld", char:FindFirstChild("Right Leg") or nil)
+	rleg.Part0 = char:FindFirstChild("Torso") or nil
+	rleg.Part1 = char:FindFirstChild("Right Leg") or nil
+	rleg.C0 = CFrame.new(1, -1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	rleg.C1 = CFrame.new(0.5, 1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	local lleg = Instance.new("Weld", char:FindFirstChild("Left Leg") or nil)
+	lleg.Part0 = char:FindFirstChild("Torso") or nil
+	lleg.Part1 = char:FindFirstChild("Left Leg") or nil
+	lleg.C0 = CFrame.new(-1, -1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	lleg.C1 = CFrame.new(-0.5, 1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	local neck = char:FindFirstChild("Torso"):FindFirstChild("Neck") or nil
+	neck.Part0 = char:FindFirstChild("Torso") or nil
+	neck.Part1 = char:FindFirstChild("Head") or nil
+	neck.C0 = CFrame.new(0, 1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	neck.C1 = CFrame.new(0, -0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0))
+	function hitSphere()
+		local function recSearch(par)
+			local tab = {}
+			local function rec(parent)
+				if parent:IsA("Humanoid") and parent ~= char:FindFirstChildOfClass("Humanoid") then
+					table.insert(tab, parent)
+				end
+				for i, v in pairs(parent:GetChildren()) do
+					rec(v)
+				end
+			end
+			rec(par)
+			return tab
+		end
+		local humsFound = {}
+		for i, v in pairs(recSearch(workspace)) do
+			table.insert(humsFound, v)
+		end
+		return humsFound
+	end
+	mouse.Button1Down:connect(function()
+		if state ~= "busy" then
+			state = "busy"
+			do
+				local foundHums = {}
+				local prtcls = {}
+				local sounds = {}
+				local parts = {}
+				sound1:Play()
+				local hit = false
+				local toggle = false
+				local frmcon
+				local frame = 0
+				frmcon = game:service("RunService").RenderStepped:connect(function()
+					frame = frame + 1
+					if frame / 4 == math.floor(frame / 4) then
+						if toggle == false then
+							toggle = true
+						else
+							toggle = false
+						end
+					end
+					if toggle == true then
+						rleg.C0 = rleg.C0:lerp(CFrame.new(1, -1 - math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+						lleg.C0 = lleg.C0:lerp(CFrame.new(-1, -1 - math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+						rarm.C0 = rarm.C0:lerp(CFrame.new(1, 0.5, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(45)), spd * 1.5)
+						larm.C0 = larm.C0:lerp(CFrame.new(-1, 0.5, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(90)), spd * 1.5)
+						rootjoint.C0 = rootjoint.C0:lerp(CFrame.new(0, math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(-90), math.rad(0), math.rad(225)), spd * 1.5)
+						neck.C0 = neck.C0:lerp(CFrame.new(0, 1, 0) * CFrame.Angles(math.rad(0), math.rad(-45), math.rad(0)), spd * 1.5)
+					else
+						rleg.C0 = rleg.C0:lerp(CFrame.new(1, -1 - math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+						lleg.C0 = lleg.C0:lerp(CFrame.new(-1, -1 - math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+						rarm.C0 = rarm.C0:lerp(CFrame.new(1, 0.5, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(-90)), spd * 1.5)
+						larm.C0 = larm.C0:lerp(CFrame.new(-1, 0.5, 0) * CFrame.Angles(math.rad(90), math.rad(0), math.rad(-45)), spd * 1.5)
+						rootjoint.C0 = rootjoint.C0:lerp(CFrame.new(0, math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(-90), math.rad(0), math.rad(135)), spd * 1.5)
+						neck.C0 = neck.C0:lerp(CFrame.new(0, 1, 0) * CFrame.Angles(math.rad(0), math.rad(45), math.rad(0)), spd * 1.5)
+					end
+					if frame % 5 == 0 then
+						for i, v in pairs(hitSphere()) do
+							for o, b in pairs(v.Parent:GetChildren()) do
+								if b:IsA("BasePart") and 4 >= (b.Position - rootjoint.Parent.CFrame * CFrame.new(0, 0, -2.25).p).Magnitude then
+									hit = true
+									if foundHums[v] then
+										foundHums[v] = foundHums[v] + 1
+									else
+										foundHums[v] = 1
+										local ns = sound3:Clone()
+										ns.Parent = b
+										table.insert(sounds, ns)
+									end
+									if not prtcls[b] then
+										partClone = particle:Clone()
+										partClone.Enabled = false
+										partClone.Parent = b
+										prtcls[b] = partClone
+									end
+									local p = Instance.new("Part")
+									p.Size = Vector3.new(0.2, 0.2, 0.2)
+									p.Color = Color3.new(1, 1, 1)
+									p.TopSurface = "Smooth"
+									p.BottomSurface = "Smooth"
+									p.Anchored = true
+									p.CanCollide = false
+									p.Shape = "Ball"
+									p.CFrame = CFrame.new(b.CFrame.p + Vector3.new(math.random(-10, 10) / 10, math.random(-10, 10) / 10, math.random(-10, 10) / 10))
+									p.Parent = workspace
+									table.insert(fadeTab, p)
+									parts[b] = b
+								end
+							end
+						end
+					end
+				end)
+				local bucon
+				bucon = mouse.Button1Up:connect(function()
+					frmcon:disconnect()
+					sound1:Stop()
+					state = "idle"
+					if hit == true then
+						sound2:Play()
+						wait(2.7)
+						for i, v in pairs(sounds) do
+							spawn(function()
+								wait(math.random(0, 100) / 600)
+								v.TimePosition = 2.5
+								v:Play()
+							end)
+						end
+						wait(1.2)
+						for i, v in pairs(prtcls) do
+							v.Enabled = true
+						end
+						wait(1.3)
+						spawn(function()
+							local rcon
+							local frame = 0
+							rcon = game:service("RunService").RenderStepped:connect(function()
+								frame = frame + 1
+								for i, v in pairs(sounds) do
+									v.Volume = 10 - frame / 5
+									if v.Volume <= 0 then
+										v.Volume = 0
+										v:Destroy()
+									end
+								end
+								if frame >= 200 then
+									for i, v in pairs(sounds) do
+										v:Destroy()
+									end
+								end
+							end)
+						end)
+						for i, v in pairs(parts) do
+							v.RotVelocity = Vector3.new(math.random(-100, 100), math.random(-100, 100), math.random(-100, 100))
+							v.Velocity = v.Velocity + Vector3.new(0, 20, 0)
+							local bvel = Instance.new("BodyVelocity", v)
+							bvel.MaxForce = Vector3.new(1000000, 1000000, 1000000)
+							bvel.Velocity = Vector3.new(math.random(-50, 50), math.random(-50, 50), math.random(-50, 50))
+							game:service("Debris"):AddItem(bvel, 0.5)
+						end
+						for i, v in pairs(foundHums) do
+							if i.MaxHealth >= math.huge then
+								i.MaxHealth = 100
+							end
+							i.Health = 0
+						end
+						wait(0.7)
+						for i, v in pairs(prtcls) do
+							v.Enabled = false
+						end
+					end
+					bucon:disconnect()
+				end)
+			end
+		end
+	end)
+	game:GetService("RunService").Heartbeat:connect(function()
+		for i, v in pairs(fadeTab) do
+			v.Transparency = v.Transparency + 0.1
+			local savecf = v.CFrame
+			v.Size = v.Size + Vector3.new(0.3, 0.3, 0.3)
+			v.CFrame = savecf
+		end
+		local isub = 0
+		for i = 1, #fadeTab do
+			if fadeTab[i - isub].Transparency >= 1 then
+				fadeTab[i - isub]:Destroy()
+				table.remove(fadeTab, i - isub)
+				isub = isub + 1
+			end
+		end
+		char:FindFirstChild("Humanoid").WalkSpeed = 26
+		spd = 0.2 * char:FindFirstChild("Humanoid").WalkSpeed / 16
+		if state ~= "busy" then
+			local ray = Ray.new(rootpart.Position, Vector3.new(0, -4, 0))
+			local part, pos, normal = workspace:FindPartOnRayWithIgnoreList(ray, char:GetChildren(), false, true)
+			if rootpart.Velocity.Magnitude > 0.5 and part ~= nil then
+				state = "running"
+			elseif rootpart.Velocity.Magnitude <= 0.5 and part ~= nil then
+				state = "idle"
+			elseif 0 < rootpart.Velocity.Y and part == nil then
+				state = "jumping"
+			elseif 0 >= rootpart.Velocity.Y and part == nil then
+				state = "falling"
+			end
+			if state == "idle" then
+				rleg.C0 = rleg.C0:lerp(CFrame.new(1, -1 - math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				lleg.C0 = lleg.C0:lerp(CFrame.new(-1, -1 - math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				rarm.C0 = rarm.C0:lerp(CFrame.new(1, 0.5 + math.cos(tick() + 0.5) / 16, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad((math.cos(tick()) + 1) / 16) * 20), spd)
+				larm.C0 = larm.C0:lerp(CFrame.new(-1, 0.5 + math.cos(tick() + 0.5) / 16, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(-(math.cos(tick()) + 1) / 16) * 20), spd)
+				rootjoint.C0 = rootjoint.C0:lerp(CFrame.new(0, math.cos(tick()) / 16, 0) * CFrame.Angles(math.rad(-90), math.rad(0), math.rad(180)), spd)
+				neck.C0 = neck.C0:lerp(CFrame.new(0, 1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+			elseif state == "running" then
+				rleg.C0 = rleg.C0:lerp(CFrame.new(1, -1 - -math.sin(tick() * 8 + 90) / 8, math.sin(tick() * 8 + 90) / 10) * CFrame.Angles(math.rad(math.sin(tick() * 8) * 60), math.rad(0), math.rad(0)), spd)
+				lleg.C0 = lleg.C0:lerp(CFrame.new(-1, -1 - math.sin(tick() * 8 + 90) / 8, -math.sin(tick() * 8 + 90) / 10) * CFrame.Angles(-math.rad(math.sin(tick() * 8) * 60), math.rad(0), math.rad(0)), spd)
+				rarm.C0 = rarm.C0:lerp(CFrame.new(1, 0.5, 0) * CFrame.Angles(math.rad(math.sin(tick() * 8) * 80), math.rad(0), math.rad(0)), spd)
+				larm.C0 = larm.C0:lerp(CFrame.new(-1, 0.5, 0) * CFrame.Angles(-math.rad(math.sin(tick() * 8) * 80), math.rad(0), math.rad(0)), spd)
+				rootjoint.C0 = rootjoint.C0:lerp(CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(-110), math.rad(0), math.rad(180)), spd)
+				neck.C0 = neck.C0:lerp(CFrame.new(0, 1, 0) * CFrame.Angles(math.rad(20), math.rad(0), math.rad(0)), spd)
+			elseif state == "jumping" then
+				rleg.C0 = rleg.C0:lerp(CFrame.new(1, -1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				lleg.C0 = lleg.C0:lerp(CFrame.new(-1, -1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				rarm.C0 = rarm.C0:lerp(CFrame.new(1, 0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				larm.C0 = larm.C0:lerp(CFrame.new(-1, 0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				rootjoint.C0 = rootjoint.C0:lerp(CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(-90), math.rad(0), math.rad(180)), spd)
+				neck.C0 = neck.C0:lerp(CFrame.new(0, 1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+			elseif state == "falling" then
+				rleg.C0 = rleg.C0:lerp(CFrame.new(1, -1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				lleg.C0 = lleg.C0:lerp(CFrame.new(-1, -1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				rarm.C0 = rarm.C0:lerp(CFrame.new(1, 0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				larm.C0 = larm.C0:lerp(CFrame.new(-1, 0.5, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+				rootjoint.C0 = rootjoint.C0:lerp(CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(-90), math.rad(0), math.rad(180)), spd)
+				neck.C0 = neck.C0:lerp(CFrame.new(0, 1, 0) * CFrame.Angles(math.rad(0), math.rad(0), math.rad(0)), spd)
+			end
+		end
+	end)
+	warn("Loaded! Time elapsed: " .. tick() - oldtick)
