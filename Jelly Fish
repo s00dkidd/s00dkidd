@@ -1,0 +1,1368 @@
+	--edit of this script is a cane? i have no idea what the name is
+
+	--Owner of this edit = makhail07.... :)
+
+
+
+
+	warn('Press q For MAXIMUM OVERDRIVE/SPEEEEEEEEEEDBOOST')
+	warn('Press x For Mr KARBS')
+	warn('Press b For Jelly Fishing')
+	warn('Press v For BEGONE')
+	warn('Press c For Catgroove')
+	warn('Press r For Water......')
+	warn('Press p To End Your Life,I Dare You')
+
+	-- Initial stuff
+	math.randomseed(tick())
+
+	p = game.Players.LocalPlayer
+	char049 = p.Character
+
+	char049.Shirt:Remove()
+	for i,v in pairs(char049:GetChildren()) do if v:IsA("Pants") then v:Remove() end end
+	wait()shirt = Instance.new("Shirt", char049)
+	shirt.Name = "Shirt"
+	pants = Instance.new("Pants", char049)
+	pants.Name = "Pants"
+
+	char049.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=95257568"
+	char049.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=95257568"
+
+
+
+	local BC = char049["Body Colors"]
+	BC.HeadColor = BrickColor.new("CGA brown")
+	BC.LeftArmColor = BrickColor.new("CGA brown")
+	BC.LeftLegColor = BrickColor.new("CGA brown")
+	BC.RightArmColor = BrickColor.new("CGA brown")
+	BC.RightLegColor = BrickColor.new("CGA brown")
+	BC.TorsoColor = BrickColor.new("CGA brown")
+
+
+
+	human = char049:FindFirstChild("Humanoid")
+	human.MaxHealth, human.Health = math.huge,math.huge
+
+
+	sound222223444 = Instance.new("Sound",char049)
+	sound222223444.SoundId = "rbxassetid://320522646"
+	sound222223444.Volume = 50
+
+
+
+
+	-- Wait for character
+	repeat wait() until game.Players.LocalPlayer.Character ~= nil
+
+
+	-- Useful shortcuts
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character 
+	local plrgui = plr.PlayerGui 
+	local backpack = plr.Backpack 
+	local torso = char.Torso 
+	local head = char.Head 
+	local hum = char.Humanoid
+	local larm = char["Left Arm"] 
+	local lleg = char["Left Leg"] 
+	local rarm = char["Right Arm"] 
+	local rleg = char["Right Leg"] 
+	local LS = torso["Left Shoulder"] 
+	local LH = torso["Left Hip"] 
+	local RS = torso["Right Shoulder"] 
+	local RH = torso["Right Hip"] 
+	local neck = torso.Neck
+	local it = Instance.new
+	local vt = Vector3.new
+	local cf = CFrame.new
+	local euler = CFrame.fromEulerAnglesXYZ
+	local angles = CFrame.Angles
+	local neckC0 = cf(0, 1, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+	local neckC1 = cf(0, -0.5, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+	local LSC0 = cf(-1.5,.5,0)
+	local LSC1 = cf(0,.5,0)
+	local RSC0 = cf(1.5,.5,0)
+	local RSC1 = cf(0,.5,0)
+	local LHC0 = cf(-1,-1,0,-0,-0,-1,0,1,0,1,0,0)
+	local LHC1 = cf(-0.5,1,0,-0,-0,-1,0,1,0,1,0,0)
+	local RHC0 = cf(1,-1,0,0,0,1,0,1,0,-1,-0,-0)
+	local RHC1 = cf(0.5,1,0,0,0,1,0,1,0,-1,-0,-0)
+	local RP = char.HumanoidRootPart
+	local RJ = RP.RootJoint
+	local RJC0 = euler(-1.57,0,3.14)
+	music = Instance.new("Sound",torso)
+	music.SoundId = "rbxassetid://662401724"
+	music.Looped = true
+	music.Volume = 3
+	music:Play()
+	human = char:FindFirstChild("Humanoid")
+
+
+
+	sound22222243 = Instance.new("Sound",char)
+	sound22222243.SoundId = "rbxassetid://306410328"
+	sound22222243.Volume = 30
+
+
+
+
+
+
+	local har2 = Instance.new("Part", char.Head)
+	har2.BrickColor = BrickColor.new("Black")
+	har2.Name = "Hair" 
+	har2.formFactor = 0
+	har2.Size = Vector3.new(0,-0.25,0) 
+	har2.BottomSurface = 0 
+	har2.TopSurface = 0 
+	har2.CanCollide = false
+	Mesh2 = Instance.new("SpecialMesh",har2)
+	Mesh2.MeshId = "rbxassetid://1017165558"
+	Mesh2.TextureId = "rbxassetid://1017165624"
+	Mesh2.Scale=Vector3.new(1.01, .99, 1.01)
+	local bWeld2 = Instance.new("Weld", char.Head)
+	bWeld2.Part0 = char.Head
+	bWeld2.Part1 = har2
+	bWeld2.C1 = CFrame.new(0,-.2,-.2)
+
+
+	local handee = Instance.new("Part")
+	handee.Parent = char049
+	handee.Size = Vector3.new(0.2,0.2,0.2)
+	handee.Archivable = true
+	handee.Transparency = 1
+	handee.CanCollide = false
+	handee.BrickColor = BrickColor.new("Really red")
+	handee.Material = "Neon"
+	local handeemesh = Instance.new("BlockMesh",handee)
+	handeemesh.Scale = Vector3.new(1,1,1)
+	local handeeweld = Instance.new("Weld")
+	handeeweld.Parent = handee
+	handeeweld.Part0 = larm
+	handeeweld.Part1 = handee
+	handeeweld.C1 = CFrame.new(0, 1.85, 0)*CFrame.Angles(math.rad(0),math.rad(0),math.rad(0))
+	handeeweld.Part0 = larm
+
+
+
+	local particleemitter3 = Instance.new("ParticleEmitter", handee)
+	particleemitter3.VelocitySpread = 180
+	particleemitter3.Lifetime = NumberRange.new(2)
+	particleemitter3.Texture = "http://roblox.com/asset/?id=284205403"
+	particleemitter3.Speed = NumberRange.new(0.5)
+	particleemitter3.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 1)})
+	particleemitter3.RotSpeed = NumberRange.new(-45, 45)
+	particleemitter3.Rate = 40
+	particleemitter3.Rotation = NumberRange.new(-45, 45)
+	particleemitter3.Acceleration = Vector3.new(0,3,0)
+	particleemitter3.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0), NumberSequenceKeypoint.new(0.701, 0), NumberSequenceKeypoint.new(1, 1)})
+	particleemitter3.LightEmission = 0.8
+	particleemitter3.Color = ColorSequence.new(Color3.new(224, 0, 255), Color3.new(255,0,124))
+
+	particleemitter3.Enabled = true
+
+
+
+
+	local har3 = Instance.new("Part", char.Head)
+	har3.BrickColor = BrickColor.new("Black")
+	har3.Name = "Hair" 
+	har3.formFactor = 0
+	har3.Size = Vector3.new(0,-0.25,0) 
+	har3.BottomSurface = 0 
+	har3.TopSurface = 0 
+	har3.CanCollide = false
+	Mesh3 = Instance.new("SpecialMesh",har3)
+	Mesh3.MeshId = "rbxassetid://1018860047"
+	Mesh3.Scale=Vector3.new(1.01, .99, 1.01)
+	local bWeld = Instance.new("Weld", char.Head)
+	bWeld.Part0 = char.Head
+	bWeld.Part1 = har3
+	bWeld.C1 = CFrame.new(0,-.1,.3)
+
+
+
+
+
+	head.face:Destroy()
+
+	-- Build the weapon
+	local build = function()
+		local model = Instance.new("Model")
+		model.Name = "Cane"
+		local handle = Instance.new("Part", model)
+		handle.FormFactor = Enum.FormFactor.Symmetric
+		handle.CanCollide = false
+		handle.Size = Vector3.new(1,1,3)
+		handle.Name = "Handle"
+		local mesh = Instance.new("SpecialMesh",handle)
+		mesh.Scale = Vector3.new(1,1,0.69999998807907)
+		mesh.MeshId = "http://www.roblox.com/asset/?id=25628815"
+		mesh.TextureId = "http://www.roblox.com/asset/?id=25629094"
+		mesh.MeshType = Enum.MeshType.FileMesh
+		return model
+	end
+
+
+	-- Wait for mouse
+	local mouse
+	while true do
+		mouse = plr:GetMouse()
+		if mouse then break end
+		wait(.1)
+	end
+
+
+	for i,v in pairs(char:children()) do
+		if v:IsA("Hat") then
+			v:Destroy()
+		end
+		for i,v in pairs(char:children()) do
+			if v:IsA("Accessory") then
+				v:Destroy()
+			end
+		end
+	end
+
+
+
+	local har1 = Instance.new("Part", char.Head)
+	har1.BrickColor = BrickColor.new("Black")
+	har1.Name = "Hair" 
+	har1.formFactor = 0
+	har1.Size = Vector3.new(0,-0.25,0) 
+	har1.BottomSurface = 0 
+	har1.TopSurface = 0 
+	har1.CanCollide = false
+	Mesh = Instance.new("SpecialMesh",har1)
+	Mesh.MeshId = "rbxassetid://503202422"
+	Mesh.TextureId = "rbxassetid://503202424"
+	Mesh.Scale=Vector3.new(1.01, .99, 1.01)
+	local bWeld = Instance.new("Weld", char.Head)
+	bWeld.Part0 = char.Head
+	bWeld.Part1 = har1
+	bWeld.C1 = CFrame.new(0,-.5,-.1)
+
+
+
+	sound2222233 = Instance.new("Sound",char)
+	sound2222233.SoundId = "rbxassetid://811963661"
+	sound2222233.Volume = 30
+
+	---- [[ Left Eye]] ----
+
+	eye1 = Instance.new("Part", workspace)
+	eye1.Anchored = false
+	eye1.Parent = head
+	eye1.TopSurface = 0
+	eye1.BrickColor = BrickColor.new("Black")
+	eye1.BottomSurface = 0
+	eye1m = Instance.new("SpecialMesh", eye1)
+	eye1m.MeshType = Enum.MeshType.Sphere
+	eye1m.Scale = Vector3.new(0.02,0.12,0.03)
+	ogsize = eye1m.Scale
+	weld = Instance.new("Weld", head)
+	weld.Part0 = eye1
+	weld.Part1 = head
+	weld.C1 = CFrame.new(-.17,.14,-.57)
+
+
+
+	---- [[ Right Eye ]] ----
+
+
+	eye2 = Instance.new("Part", workspace)
+	eye2.Anchored = false
+	eye2.Parent = head
+	eye2.TopSurface = 0
+	eye2.BrickColor = BrickColor.new("Black")
+	eye2.BottomSurface = 0
+	eye2m = Instance.new("SpecialMesh", eye2)
+	eye2m.MeshType = Enum.MeshType.Sphere
+	eye2m.Scale = Vector3.new(0.02,0.12,0.03)
+	ogsize = eye2m.Scale
+	weld = Instance.new("Weld", head)
+	weld.Part0 = eye2
+	weld.Part1 = head
+	weld.C1 = CFrame.new(.17,.14,-.57)
+
+
+
+	-- Create welds 
+	local RW, LW = Instance.new("Weld",torso), Instance.new("Weld",torso)
+	RW.Name = "Right Weld" LW.Name = "Left Weld"
+	RW.Part0 = torso LW.Part0 = torso
+	RW.C0 = RSC0 RW.C1 = RSC1 LW.C0 = LSC0 LW.C1 = LSC1
+
+
+	-- Attach weapon
+	local canemodel = build()
+	local cane = canemodel:FindFirstChild("Handle")
+	canemodel.Parent = char
+	local caneweld = Instance.new("Weld", rarm)
+	caneweld.Part0 = rarm
+	caneweld.Part1 = cane
+	caneweldC0 = caneweld.C0 * CFrame.new(0,-1,1) * CFrame.Angles(math.rad(180),0,math.rad(90))
+	caneweld.C0 = caneweldC0
+	--------------------------------------------------------------------------------------------
+
+	-- Weapon variables
+	local caneEnd = cf(-.225,0,-1.5)
+
+
+	-- Sound effects
+	local sounds = {}
+	sounds.explosion = "http://www.roblox.com/asset/?id=87784452"
+	sounds.bewm = "http://www.roblox.com/asset/?id=2767090"
+	sounds.slice = "http://www.roblox.com/asset/?id=161006195"
+	sounds.charge = "http://roblox.com/asset/?id=2101137"
+	sounds.sharpblast = "http://roblox.com/asset/?id=2248511"
+	sounds.woosh = "http://roblox.com/asset/?id=147722227"
+	sounds.metalhit = "http://roblox.com/asset/?id=153092348"
+	sounds.mechblast = "http://roblox.com/asset/?id=169380505"
+	sounds.chargepulse = "http://roblox.com/asset/?id=10209296"
+	sounds.heal = "http://roblox.com/asset/?id=2101144"
+	sounds.zap = "http://roblox.com/asset/?id=10756104"
+	sounds.powernote = "http://roblox.com/asset/?id=192603389"
+	sounds.swing = "http://roblox.com/asset/?id=10209640"
+	sounds.hit = "http://roblox.com/asset/?id=10209590"
+
+
+	-- Base functions
+	local wait = function(t)
+		if t ~= nil then
+			return wait(t)
+		else
+			local t = tick()
+			game:GetService("RunService").RenderStepped:wait()
+			return tick() - t, time()
+		end
+	end
+	local nolines = function(p)
+		p.TopSurface, p.BottomSurface, p.LeftSurface, p.RightSurface, p.FrontSurface, p.BackSurface = 10, 10, 10, 10, 10, 10
+	end
+	local part = function(formfactor,parent,reflectance,transparency,brickcolor,name,size)
+		local fp = it("Part")
+		fp.formFactor = formfactor 
+		fp.Parent = parent
+		fp.Reflectance = reflectance
+		fp.Transparency = transparency
+		fp.CanCollide = false 
+		fp.Locked = true
+		fp.BrickColor = brickcolor
+		fp.Name = name
+		fp.Size = size
+		fp.Position = torso.Position 
+		fp.Material = "SmoothPlastic"
+		fp:BreakJoints()
+		nolines(fp)
+		return fp 
+	end 
+	local mesh = function(instance,part,meshtype,meshid,offset,scale)
+		local mesh = it(instance) 
+		mesh.Parent = part
+		if instance == "SpecialMesh" then
+			mesh.MeshType = meshtype
+			if meshid ~= nil then
+				mesh.MeshId = "http://www.roblox.com/asset/?id="..meshid
+			end
+		end
+		mesh.Offset=offset
+		mesh.Scale=scale
+		return mesh
+	end
+	local weld = function(parent,part0,part1,c0)
+		local weld = it("Weld") 
+		weld.Parent = parent
+		weld.Part0 = part0 
+		weld.Part1 = part1 
+		weld.C0 = c0
+		return weld
+	end
+	local rayCast = function(Pos, Dir, Max, Ignore)  -- Origin Position , Direction, MaxDistance , IgnoreDescendants
+		return game:service("Workspace"):FindPartOnRay(Ray.new(Pos, Dir.unit * (Max or 999.999)), Ignore) 
+	end
+	local rad = function(x,y,z)
+		return euler(math.rad(x or 0),math.rad(y or 0),math.rad(z or 0))
+	end
+	local random = function(a, b)
+		local num = math.random(a*100, b*100)
+		return num/100
+	end
+	local randomRot = function()
+		return rad(random(0,360),random(0,360),random(0,360))
+	end
+	local sound = function(id, par, vol, pit) 
+		coroutine.resume(coroutine.create(function()
+			local sou = Instance.new("Sound", par or workspace)
+			sou.Volume = vol
+			sou.Pitch = pit or 1
+			sou.SoundId = id
+			wait() 
+			sou:play() 
+			game:GetService("Debris"):AddItem(sou, 6)
+		end))
+	end
+	local damage = function(hit, minim, maxim, knockback, Type, Property, Delay, KnockbackType, incstun, stagger, staghit, ranged)
+		-- Fen's nasty and messy damage function
+		if hit.Parent == nil then
+			return
+		end
+		local h = hit.Parent:FindFirstChild("Humanoid")
+		for _, v in pairs(hit.Parent:children()) do
+			if v:IsA("Humanoid") then
+				h = v
+			end
+		end
+		if hit.Parent.Parent:FindFirstChild("Torso") ~= nil then
+			h = hit.Parent.Parent:FindFirstChild("Humanoid")
+		end
+		if hit.Parent.className == "Hat" then
+			hit = hit.Parent.Parent:findFirstChild("Head")
+		end
+		if h ~= nil and hit.Parent.Name ~= char.Name and hit.Parent:FindFirstChild("Torso") ~= nil then
+			if hit.Parent:findFirstChild("DebounceHit") ~= nil then
+				if hit.Parent.DebounceHit.Value == true then
+					return
+				end
+			end
+			local c = Instance.new("ObjectValue")
+			c.Name = "creator"
+			c.Value = game:service("Players").LocalPlayer
+			c.Parent = h
+			game:GetService("Debris"):AddItem(c, .5)
+			local Damage = random(minim, maxim)
+			local blocked = false
+			local enblock = nil
+			local Stats = hit.Parent:findFirstChild("Stats")
+			if Stats ~= nil then
+				enblock = Stats:findFirstChild("Block")
+				if Stats:findFirstChild("Defense") ~= nil then
+					Damage = Damage / Stats.Defense.Value
+				end
+				if Stats:findFirstChild("Stun") ~= nil then
+					Stats.Stun.Value = Stats.Stun.Value + incstun
+				end
+				if Stats:findFirstChild("Stagger") ~= nil then
+					if stagger == true then
+						Stats.Stagger.Value = true
+					end
+				end
+			end
+			if enblock ~= nil then
+				if enblock.Value == true then
+					blocked = true
+				end
+			end
+			if blocked == true then
+				if ranged ~= true then
+					enblock.Value = false
+				end
+			else
+				Damage = math.floor(Damage)
+				print("dam"..Damage)
+				sound(sounds.hit, hit, 1, 1)
+				h.Health = h.Health - Damage
+				if Type == "Knockdown" then
+					local hum = hit.Parent.Humanoid
+					hum.PlatformStand = true
+					coroutine.resume(coroutine.create(function(HHumanoid)
+						wait()
+						HHumanoid.PlatformStand = false
+					end), hum)
+					local angle = (hit.Position - (Property.Position + Vector3.new(0, 0, 0))).unit
+					local bodvol = Instance.new("BodyVelocity")
+					bodvol.velocity = angle * knockback
+					bodvol.P = 5000
+					bodvol.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+					bodvol.Parent = hit
+					local rl = Instance.new("BodyAngularVelocity")
+					rl.P = 3000
+					rl.maxTorque = Vector3.new(500000, 500000, 500000) * 50000000000000
+					rl.angularvelocity = Vector3.new(random(-10, 10), random(-10, 10), random(-10, 10))
+					rl.Parent = hit
+					game:GetService("Debris"):AddItem(bodvol, .5)
+					game:GetService("Debris"):AddItem(rl, .5)
+				elseif Type == "Knockdown2" then
+					local hum = hit.Parent.Humanoid
+					local angle = (hit.Position - (Property.Position + Vector3.new(0, 0, 0))).unit
+					local bodvol = Instance.new("BodyVelocity")
+					bodvol.velocity = angle * knockback
+					bodvol.P = 5000
+					bodvol.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+					bodvol.Parent = hit
+					game:GetService("Debris"):AddItem(bodvol, .5)
+				elseif Type == "Normal" or Type == "NormalDecreaseMvmt1" then
+					local vp = Instance.new("BodyVelocity")
+					vp.P = 500
+					vp.maxForce = Vector3.new(math.huge, 0, math.huge)
+					if KnockbackType == 1 then
+						vp.velocity = Property.CFrame.lookVector * knockback + Property.Velocity / 1.05
+					elseif KnockbackType == 2 then
+						vp.velocity = Property.CFrame.lookVector * knockback
+					end
+					game:GetService("Debris"):AddItem(vp, .5)
+					if knockback > 0 then
+						vp.Parent = hit.Parent.HumanoidRootPart,head,larm,rarm,lleg,rleg
+					end
+				end
+			end
+			local debounce = Instance.new("BoolValue")
+			debounce.Name = "DebounceHit"
+			debounce.Parent = hit.Parent
+			debounce.Value = true
+			game:GetService("Debris"):AddItem(debounce, Delay)
+			c = Instance.new("ObjectValue")
+			c.Name = "creator"
+			c.Value = plr
+			c.Parent = h
+			game:GetService("Debris"):AddItem(c, .5)
+		end
+	end
+	local fade = function(prt, t) 
+		coroutine.resume(coroutine.create(function()
+			for i = 0, 1, t do
+				wait(0)
+				prt.Transparency = i
+			end
+			wait(0)
+			prt:destroy()
+		end))
+	end
+	local block1 = function(prt, delay, x, y, z, msh)
+		coroutine.resume(coroutine.create(function()
+			for i = 0, 1, delay do
+				wait(0)
+				prt.CFrame = prt.CFrame * euler(random(-50, 50), random(-50, 50), random(-50, 50))
+				local Mesh = msh
+				Mesh.Scale = Mesh.Scale + vt(x, y, z)
+				prt.Transparency = i
+			end
+			wait(0)
+			prt:destroy()
+		end))
+	end
+	local block2 = function(prt, delay, x, y, z, msh)
+		coroutine.resume(coroutine.create(function()
+			for i = 0, 1, delay do
+				wait(0)
+				local Mesh = msh
+				Mesh.Scale = Mesh.Scale + vt(x, y, z)
+				prt.Transparency = i
+			end
+			wait(0)
+			prt:destroy()
+		end))
+	end
+	local cyleffect = function(prt, delay, x, y, z, msh)
+		coroutine.resume(coroutine.create(function()
+			for i = 0, 1, delay do
+				wait(0)
+				local Mesh = msh
+				Mesh.Scale = Mesh.Scale + vt(x, y, z)
+				prt.Transparency = i
+			end
+			wait(0)
+			prt:destroy()
+		end))
+	end
+	local CFrameFromTopBack = function(at, top, back)
+		local right = top:Cross(back)
+		return CFrame.new(at.x, at.y, at.z,
+			right.x, top.x, back.x,
+			right.y, top.y, back.y,
+			right.z, top.z, back.z)
+	end
+	local triangle = function(a, b, c)
+		local edg1 = (c - a):Dot((b - a).unit)
+		local edg2 = (a - b):Dot((c - b).unit)
+		local edg3 = (b - c):Dot((a - c).unit)
+		if edg1 <= (b - a).magnitude and edg1 >= 0 then
+			a, b, c = a, b, c
+		elseif edg2 <= (c - b).magnitude and edg2 >= 0 then
+			a, b, c = b, c, a
+		elseif edg3 <= (a - c).magnitude and edg3 >= 0 then
+			a, b, c = c, a, b
+		else 
+			assert(false, "unreachable")
+		end
+		local len1 = (c - a):Dot((b - a).unit)
+		local len2 = (b - a).magnitude - len1
+		local width = (a + (b - a).unit * len1 - c).magnitude
+		local maincf = CFrameFromTopBack(a, (b - a):Cross(c - b).unit, -(b - a).unit)
+		local list = {}
+		if len1 > 0.01 then
+			local w1 = Instance.new('WedgePart', m)
+			game:GetService("Debris"):AddItem(w1, 5)
+			w1.Material = "SmoothPlastic"
+			w1.FormFactor = 'Custom'
+			w1.BrickColor = BrickColor.new("Bright red")
+			w1.Transparency = 0
+			w1.Reflectance = 0
+			w1.Material = "SmoothPlastic"
+			w1.CanCollide = false
+			nolines(w1)
+			local sz = Vector3.new(0.2, width, len1)
+			w1.Size = sz
+			local sp = Instance.new("SpecialMesh", w1)
+			sp.MeshType = "Wedge"
+			sp.Scale = Vector3.new(0, 1, 1) * sz / w1.Size
+			w1:BreakJoints()
+			w1.Anchored = true
+			w1.Parent = workspace
+			w1.Transparency = 0.7
+			fade(w1)
+			w1.CFrame = maincf * CFrame.Angles(math.pi, 0, math.pi / 2) * CFrame.new(0, width / 2, len1 / 2)
+			table.insert(list, w1)
+		end
+		if len2 > 0.01 then
+			local w2 = Instance.new('WedgePart', m)
+			game:GetService("Debris"):AddItem(w2, 5)
+			w2.Material = "SmoothPlastic"
+			w2.FormFactor = 'Custom'
+			w2.BrickColor = BrickColor.new("Bright red")
+			w2.Transparency = 0
+			w2.Reflectance = 0
+			w2.Material = "SmoothPlastic"
+			w2.CanCollide = false
+			nolines(w2)
+			local sz = Vector3.new(0.2, width, len2)
+			w2.Size = sz
+			local sp = Instance.new("SpecialMesh", w2)
+			sp.MeshType = "Wedge"
+			sp.Scale = Vector3.new(0, 1, 1) * sz / w2.Size
+			w2:BreakJoints()
+			w2.Anchored = true
+			w2.Parent = workspace
+			w2.Transparency = 0.7
+			fade(w2)
+			w2.CFrame = maincf * CFrame.Angles(math.pi, math.pi, -math.pi / 2) * CFrame.new(0, width / 2, -len1 - len2 / 2)
+			table.insert(list, w2)
+		end
+		return unpack(list)
+	end
+
+	sound2222224 = Instance.new("Sound",char)
+	sound2222224.SoundId = "rbxassetid://670444721"
+	sound2222224.Volume = 30
+	-- Magic effects
+	local magic = {}
+	magic.stravant = function(brickcolor, cframe, x, y, z, x1, y1, z1, delay)
+		local prt = part(3, workspace, 0, 0, brickcolor, "Effect", vt(0.5, 0.5, 0.5))
+		prt.Anchored = true
+		prt.CFrame = cframe * cf(x, y, z)
+		local msh = mesh("SpecialMesh", prt, "FileMesh", "rbxassetid://168892363", vt(0, 0, 0), vt(x1, y1, z1))
+		game:GetService("Debris"):AddItem(prt, 5)
+		coroutine.resume(coroutine.create(function(Part, Mesh, ex, why, zee) 
+			local num = random()
+			local num2 = random(-3, 2) + random()
+			local numm = 0
+			for i = 0, 1, delay * 2 do
+				wait()
+				Part.CFrame = cframe * euler(0, numm * num * 10, 0) * cf(ex, why, zee) * cf(-i * 10, num2, 0)
+				Part.Transparency = i
+				numm = numm + 0.01
+			end
+			Part.Parent = nil
+			Mesh.Parent = nil
+		end), prt, msh, x, y, z)
+	end
+	magic.block = function(brickcolor, cframe, x1, y1, z1, x3, y3, z3, delay, Type, par)
+		local prt = part(3, par or workspace, 0, 0, brickcolor, "Effect", vt())
+		prt.Anchored = true
+		prt.CFrame = cframe
+		local msh = mesh("BlockMesh", prt, "", "", vt(0, 0, 0), vt(x1, y1, z1))
+		game:GetService("Debris"):AddItem(prt, 5)
+		if Type == 1 or Type == nil then
+			block1(prt, delay, x3, y3, z3, msh)
+		elseif Type == 2 then
+			block2(prt, delay, x3, y3, z3, msh)
+		end
+	end
+	magic.circle = function(brickcolor, cframe, x1, y1, z1, x3, y3, z3, delay, par)
+		local prt = part(3, par or workspace, 0, 0, brickcolor, "Effect", vt())
+		prt.Anchored = true
+		prt.CFrame = cframe
+		local msh = mesh("SpecialMesh", prt, "Sphere", nil, vt(0, 0, 0), vt(x1, y1, z1))
+		game:GetService("Debris"):AddItem(prt, 2)
+		cyleffect(prt, delay, x3, y3, z3, msh)
+	end
+	magic.cylinder = function(brickcolor, cframe, x1, y1, z1, x3, y3, z3, delay)
+		local prt = part(3, workspace, 0, 0, brickcolor, "Effect", vt())
+		prt.Anchored = true
+		prt.CFrame = cframe
+		local msh = mesh("CylinderMesh", prt, "", "", vt(0, 0, 0), vt(x1, y1, z1))
+		game:GetService("Debris"):AddItem(prt, 2)
+		cyleffect(prt, delay, x3, y3, z3, msh)
+	end
+	magic.head = function(brickcolor, cframe, x1, y1, z1, x3, y3, z3, delay)
+		local prt = part(3, workspace, 0, 0, brickcolor, "Effect", vt())
+		prt.Anchored = true
+		prt.CFrame = cframe
+		local msh = mesh("SpecialMesh", prt, "Head", nil, vt(0, 0, 0), vt(x1, y1, z1))
+		game:GetService("Debris"):AddItem(prt, 2)
+		cyleffect(prt, delay, x3, y3, z3, msh)
+	end
+	magic.wave = function(brickcolor, cframe, x1, y1, z1, x3, y3, z3, delay)
+		local prt = part(3, workspace, 0, 0, brickcolor, "Effect", vt())
+		prt.Anchored = true
+		prt.CFrame = cframe
+		local msh = mesh("SpecialMesh", prt, "FileMesh", "http://www.roblox.com/asset/?id=20329976", vt(0, 0, 0), vt(x1, y1, z1))
+		game:GetService("Debris"):AddItem(prt, 5)
+		cyleffect(prt, delay, x3, y3, z3, msh)
+	end
+	magic.lightning = function(p0, p1, tym, ofs, col, th, tra, last, par)
+		local magz = (p0 - p1).magnitude
+		local curpos = p0
+		local trz = {
+			-ofs,
+			ofs
+		}
+		for i = 1, tym do 
+			local li = Instance.new("Part", par or workspace)
+			li.TopSurface = 0
+			li.BottomSurface = 0
+			li.Anchored = true
+			li.Transparency = tra or 0.4
+			li.BrickColor = BrickColor.new(col)
+			li.Material = "Neon"
+			li.formFactor = "Custom"
+			li.CanCollide = false
+			li.Size = Vector3.new(th, th, magz / tym)
+			local ofz = Vector3.new(random(trz[1],trz[2]), random(trz[1],trz[2]), random(trz[1],trz[2])) 
+			local trolpos = CFrame.new(curpos, p1) * CFrame.new(0, 0, magz / tym).p + ofz
+			if tym == i then 
+				local magz2 = (curpos - p1).magnitude
+				li.Size = Vector3.new(th, th, magz2)
+				li.CFrame = CFrame.new(curpos, p1) * CFrame.new(0, 0, -magz2 / 2)
+			else
+				li.CFrame = CFrame.new(curpos, trolpos) * CFrame.new(0, 0, magz / tym / 2)
+			end
+			curpos = li.CFrame * CFrame.new(0, 0, magz / tym / 2).p
+			game.Debris:AddItem(li, last)
+		end
+	end
+
+
+	-- Logic variables
+	local equipped = false
+	local attacking = false
+
+	-- Effect handling
+	local charfx = Instance.new("Model", char)
+	charfx.Name = "Effects"
+	local toggles = {
+		snow = false;
+		lmagic = false;
+		rmagic = false;
+		canemagic = false;
+	}
+	local snowTick = 0
+	local lmagicTick = 0
+	local rmagicTick = 0
+	local canemagicTick = 0
+	local snowMeshes = {
+		"rbxassetid://434057826";
+		"rbxassetid://434057826";
+		"rbxassetid://434057826";
+
+	}
+
+	-- Pose system
+	local poses = {
+		none = {
+			larm = euler(0, 0, 0);
+			rarm = euler(0, 0, 0);
+			lleg = euler(0, 0, 0);
+			rleg = euler(0, 0, 0);
+			torso = euler(0, 0, 0);
+			head = euler(0, 0, 0);
+			cane = euler(0, 0, 0);
+		}
+	}
+	local pose = "none"
+	local posespeed = .1
+	local newpose = function(name, larm, rarm, torso, head, lleg, rleg, cane)
+		poses[name] = {
+			larm = larm or rad();
+			rarm = rarm or rad();
+			lleg = lleg or rad();
+			rleg = rleg or rad();
+			torso = torso or rad();
+			head = head or rad();
+			cane = cane or rad();
+		}
+	end
+	local setpose = function(name, speed)
+		posespeed = speed or 1
+		pose = name or "none"
+	end
+	game:GetService("RunService").RenderStepped:connect(function()
+		local vel = (RP.Velocity*Vector3.new(1,0,1)).magnitude
+		local yvel = RP.Velocity.y
+		local hitfloor,posfloor=rayCast(RP.Position,(CFrame.new(RP.Position,RP.Position - Vector3.new(0,1,0))).lookVector,4,char)
+		if yvel > 1 and hitfloor == nil and equipped and not attacking then 
+			setpose("jumping",.2)
+		elseif yvel < -1 and hitfloor == nil and equipped and not attacking then
+			setpose ("falling",.075)
+		elseif vel < 1 and hitfloor ~= nil and equipped and not attacking then
+			setpose("idle",.1)
+		elseif vel > 2 and vel < 22 and hitfloor ~= nil and equipped and not attacking then
+			setpose("walking",.1)
+		end
+		if poses[pose] ~= nil then
+			local pose = poses[pose]
+			LW.C0 = LW.C0:lerp(LSC0 * pose.larm, posespeed)
+			RW.C0 = RW.C0:lerp(RSC0 * pose.rarm, posespeed)
+			LH.C0 = LH.C0:lerp(LHC0 * pose.lleg, posespeed)
+			RH.C0 = RH.C0:lerp(RHC0 * pose.rleg, posespeed)
+			RJ.C0 = RJ.C0:lerp(RJC0 * pose.torso, posespeed)
+			neck.C0 = neck.C0:lerp(neckC0 * pose.head, posespeed)
+			caneweld.C0 = caneweld.C0:lerp(caneweldC0 * pose.cane, posespeed)
+		end
+		if toggles.snow == true then
+			if snowTick % 15 == 0 then
+				local p = Instance.new("Part")
+				local m = Instance.new("SpecialMesh", p)
+				m.MeshId = snowMeshes[math.random(1, #snowMeshes)]
+				m.TextureId = "rbxassetid://434057827"
+				m.Scale = Vector3.new(2,2,2)
+				local q = Instance.new("BodyVelocity")
+				p.BrickColor = BrickColor.new("Hot pink")
+				p.Parent = charfx
+				p.Shape = 1
+				p.Size = Vector3.new(.5, .5, .5)
+				p.Transparency = .3
+				p.Locked = true
+				p.Anchored = false
+				p.CanCollide = false
+				p.formFactor = "Plate"
+				p.CFrame = torso.CFrame * cf(Vector3.new((random(-75, 75)),50,(random(-75,75)))) * randomRot()
+				q.velocity = Vector3.new(0, -10, 0)
+				q.Parent = p
+				p.Touched:connect(function()
+					p:destroy()
+				end)
+			end
+			snowTick = snowTick + 1
+		end
+		if toggles.lmagic then
+			if lmagicTick % 15 == 0 then
+				magic.block(BrickColor.new("Hot pink"),larm.CFrame*cf(0,-1,0),1,1,1,.5,.5,.5,.065,nil,charfx)
+			end
+			lmagicTick = lmagicTick + 1
+		end
+		if toggles.rmagic then
+			if rmagicTick % 15 == 0 then
+				magic.block(BrickColor.new("Hot pink"),rarm.CFrame*cf(0,-1,0),1,1,1,.5,.5,.5,.065,nil,charfx)
+			end
+			rmagicTick = rmagicTick + 1
+		end
+		if toggles.canemagic then
+			if canemagicTick % 15 == 0 then
+				magic.block(BrickColor.new("Hot pink"),cane.CFrame*caneEnd,1,1,1,.5,.5,.5,.065,nil,charfx)
+			end
+			canemagicTick = canemagicTick + 1
+		end
+	end)
+	human = char:FindFirstChild("Humanoid")
+	human.MaxHealth, human.Health = math.huge,math.huge
+
+	m=Instance.new("ForceField", char)
+	m.Visible = false
+
+
+
+	local HBill = Instance.new("BillboardGui", head)
+	local HMain, HBarBack, HBar = Instance.new("Frame", HBill), Instance.new("Frame"), Instance.new("Frame")
+	local HHealth, HName = Instance.new("TextLabel", HBarBack), Instance.new("TextLabel")
+	HBill.Size = UDim2.new(15,0,2.2,0)
+	HBill.Name = "Health Display"
+	HBill.StudsOffset = Vector3.new(0,4,0)
+	HBill.AlwaysOnTop = true
+	HBill.Enabled = true
+	HMain.BackgroundColor3 = Color3.new(255,255,255  )
+	HMain.BackgroundTransparency = 0.6
+	HMain.Size = UDim2.new(1,0,1,0)
+	HBarBack.Parent = HMain
+	HBarBack.BackgroundColor3 = Color3.new(137,137,137)
+	HBarBack.BorderColor3 = Color3.new(0,0,0)
+	HBarBack.BorderSizePixel = 2
+	HBarBack.Position = UDim2.new(.025, 0, .55, 0)
+	HBarBack.Size = UDim2.new(.95, 0, .3, 0)
+	HHealth.BackgroundTransparency = 1
+	HHealth.Size = UDim2.new(1,0,1,0)
+	HHealth.Font = "Bodoni"
+	HHealth.Text = "An Inhuman!"
+	HHealth.TextScaled = true
+	HHealth.TextColor3 = Color3.new(1,1,1)
+	HHealth.TextStrokeColor3 = BrickColor.new("Hot pink").Color
+	HHealth.TextStrokeTransparency = 0
+	HName.Parent = HMain
+	HName.BackgroundTransparency = 1
+	HName.Size = UDim2.new(1,0,.5,0)
+	HName.Font = "Code"
+	HName.Text = "THE TRUE JELLYFISHER"
+	HName.TextScaled = true
+	HName.TextColor3 = BrickColor.new("Toothpaste").Color
+	HName.TextStrokeColor3 = Color3.new(255,0,124)
+	HName.TextStrokeTransparency = 0
+	HName.TextYAlignment = "Top"
+	-- Weapon setup
+	local bin = Instance.new("HopperBin",backpack)
+	bin.Name = "Cane"
+	script.Parent = bin
+
+	-- Weapon poses
+	newpose("idle", rad(-5,5,0), rad(0,0,50), rad(0,-2,-15), rad(0,-3,15), rad(0,15,0), rad(0,15,0), rad(90,-45,170)*CFrame.new(0,-1,-1.5))
+	newpose("jumping", rad(-20, 0, -10), rad(-20, 0, 10), rad(-10, 0, 0), rad(0, 0, 0), rad(0, 0, 15), rad(0, 0, 0)*CFrame.new(.35,.35,0))
+	newpose("falling", rad(0, 0, -50), rad(0, 0, 50), rad(0, 0, 0), rad(20, 0, 0), rad(0, 0, 0), rad(0, 0, 0)*CFrame.new(.15,.15,0))
+	newpose("walking", rad(-5,5,-15), rad(-20,0,20), rad(5,0,0), rad(0,0,0), rad(0,0,0), rad(0,0,0))
+
+	-- Attack poses
+	newpose("larmcharge", rad(0,-15,-135), rad(0,0,50), rad(0,-2,-15), rad(-15,-15,50), rad(0,15,0), rad(0,15,0), rad(90,-45,170)*CFrame.new(0,-1,-1.5))
+	newpose("canecharge", rad(45,0,30), rad(0,0,150), rad(0,0,-35), rad(-20,0,0), rad(0,35,0), rad(0,35,0), rad(90,-135,170)*CFrame.new(0,-1,-1.5))
+	newpose("clickattack1_1", rad(20,0,15), rad(0,-15,125), rad(0,-2,-35), rad(0,-3,35), rad(0,35,0), rad(0,35,0), rad(90,-165,180)*CFrame.new(0,-1,-1.5))
+	newpose("clickattack1_2", rad(-20,0,-15), rad(0,100,65), rad(0,-2,45), rad(10,-10,-25), rad(0,-45,0), rad(0,-45,0), rad(90,-110,180)*CFrame.new(0,-1,-1.5))
+	newpose("clickattack2_1", rad(-45,0,-45), rad(0,150,65), rad(0,-2,65), rad(10,-10,-45), rad(0,-65,0), rad(0,-65,0), rad(90,-135,180)*CFrame.new(0,-1,-1.5))
+	newpose("clickattack2_2", rad(-15,0,-60), rad(0,-15,70), rad(0,-2,-35), rad(0,-3,35), rad(0,35,0), rad(0,35,0), rad(90,-110,180)*CFrame.new(0,-1,-1.5))
+	newpose("clickattack3_1", rad(-15,0,-60), rad(0,-15,125), rad(0,-2,-45), rad(0,-3,45), rad(0,45,0), rad(0,45,0), rad(90,-165,180)*CFrame.new(0,-1,-1.5))
+	newpose("clickattack3_2", rad(-20,0,-75), rad(-90,0,110), rad(0,0,75), rad(10,-10,-60), rad(0,-80,30), rad(0,-80,0), rad(90,-90,180)*CFrame.new(0,-1,-1.5))
+	newpose("clickattack4_1", rad(0,0,-90), rad(0,0,125), rad(0,0,-90), rad(0,0,90), rad(0,35,0), rad(0,35,0), rad(90,-165,180)*CFrame.new(0,-1,-1.5))
+	newpose("clickattack4_2", rad(0,0,-135), rad(0,0,125), rad(0,0,-90), rad(0,0,90), rad(0,35,0), rad(0,35,0), rad(90,-165,180)*CFrame.new(0,-1,-1.5))
+
+	-- Weapon usage (edit to liking)
+	local equip = function()
+		equipped = true
+		if attacking then
+			repeat
+				wait()
+			until not attacking
+		end
+		attacking = true
+		if not equipped then
+			attacking = false
+			return
+		end
+		LW.Part1 = larm
+		RW.Part1 = rarm
+		LS.Part1 = nil
+		RS.Part1 = nil
+		attacking = false
+		setpose("idle", .085)
+	end
+	local unequip = function()
+		equipped = false
+		if attacking then
+			repeat
+				wait()
+			until not attacking
+		end
+		if equipped then
+			return
+		end
+		setpose("none", .1)
+		wait(.65)
+		if equipped then
+			return
+		end
+		LS.Part1 = larm
+		RS.Part1 = rarm
+		LW.Part1 = nil
+		RW.Part1 = nil
+	end
+	local keypress = function(key)
+		if attacking or not equipped then return end
+		if key == "b" then
+			music:Stop()
+			sound222223 = Instance.new("Sound",char)
+			sound222223.SoundId = "rbxassetid://138082524"
+			sound222223.Volume = 30
+			sound222223:Play()
+			attacking = true
+			print("B for welp....nothing?")
+			hum.WalkSpeed = 16
+			setpose("larmcharge", .1)
+			wait(.3)
+			toggles.lmagic = true
+			wait(1.5)
+			toggles.lmagic = false
+			particleemitter3.Color = ColorSequence.new(Color3.new(224, 0, 255), Color3.new(255,0,124))
+			magic.circle(BrickColor.new("Hot pink"), larm.CFrame*CFrame.new(0,-1,0), 1, 1, 1, 1.2, 1.2, 1.2, .04, charfx)
+			toggles.snow = not toggles.snow
+			print(""..(toggles.snow and "JELLYFISHING???" or "No? okay....B"))
+			wait(.5)
+			hum.WalkSpeed = 16
+			attacking = false
+			music:Resume()
+			sound2222224:Stop()
+			sound2222233:Stop()
+			sound222223444:Stop()
+			sound22222243:Stop()
+		end
+		if key == "x" then
+			music:Stop()
+			sound22222 = Instance.new("Sound",char)
+			sound22222.SoundId = "rbxassetid://345287845"
+			sound22222.Volume = 30
+			sound22222:Play()
+			attacking = true
+			print("JELLYFISHING?")
+			hum.WalkSpeed = 12
+			toggles.canemagic = true
+			setpose("canecharge", .1)
+			wait(.5)
+			setpose("clickattack3_2", .175)
+			wait(.3)
+			particleemitter3.Color = ColorSequence.new(Color3.new(224, 0, 255), Color3.new(255,0,124))
+			magic.circle(BrickColor.new("Hot pink"), cane.CFrame*caneEnd, .2, .2, .3, 6, 6, 0, .075)
+			hum.WalkSpeed = 16
+			print("JELLYFISH ZAP")
+			for i = 1, 50 do
+				local prt,hit = rayCast(cane.CFrame*caneEnd.p,((cane.CFrame*caneEnd).p - (cane.CFrame*(caneEnd*CFrame.new(0,0,1))).p).unit, 100, char)
+				magic.lightning((cane.CFrame*caneEnd).p, hit, 20, 1, "Hot pink", .1, .2, .15, charfx)
+				if prt and prt.Parent:FindFirstChild("Humanoid") then
+					damage(prt, 50, 70, 100, "Knockdown", RP, 0, 0, random(0, 1), nil, true)
+				end
+				wait(.02)
+			end
+			toggles.canemagic = false
+			hum.WalkSpeed = 16
+			attacking = false
+			music:Resume()
+			sound2222233:Stop()
+			sound2222224:Stop()
+			sound222223444:Stop()
+			sound22222243:Stop()
+		end
+		if key == "v" then
+			music:Stop()
+			sound222222 = Instance.new("Sound",char)
+			sound222222.SoundId = "rbxassetid://949916584"
+			sound222222.Volume = 30
+			sound222222:Play()
+			attacking = true
+			print("They Shall Go...")
+			hum.WalkSpeed = 12
+			toggles.canemagic = true
+			setpose("canecharge", .1)
+			wait(.5)
+			setpose("clickattack3_2", .175)
+			wait(.3)
+			particleemitter3.Color = ColorSequence.new(Color3.new(255, 0, 0), Color3.new(255,0,0))
+			magic.block(BrickColor.new("Really red"),cane.CFrame*caneEnd,1,1,1,.5,.5,.5,.065,nil,charfx)
+			magic.circle(BrickColor.new("Really red"), cane.CFrame*caneEnd, 500, 500, 500, 500, 500, 500, 500)
+			hum.WalkSpeed = 16
+			print("Begone...Thot")
+			for i = 1, 10 do
+				local prt,hit = rayCast(cane.CFrame*caneEnd.p,((cane.CFrame*caneEnd).p - (cane.CFrame*(caneEnd*CFrame.new(0,0,1))).p).unit, 100, char)
+				magic.lightning((cane.CFrame*caneEnd).p, hit, 20, 1, "Really red", .1, .2, .15, charfx)
+				if prt and prt.Parent:FindFirstChild("Humanoid") then
+					damage(prt, math.huge, math.huge, math.huge, "Knockdown", RP, math.huge, math.huge, random(math.huge, math.huge), nil, true)
+				end
+				wait(.02)
+			end
+			toggles.canemagic = false
+			hum.WalkSpeed = 16
+			attacking = false
+			music:Resume()
+			sound2222233:Stop()
+			sound2222224:Stop()
+			sound222223444:Stop()
+			sound22222243:Stop()
+		end
+		if key == "q" then
+			music:Stop()
+			sound2222233:Play()
+			attacking = true
+			print("Q for queer")
+			hum.WalkSpeed = 500
+			toggles.canemagic = true
+			setpose("canecharge", .1)
+			wait(.5)
+			setpose("clickattack3_2", .175)
+			wait(.3)
+			particleemitter3.Color = ColorSequence.new(Color3.new(0, 255, 232), Color3.new(0,255,232))
+			magic.block(BrickColor.new("Cyan"),cane.CFrame*caneEnd,1,1,1,.5,.5,.5,.065,nil,charfx)
+			magic.circle(BrickColor.new("Cyan"), cane.CFrame*caneEnd, .2, .2, .3, 6, 6, 0, .075)
+			hum.WalkSpeed = 500
+			print("MAXIMUM OVERDRIVE VU")
+			for i = 1, 50 do
+				local prt,hit = rayCast(cane.CFrame*caneEnd.p,((cane.CFrame*caneEnd).p - (cane.CFrame*(caneEnd*CFrame.new(0,0,1))).p).unit, 100, char)
+				magic.lightning((cane.CFrame*caneEnd).p, hit, 10, 10, "Cyan", 10, 10, 10, charfx)
+				if prt and prt.Parent:FindFirstChild("Humanoid") then
+					damage(prt, 50, 70, 100, "Knockdown", RP, 0, 0, random(0, 1), nil, true)
+				end
+				toggles.canemagic = false
+				hum.WalkSpeed = 500
+				attacking = false
+				sound2222224:Stop()
+				sound22222243:Stop()
+			end
+		elseif key == "p" then
+			music:Stop()
+			sound2222224:Play()
+			attacking = true
+			print("Why did you press this????")
+			hum.WalkSpeed = 12
+			toggles.canemagic = true
+			setpose("canecharge", .1)
+			wait(.5)
+			setpose("clickattack4_2", .175)
+			wait(.3)
+			particleemitter3.Color = ColorSequence.new(Color3.new(255, 255, 0), Color3.new(255,255,0))
+			magic.block(BrickColor.new("New Yeller"),cane.CFrame*caneEnd,1,1,1,.5,.5,.5,.065,nil,charfx)
+			magic.block(BrickColor.new("New Yeller"),larm.CFrame*cf(0,-1,0),1,1,1,.5,.5,.5,.065,nil,charfx)
+			magic.circle(BrickColor.new("New Yeller"), cane.CFrame*caneEnd, 500, 500, 500, 500, 500, 500, 500)
+			hum.WalkSpeed = 16
+			print("e.e My life")
+			for i = 1, 10 do
+				local prt,hit = rayCast(cane.CFrame*caneEnd.p,((cane.CFrame*caneEnd).p - (cane.CFrame*(caneEnd*CFrame.new(0,0,1))).p).unit, 100, char)
+				magic.lightning((cane.CFrame*caneEnd).p, hit, 20, 1, "New Yeller", .1, .2, .15, charfx)
+				sound(sounds.zap,cane,random(.75,1),random(.75,1.25))
+				if prt and prt.Parent:FindFirstChild("Humanoid") then
+					damage(prt, math.huge, math.huge, math.huge, "Knockdown", RP, math.huge, math.huge, random(math.huge, math.huge), nil, true)
+				end
+				wait(.02)
+			end
+			toggles.canemagic = false
+			hum.WalkSpeed = 16
+			attacking = false
+			sound2222233:Stop()
+			sound222223444:Stop()
+			sound22222243:Stop()
+			wait(10)
+			human.MaxHealth, human.Health = 0,0
+			print('ded')
+		end
+		if key == "c" then
+			music:Stop()
+			sound222223444:Play()
+			attacking = true
+			print("CATGROOVY")
+			hum.WalkSpeed = 12
+			toggles.canemagic = true
+			setpose("canecharge", .1)
+			wait(.5)
+			setpose("clickattack1_2", .175)
+			wait(.3)
+			particleemitter3.Color = ColorSequence.new(Color3.new(137, 137, 137), Color3.new(137,137,137))
+			magic.block(BrickColor.new("Dark stone grey"),cane.CFrame*caneEnd,1,1,1,.5,.5,.5,.065,nil,charfx)
+			magic.circle(BrickColor.new("Dark stone grey"), cane.CFrame*caneEnd, .2, .2, .3, 6, 6, 0, .075)
+			hum.WalkSpeed = 16
+			print("Seems legit")
+			for i = 1, 50 do
+				local prt,hit = rayCast(cane.CFrame*caneEnd.p,((cane.CFrame*caneEnd).p - (cane.CFrame*(caneEnd*CFrame.new(0,0,1))).p).unit, 100, char)
+				magic.lightning((cane.CFrame*caneEnd).p, hit, 10, 10, "Dark stone grey", 10, 10, 10, charfx)
+				if prt and prt.Parent:FindFirstChild("Humanoid") then
+					damage(prt, 50, 70, 100, "Knockdown", RP, 0, 0, random(0, 1), nil, true)
+				end
+				toggles.canemagic = false
+				hum.WalkSpeed = 16
+				attacking = false
+				sound2222224:Stop()
+				sound2222233:Stop()
+			end
+		end
+
+		if key == "r" then
+			music:Stop()
+			sound22222243:Play()
+			attacking = true
+			print("Water THOSE!")
+			hum.WalkSpeed = 12
+			toggles.canemagic = true
+			setpose("canecharge", .1)
+			wait(.5)
+			setpose("clickattack3_2", .175)
+			wait(.3)
+			particleemitter3.Color = ColorSequence.new(Color3.new(0, 0, 255), Color3.new(0,0,255))
+			magic.block(BrickColor.new("Really blue"),cane.CFrame*caneEnd,1,1,1,.5,.5,.5,.065,nil,charfx)
+			magic.circle(BrickColor.new("Really blue"), cane.CFrame*caneEnd, .2, .2, .3, 6, 6, 0, .075)
+			hum.WalkSpeed = 16
+			print("But I don't want t00")
+			for i = 1, 50 do
+				local prt,hit = rayCast(cane.CFrame*caneEnd.p,((cane.CFrame*caneEnd).p - (cane.CFrame*(caneEnd*CFrame.new(0,0,1))).p).unit, 100, char)
+				magic.lightning((cane.CFrame*caneEnd).p, hit, 0.1, 5, "Really blue", 1, 2, 4, charfx)
+				if prt and prt.Parent:FindFirstChild("Humanoid") then
+					damage(prt, 50, 70, 100, "Knockdown", RP, 0, 0, random(0, 1), nil, true)
+				end
+				toggles.canemagic = false
+				hum.WalkSpeed = 16
+				attacking = false
+				sound2222224:Stop()
+				sound2222233:Stop()
+				sound222223444:Stop()
+			end
+		end
+	end
+	local combo = 0
+	local clicked = function(hit)
+		if attacking or not equipped then return end
+		if combo == 0 then
+			attacking = true
+			combo = combo + 1
+			print("swing"..combo)
+			setpose("clickattack1_1", .165)
+			wait(.125)
+			local dam1 = cane.Touched:connect(function(hit)
+				if hit.Parent:FindFirstChild("Humanoid") and hit.Parent ~= char then
+					damage(hit, 10, 15, .25, "Normal", RP, .5, 1, random(3, 10), nil, true)
+				end
+			end)
+			local dam2 = rarm.Touched:connect(function(hit)
+				if hit.Parent:FindFirstChild("Humanoid") and hit.Parent ~= char then
+					damage(hit, 10, 15, .25, "Normal", RP, .5, 1, random(3, 10), nil, true)
+				end
+			end)
+			setpose("clickattack1_2", .185)
+			sound(sounds.swing,cane,.5,random(1,1.5))
+			wait(.35)
+			dam1:disconnect()
+			dam2:disconnect()
+			attacking = false
+			wait(1)
+			if combo == 1 then
+				combo = 0
+				print("ded")
+			end
+		elseif combo == 1 then
+			attacking = true
+			combo = combo + 1
+			print("swing"..combo)
+			setpose("clickattack2_1", .15)
+			wait(.125)
+			local dam1 = cane.Touched:connect(function(hit)
+				if hit.Parent:FindFirstChild("Humanoid") and hit.Parent ~= char then
+					damage(hit, 10, 15, .25, "Normal", RP, .5, 1, random(3, 10), nil, true)
+				end
+			end)
+			local dam2 = rarm.Touched:connect(function(hit)
+				if hit.Parent:FindFirstChild("Humanoid") and hit.Parent ~= char then
+					damage(hit, 10, 15, .25, "Normal", RP, .5, 1, random(3, 10), nil, true)
+				end
+			end)
+			setpose("clickattack2_2", .14)
+			sound(sounds.swing,cane,.5,random(1,1.5))
+			for i = 1, 5 do
+				torso.Velocity = RP.CFrame.lookVector * 45
+				wait()
+			end
+			wait(.25)
+			dam1:disconnect()
+			dam2:disconnect()
+			attacking = false
+			wait(1)
+			if combo == 2 then
+				combo = 0
+				print("ded")
+			end
+		elseif combo == 2 then
+			attacking = true
+			combo = combo + 1
+			print("swing"..combo)
+			setpose("clickattack3_1", .15)
+			wait(.2)
+			local dam1 = cane.Touched:connect(function(hit)
+				if hit.Parent:FindFirstChild("Humanoid") and hit.Parent ~= char then
+					damage(hit, 10, 15, .25, "Normal", RP, .5, 1, random(3, 10), nil, true)
+				end
+			end)
+			local dam2 = rarm.Touched:connect(function(hit)
+				if hit.Parent:FindFirstChild("Humanoid") and hit.Parent ~= char then
+					damage(hit, 10, 15, .25, "Normal", RP, .5, 1, random(3, 10), nil, true)
+				end
+			end)
+			setpose("clickattack3_2", .2)
+			sound(sounds.swing,cane,.5,random(.5,1))
+			for i = 1, 5 do
+				torso.Velocity = RP.CFrame.lookVector * 55
+				wait()
+			end
+			wait(.3)
+			dam1:disconnect()
+			dam2:disconnect()
+			attacking = false
+			wait(.5)
+			if combo == 3 then
+				combo = 0
+				print("ded")
+			end
+		elseif combo == 3 then
+			attacking = true
+			combo = combo + 1
+			print("swing"..combo)
+			setpose("clickattack4_1", .18)
+			sound(sounds.swing,cane,.5,random(1,1.5))
+			wait(.3)
+			local bewmcf = larm.CFrame*cf(0,-3,0)
+			local bewmrange = 7.5
+			for i = 1, 2 do
+				particleemitter3.Color = ColorSequence.new(Color3.new(255, 255, 0), Color3.new(255,255,0))
+				magic.block(BrickColor.new("New Yeller"), bewmcf, 1, 1, 1, 2, 2, 2, .075)
+			end
+			for _,v in pairs(game.Workspace:GetChildren()) do
+				if v:FindFirstChild("Torso") and v.Torso:IsA("Part") then
+					local vtor = v.Torso
+					local dist = (bewmcf.p - vtor.Position).magnitude
+					if dist <= bewmrange then
+						damage(vtor, 20, 30, .5, "Normal", RP, .5, 1, random(3, 10), nil, true)
+					end
+				end
+			end
+			sound(sounds.bewm,rarm,1,random(1,2))
+			print("bewm")
+			setpose("clickattack4_2", .165)
+			wait(.175)
+			attacking = false
+			wait(.5)
+			if combo == 4 then
+				combo = 0
+				print("ded")
+			end
+		end
+	end
+	bin.Selected:connect(equip)
+	bin.Deselected:connect(unequip)
+	mouse.Button1Down:connect(clicked)
+	mouse.KeyDown:connect(keypress)
+
+
+
+
+
+	local scrn = Instance.new("ScreenGui", p.PlayerGui)
+	ud = UDim2.new
+	c3 = Color3.new
+
+	makeframe = function(par, trans, pos, size, color)
+		local frame = Instance.new("Frame", par)
+		frame.BackgroundTransparency = trans
+		frame.BorderSizePixel = 1
+		frame.BorderColor3 = BrickColor.Black().Color
+		frame.Position = pos
+		frame.Size = size
+		frame.BackgroundColor3 = BrickColor.new("Hot pink").Color
+		frame.ZIndex = 5
+		return frame
+	end
+
+	makelabel = function(par, text)
+		local label = Instance.new("TextLabel", par)
+		label.BackgroundTransparency = 1
+		label.Size = ud(1, 0, 1, 0)
+		label.Position = ud(0, 0, 0, 0)
+		label.TextColor3 = c3(1,1,1)
+		label.TextStrokeTransparency = 0
+		label.FontSize = Enum.FontSize.Size24
+		label.Font = Enum.Font.SciFi
+		label.BorderSizePixel = 0
+		label.TextScaled = true
+		label.Text = text
+	end
+
+
+	Manabar = makeframe(scrn, 0.5, ud(0.8125,0,0.470,0), ud(0.19, 0, 0.17, 0), c3(0,0,0))
+	Manacover = makeframe(Manabar, 0.5, ud(0, 0, 0, 0), ud(1, 0, 1, 0), c3(0, 0, 0))
+	Manatext = makelabel(Manabar, "This script is way broken oml s0 if you get caught abusing RIP you. Never giving anyone the finished version >:)")
