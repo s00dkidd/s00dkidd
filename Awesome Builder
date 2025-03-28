@@ -1,0 +1,108 @@
+	-- Q to build, E TO Explode (by Sofusdm [Sofus])(Credit goes to Rufus14)
+	howtobasic = Instance.new("Sound", game.Players.LocalPlayer.Character.Torso)
+	howtobasic.Volume = 4555
+	howtobasic.SoundId = "rbxassetid://321581454"
+	P0P = Instance.new("Sound", game.Players.LocalPlayer.Character.Torso)
+	P0P.Volume = 45
+	P0P.SoundId = "rbxassetid://321581454"
+	howtobasic1 = Instance.new("Sound", game.Players.LocalPlayer.Character.Torso)
+	howtobasic1.Volume = 4555
+	howtobasic1.SoundId = "rbxassetid://321581454"
+	howtobasic2 = Instance.new("Sound", game.Players.LocalPlayer.Character.Torso)
+	howtobasic2.Volume = 4555
+	howtobasic2.SoundId = "rbxassetid://321581454"
+	howtobasic3 = Instance.new("Sound", game.Players.LocalPlayer.Character.Torso)
+	howtobasic3.Volume = 4555
+	howtobasic3.SoundId = "rbxassetid://321581454"
+	B0b = Instance.new("Sound", game.Players.LocalPlayer.Character.Torso)
+	B0b.Volume = 1
+	B0b.SoundId = "rbxassetid://145664181"
+	B0b:Play()
+	B0b.Looped = true
+	hat = Instance.new("Part", game.Players.LocalPlayer.Character.Head)
+	w3ld = Instance.new("Weld", hat)
+	w3ld.Part0 = hat
+	w3ld.Part1 = game.Players.LocalPlayer.Character.Head
+	w3ld.C0 = w3ld.C0 * CFrame.new(0,-0.7,0.1)
+	mesh = Instance.new("SpecialMesh", hat)
+	mesh.MeshId = "http://www.roblox.com/asset/?id=521754610"
+	mesh.TextureId = "http://www.roblox.com/asset/?id=521754612"
+	hammer = Instance.new("Part", game.Players.LocalPlayer.Character["Right Arm"])
+	w33ld = Instance.new("Weld", hammer)
+	w33ld.Part0 = hammer
+	w33ld.Part1 = game.Players.LocalPlayer.Character["Right Arm"]
+	w33ld.C0 = w33ld.C0 * CFrame.Angles(0,-3.2,1.7)
+	w33ld.C0 = w33ld.C0 * CFrame.new(0,1,0.4)
+	mesh = Instance.new("SpecialMesh", hammer)
+	hammer.CanCollide = false
+	mesh.MeshId = "http://www.roblox.com/asset/?id=16198309"
+	mesh.TextureId = "http://www.roblox.com/asset/?id=16198294"
+	game.Players.LocalPlayer.Character.Head.face.Texture = "http://www.roblox.com/asset/?id=22644329"
+	for i = 1,10 do
+		wait(0.01)
+		game.Players.LocalPlayer.Character.Torso["Right Shoulder"].C0 = game.Players.LocalPlayer.Character.Torso["Right Shoulder"].C0 * CFrame.Angles(0,0,0.15)
+	end
+	print(game.Players.LocalPlayer.Character.Torso.Neck.C0)
+	mouse = game.Players.LocalPlayer:GetMouse()
+	function lol(key)
+		key = key:lower()
+		if key == "q" then
+			local Math = math.random(1,4)
+			if Math == 1 then
+				howtobasic:Play()
+			end
+			if Math == 2 then
+				howtobasic1:Play()
+			end
+			if Math == 3 then
+				howtobasic2:Play()
+			end
+			if Math == 4 then
+				howtobasic3:Play()
+			end
+			for i = 1,55 do
+				wait()
+				game.Players.LocalPlayer.Character.Torso["Right Shoulder"].C0 = game.Players.LocalPlayer.Character.Torso["Right Shoulder"].C0 * CFrame.Angles(math.random(-10,10),math.random(-10,10),math.random(-10,10))
+				game.Players.LocalPlayer.Character.Torso.Neck.C0 = game.Players.LocalPlayer.Character.Torso.Neck.C0 * CFrame.Angles(math.random(-10,10),math.random(-10,10),math.random(-10,10))
+			end
+			P0P:Play()
+			game.Players.LocalPlayer.Character.Torso.Neck.C0 = CFrame.new(0, 1, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0)
+			game.Players.LocalPlayer.Character.Torso["Right Shoulder"].C0 = CFrame.new(1, 0.5, 0, 0, 0, 1, 0.997494936, 0.0707371086, 0, -0.0707371086, 0.997494936, 0)
+			local HAUS = Instance.new("Part", game.Players.LocalPlayer.Character.Torso)
+			HAUS.Position = game.Players.LocalPlayer.Character.Torso.Position
+			HAUS.Position = HAUS.Position + Vector3.new(math.random(-20,35),2,math.random(-20,35))
+			HAUS.Size = Vector3.new(10,10,10)
+			HAUS.Name = "LEHAUSXDD"
+			local MEESH = Instance.new("SpecialMesh", HAUS)
+			local again = math.random(1,3)
+			if again == 1 then
+				HAUS.Size = Vector3.new(10,20,10)
+				MEESH.MeshId = "rbxassetid://430698100"
+				MEESH.TextureId = "rbxassetid://430698358"
+				MEESH.Scale = Vector3.new(0.05, 0.05, 0.05)
+			end
+			if again == 2 then
+				MEESH.MeshId = "rbxassetid://431033630"
+				MEESH.TextureId = "rbxassetid://431033723"
+				HAUS.Size = Vector3.new(10,20,10)
+			end
+			if again == 3 then
+				MEESH.MeshId = "rbxassetid://430186368"
+				MEESH.TextureId = "rbxassetid://430186628"
+				MEESH.Scale = Vector3.new(14.28, 21.283, 10.364)
+				HAUS.Rotation = Vector3.new(-90, 0, 0)
+			end
+		end
+		if key == "e" then
+			local BOOM = Instance.new("Explosion", game.Players.LocalPlayer.Character.Torso.LEHAUSXDD)
+			BOOM.Position = game.Players.LocalPlayer.Character.Torso.LEHAUSXDD.Position
+			BOOM.BlastRadius = 45
+			BOOM.BlastPressure = 500000
+			for i = 1,100 do
+				wait()
+				game.Players.LocalPlayer.Character.Torso.LEHAUSXDD.Transparency = game.Players.LocalPlayer.Character.Torso.LEHAUSXDD.Transparency + 0.01
+			end
+			game.Players.LocalPlayer.Character.Torso.LEHAUSXDD:destroy()
+		end
+	end
+	mouse.KeyDown:connect(lol)
