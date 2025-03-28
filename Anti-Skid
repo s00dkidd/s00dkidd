@@ -1,0 +1,1022 @@
+	Character = game.Players.LocalPlayer.Character
+	Player = game.Players.LocalPlayer
+	char = Character
+	hum = Character.Humanoid
+	Torso = Character.Torso
+	Head = Character.Head
+
+	char.Shirt.ShirtTemplate = "rbxassetid://994469018"
+	char.Pants.PantsTemplate = "rbxassetid://977437883"
+
+
+	local BC = char["Body Colors"]
+	BC.HeadColor = BrickColor.new("Really black")
+	BC.LeftArmColor = BrickColor.new("Really black")
+	BC.LeftLegColor = BrickColor.new("Really black")
+	BC.RightArmColor = BrickColor.new("Really black")
+	BC.RightLegColor = BrickColor.new("Really black")
+	BC.TorsoColor = BrickColor.new("Really black")
+
+	char.Head.face.Texture = "rbxassetid://701379058"
+
+	hum.MaxHealth = math.huge
+
+
+
+
+	for i,v in pairs(char:children()) do
+		if v:IsA("Hat") then
+			v:Destroy()
+		end
+	end
+	for i,v in pairs(char:children()) do
+		if v:IsA("Accessory") then
+			v:Destroy()
+		end
+	end
+	for i,v in pairs(char:children()) do
+		if v:IsA("Hair") then
+			v:Destroy()
+		end
+	end
+	--141378828
+	Reaper = Instance.new("Model")
+	Reaper.Parent = Player.Character
+	Reaper.Name = "Reaper"
+	rh = Instance.new("Part")
+	rh.Parent = Reaper
+	rh.BrickColor = BrickColor.new("Really red")
+	rh.Locked = true
+	rh.CanCollide = false
+	mesh = Instance.new("SpecialMesh")
+	rh.formFactor =  "Symmetric"
+	mesh.MeshType = "FileMesh"
+	mesh.MeshId = "http://www.roblox.com/asset/?id=112643970"
+	mesh.TextureId = "http://www.roblox.com/asset/?id=1018233493"
+	mesh.Parent = rh
+	mesh.Scale = Vector3.new(1.1,1.1,1.1)
+	local weld = Instance.new("Weld")
+	weld.Parent = rh
+	rh.Transparency = 0
+	weld.Part0 = rh
+	weld.Part1 = Player.Character.Head
+	weld.C0 = CFrame.new(-0, -0.05, -0)*CFrame.Angles(0, 0, 0)
+
+	mouse = game.Players.LocalPlayer:GetMouse()
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
+	local rhandclone = game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Clone()
+	game.Players.LocalPlayer.Character.Torso["Right Shoulder"]:Remove()
+	local rhandweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+	rhandweld.Part0 = game.Players.LocalPlayer.Character.Torso
+	rhandweld.Part1 = game.Players.LocalPlayer.Character["Right Arm"]
+	rhandweld.C0 = CFrame.new(1.5, 0, 0, 1, -1.6395192e-43, 0, -1.6395192e-43, 1, 0, 0, 0, 1)
+	local lhandclone = game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Clone()
+	game.Players.LocalPlayer.Character.Torso["Left Shoulder"]:Remove()
+	local lhandweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+	lhandweld.Part0 = game.Players.LocalPlayer.Character.Torso
+	lhandweld.Part1 = game.Players.LocalPlayer.Character["Left Arm"]
+	lhandweld.C0 = CFrame.new(-1.5, 0, 0, 1, -1.6395192e-43, 0, -1.6395192e-43, 1, 0, 0, 0, 1)
+	local llegclone = game.Players.LocalPlayer.Character.Torso["Left Hip"]:Clone()
+	game.Players.LocalPlayer.Character.Torso["Left Hip"]:Remove()
+	local llegweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+	llegweld.Part0 = game.Players.LocalPlayer.Character.Torso
+	llegweld.Part1 = game.Players.LocalPlayer.Character["Left Leg"]
+	llegweld.C0 = CFrame.new(-0.5, -1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+	local rlegclone = game.Players.LocalPlayer.Character.Torso["Right Hip"]:Clone()
+	game.Players.LocalPlayer.Character.Torso["Right Hip"]:Remove()
+	local rlegweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+	rlegweld.Part0 = game.Players.LocalPlayer.Character.Torso
+	rlegweld.Part1 = game.Players.LocalPlayer.Character["Right Leg"]
+	rlegweld.C0 = CFrame.new(0.5, -1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+	local rootjointclone = game.Players.LocalPlayer.Character.HumanoidRootPart.RootJoint:Clone()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.RootJoint:Remove()
+	local humanoidrootpart = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+	humanoidrootpart.Part0 = game.Players.LocalPlayer.Character.HumanoidRootPart
+	humanoidrootpart.Part1 = game.Players.LocalPlayer.Character.Torso
+	local heed = game.Players.LocalPlayer.Character.Torso["Neck"]:Clone()
+	local headweld = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+	headweld.Part0 = game.Players.LocalPlayer.Character.Torso
+	headweld.Part1 = game.Players.LocalPlayer.Character.Head
+	headweld.C0 = headweld.C0 * CFrame.new(0,1.5,0)
+	game.Players.LocalPlayer.Character.Torso.Neck:Remove()
+	howmuch = 0
+	canwalk = true
+	function change(key)
+		if key == "w" or key == "a" or key == "s" or key == "d" then
+			howmuch = howmuch + 1
+		end
+	end
+	function otherchange(key)
+		if key == "w" or key == "a" or key == "s" or key == "d" then
+			howmuch = howmuch - 1
+		end
+	end
+	mouse.KeyDown:connect(change)
+	mouse.KeyUp:connect(otherchange)
+	--Converted with ttyyuu12345's model to script plugin v4
+	function sandbox(var,func)
+		local env = getfenv(func)
+		local newenv = setmetatable({},{
+			__index = function(self,k)
+				if k=="script" then
+					return var
+				else
+					return env[k]
+				end
+			end,
+		})
+		setfenv(func,newenv)
+		return func
+	end
+	cors = {}
+	mas = Instance.new("Model",game:GetService("Lighting"))
+	Model0 = Instance.new("Model")
+	Part1 = Instance.new("Part")
+	Part2 = Instance.new("Part")
+	Part3 = Instance.new("Part")
+	Weld4 = Instance.new("Weld")
+	Weld5 = Instance.new("Weld")
+	Weld6 = Instance.new("Weld")
+	Part7 = Instance.new("Part")
+	Model0.Name = "Sawed Off"
+	Model0.Parent = mas
+	Part1.Parent = Model0
+	Part1.BrickColor = BrickColor.new("Really black")
+	Part1.Shape = Enum.PartType.Cylinder
+	Part1.Size = Vector3.new(2.96000075, 0.449999958, 0.400000334)
+	Part1.CFrame = CFrame.new(40.7499924, 151.548019, 156.470001, 1.0000006, -1.78813934e-07, 0, -1.78813934e-07, 1.00000024, 0, 0, 0, 1)
+	Part1.Color = Color3.new(0.101961, 0.101961, 0.101961)
+	Part1.Position = Vector3.new(40.7499924, 151.548019, 156.470001)
+	Part1.Color = Color3.new(0.101961, 0.101961, 0.101961)
+	Part2.Parent = Model0
+	Part2.BrickColor = BrickColor.new("Really black")
+	Part2.Shape = Enum.PartType.Cylinder
+	Part2.Size = Vector3.new(2.96000075, 0.449999958, 0.400000334)
+	Part2.CFrame = CFrame.new(40.7499962, 151.548035, 156.079056, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	Part2.Color = Color3.new(0.101961, 0.101961, 0.101961)
+	Part2.Position = Vector3.new(40.7499962, 151.548035, 156.079056)
+	Part2.Color = Color3.new(0.101961, 0.101961, 0.101961)
+	Part3.Parent = Model0
+	Part3.BrickColor = BrickColor.new("Cocoa")
+	Part3.Rotation = Vector3.new(0, 0, -34)
+	Part3.Size = Vector3.new(1.11000025, 0.519999921, 0.570000172)
+	Part3.CFrame = CFrame.new(42.5974922, 150.98793, 156.274887, 0.829038441, 0.559192181, 0, -0.55919224, 0.829038203, 0, 0, 0, 1)
+	Part3.Color = Color3.new(0.317647, 0.145098, 0)
+	Part3.Position = Vector3.new(42.5974922, 150.98793, 156.274887)
+	Part3.Orientation = Vector3.new(0, 0, -34)
+	Part3.Color = Color3.new(0.317647, 0.145098, 0)
+	Weld4.Name = "1"
+	Weld4.Parent = Part3
+	Weld4.C0 = CFrame.new(-1.84484863, -0.568756104, -0.195831299, 0.829038441, -0.55919224, 0, 0.559192181, 0.829038203, 0, 0, 0, 1)
+	Weld4.Part0 = Part3
+	Weld4.Part1 = Part2
+	Weld5.Name = "3"
+	Weld5.Parent = Part3
+	Weld5.C0 = CFrame.new(-0.60994339, 0.0636444092, 0.00506591797, 0.866026163, 0.499997735, 0, -0.499997616, 0.866026044, 0, 0, 0, 1)
+	Weld5.Part0 = Part3
+	Weld5.Part1 = Part7
+	Weld6.Name = "2"
+	Weld6.Parent = Part3
+	Weld6.C0 = CFrame.new(-1.84484482, -0.568771362, 0.195114136, 0.829038441, -0.55919224, 0, 0.559192181, 0.829038203, 0, 0, 0, 1)
+	Weld6.Part0 = Part3
+	Weld6.Part1 = Part1
+	Part7.Parent = Model0
+	Part7.BrickColor = BrickColor.new("Cocoa")
+	Part7.Rotation = Vector3.new(0, 0, -64)
+	Part7.Size = Vector3.new(0.440000623, 0.519999921, 0.759999931)
+	Part7.CFrame = CFrame.new(42.1274147, 151.381775, 156.279953, 0.438374251, 0.898792326, 0, -0.898792267, 0.438373834, 0, 0, 0, 1)
+	Part7.Color = Color3.new(0.317647, 0.145098, 0)
+	Part7.Position = Vector3.new(42.1274147, 151.381775, 156.279953)
+	Part7.Orientation = Vector3.new(0, 0, -64)
+	Part7.Color = Color3.new(0.317647, 0.145098, 0)
+	for i,v in pairs(mas:GetChildren()) do
+		v.Parent = game:GetService("Players").LocalPlayer.Character
+		pcall(function() v:MakeJoints() end)
+	end
+	mas:Destroy()
+	for i,v in pairs(cors) do
+		spawn(function()
+			pcall(v)
+		end)
+	end
+	for i,v in pairs(Model0:GetChildren()) do
+		if v.ClassName == "Part" then
+			v.CanCollide = false
+		end
+	end
+
+	--Converted with ttyyuu12345's model to script plugin v4
+	function sandbox(var,func)
+		local env = getfenv(func)
+		local newenv = setmetatable({},{
+			__index = function(self,k)
+				if k=="script" then
+					return var
+				else
+					return env[k]
+				end
+			end,
+		})
+		setfenv(func,newenv)
+		return func
+	end
+	cors = {}
+	mas = Instance.new("Model",game:GetService("Lighting"))
+	for i,v in pairs(mas:GetChildren()) do
+		v.Parent = game:GetService("Players").LocalPlayer.Character.Torso
+		pcall(function() v:MakeJoints() end)
+	end
+	mas:Destroy()
+	for i,v in pairs(cors) do
+		spawn(function()
+			pcall(v)
+		end)
+	end
+	Sound0 = Instance.new("Sound")
+	Sound0.Volume = 5
+	Sound0.Parent = game.Players.LocalPlayer.Character.Head
+	Sound0.SoundId = "rbxassetid://565420180"
+	Sound0.Looped = true
+	Sound0:Play()
+	Sound00 = Instance.new("Sound")
+	Sound00.Volume = 6
+	Sound00.Parent = game.Players.LocalPlayer.Character.Head
+	Sound00.SoundId = "rbxassetid://330706798"
+	local txtfag = Instance.new("BillboardGui", game.Players.LocalPlayer.Character.Head)
+	txtfag.Adornee = suckadick
+	txtfag.Name = "kys nigga"
+	txtfag.Size = UDim2.new(2, 0, 1.2, 0)
+	txtfag.StudsOffset = Vector3.new(-5, 3, 0)
+	local textfag = Instance.new("TextLabel", txtfag)
+	textfag.Size = UDim2.new(6, 0, 1, 0)
+	textfag.FontSize = "Size8"
+	textfag.TextScaled = true
+	textfag.TextTransparency = 0
+	textfag.BackgroundTransparency = 1
+	textfag.TextTransparency = 0
+	textfag.TextStrokeTransparency = 0
+	textfag.Font = "Cartoon"
+	textfag.TextStrokeColor3 = Color3.new(0, 0, 0)
+	textfag.Text = game.Players.LocalPlayer.Character.Name.." the Anti-Skid "
+	bullethitforclone = Instance.new("Sound")
+	bullethitforclone.Volume = 4
+	bullethitforclone.Parent = game.Players.LocalPlayer.Character.Head
+	bullethitforclone.SoundId = "rbxassetid://144884872"
+	weldf = Instance.new("Weld", game.Players.LocalPlayer.Character.Torso)
+	weldf.Part0 = game.Players.LocalPlayer.Character["Right Arm"]
+	weldf.Part1 = Part3
+	weldf.C0 = CFrame.new(-0.0861244202, -1.04447937, -0.182327271, -0.105800174, 0.219419539, -0.969882667, 0.973032475, -0.178225949, -0.146464914, -0.204995126, -0.959215224, -0.194644511)
+	using = false
+	function shoot()
+		if not using then
+			using = true
+			canwalk = false
+			for i = 0,1 , 0.02 do
+				headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.5, 0, 0.207927465, 1.10965065e-11, -0.978144228, -7.31349337e-09, 1, -1.5433097e-09, 0.978144288, 7.47454809e-09, 0.207927451),i)
+				rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(2.01304245, 0.49798584, -0.020904541, 0.0697589889, -0.997563899, -2.65673535e-22, -1.85331179e-23, 2.65026316e-22, -0.999999881, 0.997563779, 0.0697589815, 0),i)
+				weldf.C0 = weldf.C0:lerp(CFrame.new(-0.0359191895, -0.892173767, 0.284561157, -0.0689456016, 0.0198679417, -0.997422755, 0.839448929, 0.541383147, -0.0472417921, 0.539049447, -0.840541601, -0.0540040247),i)
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(-0.00933837891, -0.0203552246, -0.000652313232, 0.0697618872, -2.27432338e-06, 0.997569025, 1.77783205e-11, 0.999999881, 2.2798622e-06, -0.997569859, -1.59030108e-07, 0.0697606578),i)
+				game:GetService("RunService").RenderStepped:wait()
+			end
+			Sound00:Play()
+			for i = 1,5 do
+				ghosting = math.random(1,2)
+				local bullet = Instance.new("Part", workspace)
+				bullet.Size = Vector3.new(0.2,0.2,3)
+				bullet.BrickColor = BrickColor.new("Institutional White")
+				bullet.Material = "Neon"
+				bullet.Anchored = false
+				bullet.CFrame = Part1.CFrame * CFrame.new(3,0,0) * CFrame.fromEulerAnglesXYZ(0,math.pi/2,0)
+				local velocityofbullet = Instance.new("BodyVelocity", bullet)
+				velocityofbullet.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+				velocityofbullet.Velocity = mouse.Hit.lookVector * 650 + Vector3.new(math.random(-30,30),math.random(-30,30),math.random(-30,30))
+				bullet.CanCollide = false
+				bullet:BreakJoints()
+				local function kill(part)
+					local humanoid = part.Parent:findFirstChild("Humanoid")
+					if humanoid then
+						if humanoid.Parent.Name == game.Players.LocalPlayer.Name then
+
+						else
+							if ghosting == 1 then
+
+							else
+								bullet:destroy()
+							end
+							local bullethit = bullethitforclone:Clone()
+							bullethit.Parent = part
+							if part.Name == "Left Leg" then
+								bullethit:Play()
+								humanoid.Parent.Torso["Left Hip"]:Remove()
+								humanoid.Health = humanoid.Health - math.random(35,50)
+								local glue = Instance.new("Glue",  humanoid.Parent.Torso)
+								glue.Part0 = humanoid.Parent.Torso
+								glue.Part1 = humanoid.Parent["Left Leg"]
+								glue.Name = "Left leg"
+								local collider = Instance.new("Part",  humanoid.Parent["Left Leg"])
+								collider.Position = Vector3.new(0,999,0)
+								collider.Size = Vector3.new(1.5, 1, 1)
+								collider.Shape = "Cylinder"
+								local weld = Instance.new("Weld", collider)
+								weld.Part0 =  humanoid.Parent["Left Leg"]
+								weld.Part1 = collider
+								weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+								collider.TopSurface = "Smooth"
+								collider.BottomSurface = "Smooth"
+								collider.formFactor = "Symmetric"
+								glue.C0 = CFrame.new(-0.5, -1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+								glue.C1 = CFrame.new(-0, 1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+								collider.Transparency = 1
+							end
+							if part.Name == "Right Leg" then
+								humanoid.Parent.Torso["Right Hip"]:Remove()
+								bullethit:Play()
+								humanoid.Health = humanoid.Health - math.random(35,50)
+								local glue = Instance.new("Glue",  humanoid.Parent.Torso)
+								glue.Part0 = humanoid.Parent.Torso
+								glue.Part1 = humanoid.Parent["Right Leg"]
+								glue.Name = "Right leg"
+								local collider = Instance.new("Part",  humanoid.Parent["Right Leg"])
+								collider.Position = Vector3.new(0,999,0)
+								collider.Size = Vector3.new(1.5, 1, 1)
+								collider.Shape = "Cylinder"
+								local weld = Instance.new("Weld", collider)
+								weld.Part0 =  humanoid.Parent["Right Leg"]
+								weld.Part1 = collider
+								weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+								collider.TopSurface = "Smooth"
+								collider.BottomSurface = "Smooth"
+								collider.formFactor = "Symmetric"
+								glue.C0 = CFrame.new(0.5, -1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+								glue.C1 = CFrame.new(0, 1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+								collider.Transparency = 1
+							end
+							if part.Name == "Right Arm" then
+								bullethit:Play()
+								humanoid.Parent.Torso["Right Shoulder"]:Remove()
+								humanoid.Health = humanoid.Health - math.random(20,35)
+								local glue = Instance.new("Glue",  humanoid.Parent.Torso)
+								glue.Part0 = humanoid.Parent.Torso
+								glue.Part1 = humanoid.Parent["Right Arm"]
+								glue.Name = "Right arm"
+								local collider = Instance.new("Part",  humanoid.Parent["Right Arm"])
+								collider.Position = Vector3.new(0,999,0)
+								collider.Size = Vector3.new(1.5, 1, 1)
+								collider.Shape = "Cylinder"
+								local weld = Instance.new("Weld", collider)
+								weld.Part0 =  humanoid.Parent["Right Arm"]
+								weld.Part1 = collider
+								weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+								collider.TopSurface = "Smooth"
+								collider.BottomSurface = "Smooth"
+								collider.formFactor = "Symmetric"
+								glue.C0 = CFrame.new(1.5, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+								glue.C1 = CFrame.new(0, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+								collider.Transparency = 1
+							end
+							if part.Name == "Left Arm" then
+								bullethit:Play()
+								humanoid.Parent.Torso["Left Shoulder"]:Remove()
+								humanoid.Health = humanoid.Health - math.random(20,35)
+								local glue = Instance.new("Glue",  humanoid.Parent.Torso)
+								glue.Part0 = humanoid.Parent.Torso
+								glue.Part1 = humanoid.Parent["Left Arm"]
+								glue.Name = "Left arm"
+								local collider = Instance.new("Part",  humanoid.Parent["Left Arm"])
+								collider.Position = Vector3.new(0,999,0)
+								collider.Size = Vector3.new(1.5, 1, 1)
+								collider.Shape = "Cylinder"
+								local weld = Instance.new("Weld", collider)
+								weld.Part0 =  humanoid.Parent["Left Arm"]
+								weld.Part1 = collider
+								weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+								collider.TopSurface = "Smooth"
+								collider.BottomSurface = "Smooth"
+								collider.formFactor = "Symmetric"
+								glue.C0 = CFrame.new(-1.5, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+								glue.C1 = CFrame.new(0, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+								collider.Transparency = 1
+							end
+							if part.Name == "Torso" then
+								bullethit:Play()
+								humanoid.Health = humanoid.Health - math.random(15,50)
+								humanoid.WalkSpeed = humanoid.WalkSpeed - math.random(1,2)
+							end
+							if part.Name == "Head" then
+								bullethit:Play()
+								humanoid.JumpPower = 0
+								humanoid.PlatformStand = true
+								humanoid.WalkSpeed = 0
+								local decal = Instance.new("Decal", part)
+								decal.Texture = "http://www.roblox.com/asset/?id=1081285488"
+								local findlefthip = humanoid.Parent.Torso:findFirstChild("Left Hip")
+								if findlefthip then
+									findlefthip:Remove()
+									local glue = Instance.new("Glue",  humanoid.Parent.Torso)
+									glue.Part0 = humanoid.Parent.Torso
+									glue.Part1 = humanoid.Parent["Left Leg"]
+									glue.Name = "Left leg"
+									local collider = Instance.new("Part",  humanoid.Parent["Left Leg"])
+									collider.Position = Vector3.new(0,999,0)
+									collider.Size = Vector3.new(1.5, 1, 1)
+									collider.Shape = "Cylinder"
+									local weld = Instance.new("Weld", collider)
+									weld.Part0 =  humanoid.Parent["Left Leg"]
+									weld.Part1 = collider
+									weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+									collider.TopSurface = "Smooth"
+									collider.BottomSurface = "Smooth"
+									collider.formFactor = "Symmetric"
+									glue.C0 = CFrame.new(-0.5, -1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+									glue.C1 = CFrame.new(-0, 1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+									collider.Transparency = 1
+								end
+								--
+								local findrighthip = humanoid.Parent.Torso:findFirstChild("Right Hip")
+								if findrighthip then
+									findrighthip:Remove()
+									local glue = Instance.new("Glue",  humanoid.Parent.Torso)
+									glue.Part0 = humanoid.Parent.Torso
+									glue.Part1 = humanoid.Parent["Right Leg"]
+									glue.Name = "Right leg"
+									local collider = Instance.new("Part",  humanoid.Parent["Right Leg"])
+									collider.Position = Vector3.new(0,999,0)
+									collider.Size = Vector3.new(1.5, 1, 1)
+									collider.Shape = "Cylinder"
+									local weld = Instance.new("Weld", collider)
+									weld.Part0 =  humanoid.Parent["Right Leg"]
+									weld.Part1 = collider
+									weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+									collider.TopSurface = "Smooth"
+									collider.BottomSurface = "Smooth"
+									collider.formFactor = "Symmetric"
+									glue.C0 = CFrame.new(0.5, -1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+									glue.C1 = CFrame.new(0, 1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+									collider.Transparency = 1
+								end
+								--
+								local findrightshoulder = humanoid.Parent.Torso:findFirstChild("Right Shoulder")
+								if findrightshoulder then
+									findrightshoulder:Remove()
+									local glue = Instance.new("Glue",  humanoid.Parent.Torso)
+									glue.Part0 = humanoid.Parent.Torso
+									glue.Part1 = humanoid.Parent["Right Arm"]
+									glue.Name = "Right arm"
+									local collider = Instance.new("Part",  humanoid.Parent["Right Arm"])
+									collider.Position = Vector3.new(0,999,0)
+									collider.Size = Vector3.new(1.5, 1, 1)
+									collider.Shape = "Cylinder"
+									local weld = Instance.new("Weld", collider)
+									weld.Part0 =  humanoid.Parent["Right Arm"]
+									weld.Part1 = collider
+									weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+									collider.TopSurface = "Smooth"
+									collider.BottomSurface = "Smooth"
+									collider.formFactor = "Symmetric"
+									glue.C0 = CFrame.new(1.5, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+									glue.C1 = CFrame.new(0, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+									collider.Transparency = 1
+								end
+								--
+								local findleftshoulder = humanoid.Parent.Torso:findFirstChild("Left Shoulder")
+								if findleftshoulder then
+									findleftshoulder:Remove()
+									local glue = Instance.new("Glue",  humanoid.Parent.Torso)
+									glue.Part0 = humanoid.Parent.Torso
+									glue.Part1 = humanoid.Parent["Left Arm"]
+									glue.Name = "Left arm"
+									local collider = Instance.new("Part",  humanoid.Parent["Left Arm"])
+									collider.Position = Vector3.new(0,999,0)
+									collider.Size = Vector3.new(1.5, 1, 1)
+									collider.Shape = "Cylinder"
+									local weld = Instance.new("Weld", collider)
+									weld.Part0 =  humanoid.Parent["Left Arm"]
+									weld.Part1 = collider
+									weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+									collider.TopSurface = "Smooth"
+									collider.BottomSurface = "Smooth"
+									collider.formFactor = "Symmetric"
+									glue.C0 = CFrame.new(-1.5, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+									glue.C1 = CFrame.new(0, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+									collider.Transparency = 1
+								end
+								wait(5)
+								humanoid.Health = 0
+							end
+							local howmany = 0
+							for i,v in pairs(humanoid.Parent.Torso:GetChildren()) do
+								if v.ClassName == "Glue" then
+									howmany = howmany + 1
+								end
+							end
+							if howmany == 4 then
+								humanoid.JumpPower = 0
+								humanoid.PlatformStand = true
+								humanoid.WalkSpeed = 0
+							end
+							if humanoid.Health < 1 then
+								if humanoid.Parent:findFirstChild("Health") then
+									humanoid.Parent.Health:Remove()
+									humanoid.Health = 0.001
+									for i,v in pairs(humanoid.Parent:GetChildren()) do
+										if v.ClassName == "Part" then
+											for q,w in pairs(v:GetChildren()) do
+												if w.ClassName == "Part" then
+													w:destroy()
+												end
+											end
+										end
+									end
+								end
+								if humanoid.Parent:findFirstChild("Torso") then
+									humanoid.Parent.Torso.Velocity = mouse.Hit.lookVector * 35
+									for i,v in pairs(humanoid.Parent.Torso:GetChildren()) do
+										if v.ClassName == "Motor6D" then
+											if v.Name == "Neck" then
+
+											else
+												v:destroy()
+											end
+										end
+									end
+								end
+								humanoid.WalkSpeed = 0
+								humanoid.JumpPower = 0
+								humanoid.PlatformStand = true
+								if humanoid.Parent:findFirstChild("Right Arm") then
+									local attachment = Instance.new("Attachment", humanoid.Parent.Torso)
+									attachment.Position = Vector3.new(1, 1, 0)
+									local ball = Instance.new("BallSocketConstraint", humanoid.Parent)
+									ball.Attachment0 = humanoid.Parent["Right Arm"].RightShoulderAttachment
+									ball.Attachment1 = attachment
+									local collidepartofleftleg = Instance.new("Part", humanoid.Parent.Torso)
+									collidepartofleftleg.Name = "Bone"
+									collidepartofleftleg.Size = Vector3.new(0.8,1.4,0.8)
+									collidepartofleftleg.Transparency = 1
+									collidepartofleftleg:BreakJoints()
+									local weeld = Instance.new("Weld", collidepartofleftleg)
+									weeld.Part0 = humanoid.Parent["Right Arm"]
+									weeld.Part1 = collidepartofleftleg
+									weeld.C0 = weeld.C0 * CFrame.new(0,-0.3,0)
+								end
+								if humanoid.Parent:findFirstChild("Left Arm") then
+									local attachment = Instance.new("Attachment", humanoid.Parent.Torso)
+									attachment.Position = Vector3.new(1, 1, 0)
+									local ball = Instance.new("BallSocketConstraint", humanoid.Parent)
+									ball.Attachment0 = humanoid.Parent.Torso.LeftCollarAttachment
+									ball.Attachment1 = humanoid.Parent["Left Arm"].LeftShoulderAttachment
+									local collidepartofleftleg = Instance.new("Part", humanoid.Parent.Torso)
+									collidepartofleftleg.Name = "Bone"
+									collidepartofleftleg.Size = Vector3.new(0.8,1.4,0.8)
+									collidepartofleftleg.Transparency = 1
+									collidepartofleftleg:BreakJoints()
+									local weeld = Instance.new("Weld", collidepartofleftleg)
+									weeld.Part0 = humanoid.Parent["Left Arm"]
+									weeld.Part1 = collidepartofleftleg
+									weeld.C0 = weeld.C0 * CFrame.new(0,-0.3,0)
+								end
+								if humanoid.Parent:findFirstChild("Right Leg") then
+									local attachment = Instance.new("Attachment", humanoid.Parent.Torso)
+									attachment.Position = Vector3.new(0.5, -1, 0)
+									local ball = Instance.new("BallSocketConstraint", humanoid.Parent)
+									ball.Attachment0 = humanoid.Parent["Right Leg"].RightFootAttachment
+									ball.Attachment1 = attachment
+									humanoid.Parent["Right Leg"].RightFootAttachment.Position = Vector3.new(0, 1, 0)
+									local collidepartofleftleg = Instance.new("Part", humanoid.Parent.Torso)
+									collidepartofleftleg.Name = "Bone"
+									collidepartofleftleg.Size = Vector3.new(0.8,1.4,0.8)
+									collidepartofleftleg.Transparency = 1
+									collidepartofleftleg:BreakJoints()
+									local weeld = Instance.new("Weld", collidepartofleftleg)
+									weeld.Part0 = humanoid.Parent["Right Leg"]
+									weeld.Part1 = collidepartofleftleg
+									weeld.C0 = weeld.C0 * CFrame.new(0,-0.3,0)
+								end
+								if humanoid.Parent:findFirstChild("Left Leg") then
+									local attachment = Instance.new("Attachment", humanoid.Parent.Torso)
+									attachment.Position = Vector3.new(-0.5, -1, 0)
+									local ball = Instance.new("BallSocketConstraint", humanoid.Parent)
+									ball.Attachment0 = humanoid.Parent["Left Leg"].LeftFootAttachment
+									ball.Attachment1 = attachment
+									humanoid.Parent["Left Leg"].LeftFootAttachment.Position = Vector3.new(0, 1, 0)
+									local collidepartofleftleg = Instance.new("Part", humanoid.Parent.Torso)
+									collidepartofleftleg.Name = "Bone"
+									collidepartofleftleg.Size = Vector3.new(0.8,1.4,0.8)
+									collidepartofleftleg.Transparency = 1
+									collidepartofleftleg:BreakJoints()
+									local weeld = Instance.new("Weld", collidepartofleftleg)
+									weeld.Part0 =  humanoid.Parent["Left Leg"]
+									weeld.Part1 = collidepartofleftleg
+									weeld.C0 = weeld.C0 * CFrame.new(0,-0.3,0)
+								end
+								if humanoid.Parent:findFirstChild("Head") then
+									local attachment = Instance.new("Attachment", humanoid.Parent.Head)
+									attachment.Position = Vector3.new(0, -0.5, 0)
+									humanoid.Parent.Torso.NeckAttachment.Visible = false
+									humanoid.Parent.Torso.NeckAttachment.Position = humanoid.Parent.Torso.NeckAttachment.Position + Vector3.new(0,0,0)
+									local ball = Instance.new("HingeConstraint", humanoid.Parent)
+									ball.Attachment0 = humanoid.Parent.Torso.NeckAttachment
+									ball.Attachment1 = attachment
+									local collidepartofleftleg = Instance.new("Part", humanoid.Parent.Torso)
+									collidepartofleftleg.Name = "Bone"
+									collidepartofleftleg.Size = Vector3.new(0.5,0.3,0.5)
+									collidepartofleftleg.Transparency = 1
+									collidepartofleftleg:BreakJoints()
+									local weeld = Instance.new("Weld", collidepartofleftleg)
+									weeld.Part0 = collidepartofleftleg
+									weeld.Part1 = humanoid.Parent["Head"]
+									humanoid.Parent.Torso.Neck:destroy()
+								end
+								if humanoid.Parent:findFirstChild("Head") then
+									local aah = Instance.new("Sound", humanoid.Parent.Head)
+									if aah then
+										aah.Volume = 8
+										local aahmath = math.random(2,8)
+										if aahmath == 2 then
+											aah.SoundId = "rbxassetid://884348443"
+											aah:Play()
+										end
+										if aahmath == 3 then
+											aah.SoundId = "rbxassetid://535528169"
+											aah.TimePosition = 0.3
+											aah:Play()
+										end
+										if aahmath == 4 then
+											aah.SoundId = "rbxassetid://1080363252"
+											aah:Play()
+										end
+										if aahmath == 5 then
+											aah.SoundId = "rbxassetid://150245085"
+											aah:Play()
+										end
+										if aahmath == 6 then
+											aah.SoundId = "rbxassetid://345287845"
+											aah.TimePosition = 2.5
+											aah:Play()
+										end
+										if aahmath == 7 then
+											aah.SoundId = "rbxassetid://147758746"
+											aah.TimePosition = 1.3
+											aah:Play()
+										end
+										if aahmath == 8 then
+											aah.SoundId = "rbxassetid://626777433"
+											aah.TimePosition = 1.4
+											aah:Play()
+										end
+									end
+									humanoid.Name = "Hammoodmememememem"
+								end
+							end
+						end
+					end
+				end
+				bullet.Touched:connect(kill)
+			end
+			for i = 0,1 , 0.25 do
+				headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.5, 0, 0.207933038, -0.102243967, -0.972784758, 8.86239135e-08, 0.994521916, -0.104528628, 0.978143096, 0.0217348691, 0.206793979),i)
+				rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(1.82263184, 0.730773926, -0.020904541, 0.0646852478, -0.924928367, 0.374597609, 0.0261337012, -0.373684913, -0.927187502, 0.997563481, 0.0697649717, -9.91872824e-08),i)
+				weldf.C0 = weldf.C0:lerp(CFrame.new(-0.0359191895, -0.892173767, 0.284561157, -0.0689456016, 0.0198679417, -0.997422755, 0.839448929, 0.541383147, -0.0472417921, 0.539049447, -0.840541601, -0.0540040247),i)
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(-0.00933837891, -0.0203552246, -0.000652313232, 0.0697618872, -2.27432338e-06, 0.997569025, 1.77783205e-11, 0.999999881, 2.2798622e-06, -0.997569859, -1.59030108e-07, 0.0697606578),i)
+				game:GetService("RunService").RenderStepped:wait()
+			end
+			for i = 0,1 , 0.02 do
+				headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.5, 0, 0.207927465, 1.10965065e-11, -0.978144228, -7.31349337e-09, 1, -1.5433097e-09, 0.978144288, 7.47454809e-09, 0.207927451),i)
+				rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(2.01304245, 0.49798584, -0.020904541, 0.0697589889, -0.997563899, -2.65673535e-22, -1.85331179e-23, 2.65026316e-22, -0.999999881, 0.997563779, 0.0697589815, 0),i)
+				weldf.C0 = weldf.C0:lerp(CFrame.new(-0.0359191895, -0.892173767, 0.284561157, -0.0689456016, 0.0198679417, -0.997422755, 0.839448929, 0.541383147, -0.0472417921, 0.539049447, -0.840541601, -0.0540040247),i)
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(-0.00933837891, -0.0203552246, -0.000652313232, 0.0697618872, -2.27432338e-06, 0.997569025, 1.77783205e-11, 0.999999881, 2.2798622e-06, -0.997569859, -1.59030108e-07, 0.0697606578),i)
+				game:GetService("RunService").RenderStepped:wait()
+			end
+			for i = 0,1 , 0.02 do
+				weldf.C0 = weldf.C0:lerp(CFrame.new(-0.0861244202, -1.04447937, -0.182327271, -0.105800174, 0.219419539, -0.969882667, 0.973032475, -0.178225949, -0.146464914, -0.204995126, -0.959215224, -0.194644511),i)
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,0,0),i)
+				headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.48563504, -0.102214813, 1, 6.31088724e-30, -1.00974196e-28, -2.5243549e-29, 0.990270674, 0.139171436, -5.04870979e-29, -0.139171436, 0.990270674),i)
+				llegweld.C0 = llegweld.C0:lerp(CFrame.new(-0.606146812, -2.0409379, 0.23392868, 0.994522691, 0.104527831, 4.48272353e-09, -0.10395515, 0.989075184, 0.104526937, 0.0109259691, -0.103954434, 0.994521797),i)
+				lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-1.56223869, 0.00435209274, 0, 0.997564316, 0.0697554871, 0, -0.0697554871, 0.997564316, 0, 0, 2.5243549e-29, 1),i)
+				rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(0.589343071, -2.06024575, -0.139556885, 0.997564077, -0.0693742931, 0.0072911568, 0.0697562397, 0.992102206, -0.104268931, 1.75914945e-08, 0.104523741, 0.994524658),i)
+				rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(1.61233902, 0.0157878399, 0, 0.990270674, -0.139171436, 5.04870979e-29, 0.139171436, 0.990270674, 2.01948392e-28, 1.00974196e-28, 2.27191941e-28, 1),i)
+				game:GetService("RunService").RenderStepped:wait()
+			end
+			canwalk = true
+			using = false
+		end
+	end
+	function kys(key)
+		key = key:lower()
+		if key == "q" and not using then
+			using = false
+			canwalk = false
+			for i = 0,1 , 0.02 do
+				weldf.C0 = weldf.C0:lerp(CFrame.new(-0.168807983, -2.35839844, 1.06054688, 0.376244515, -0.0200107303, 0.92630434, -0.527649045, -0.826430559, 0.196466327, 0.761594713, -0.562682986, -0.321498603),i)
+				humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,0,0),i)
+				headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.5, 0, 0.964937389, -0.102245584, 0.241747394, 0.104467049, 0.994521677, 0.00364552485, -0.240795761, 0.0217369329, 0.970332384),i)
+				llegweld.C0 = llegweld.C0:lerp(CFrame.new(-0.606146812, -2.0409379, 0.23392868, 0.994522691, 0.104527831, 4.48272353e-09, -0.10395515, 0.989075184, 0.104526937, 0.0109259691, -0.103954434, 0.994521797),i)
+				lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-0.755413055, -0.0500183105, -2.32714844, 0.992147624, -0.122393578, 0.0257476419, 0.0214064512, -0.0366528891, -0.999098778, 0.123226993, 0.991804659, -0.0337450653),i)
+				rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(0.589343071, -2.06024575, -0.139556885, 0.997564077, -0.0693742931, 0.0072911568, 0.0697562397, 0.992102206, -0.104268931, 1.75914945e-08, 0.104523741, 0.994524658),i)
+				rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(0.817108154, 0.43989563, -1.35630798, 0.906662822, 0.312888145, -0.28295514, -0.253573388, -0.131829232, -0.958290994, -0.337139636, 0.9405967, -0.04018455),i)
+				game:GetService("RunService").RenderStepped:wait()
+			end
+			--0, 1, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0
+			--0, -0.5, 0, -1, -0, -0, 0, 0, 1, 0, 1, 0
+--[[
+	local vel = Instance.new("BodyVelocity", game.Players.LocalPlayer.Character.Torso)
+vel.Velocity = game.Players.LocalPlayer.Character.Torso.CFrame.lookVector * -5
+vel.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+--]]
+			--By Rufus14 (FINALLY I KNOW HOW TO MAKE A RAGDOLL :D)
+			--die plz
+			mouse = game.Players.LocalPlayer:GetMouse()
+			function ragdoll()
+				game.Players.LocalPlayer.Character.Archivable = true
+				Sound0:destroy()
+				clone = game.Players.LocalPlayer.Character:Clone()
+				clone.Parent = workspace
+				for i,v in pairs(clone:GetChildren()) do
+					if v.ClassName == "Script" or v.ClassName == "LocalScript" then
+						v:destroy()
+					end
+					for i,p in pairs(v:GetChildren()) do
+						if p.ClassName == "Weld" or p.ClassName == "Motor6D" or p.ClassName == "BodyVelocity" then
+							p:destroy()
+						end
+					end
+				end
+				for i,t in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+					if t.ClassName == "Accessory" or t.ClassName == "ForceField" then
+						t:destroy()
+					end
+				end
+				vel = Instance.new("BodyVelocity", clone.Torso)
+				vel.Velocity = clone.Torso.CFrame.lookVector * -5
+				vel.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+				clone.Head.face.Texture = "http://www.roblox.com/asset/?id=161061608"
+				using = false
+				hit = Instance.new("Sound", clone.Torso)
+				hit.SoundId = "rbxassetid://260430060"
+				hit.Volume = 0
+				hit1 = Instance.new("Sound", clone.Torso)
+				hit1.SoundId = "rbxassetid://138087186"
+				hit1.Volume = 0
+				hit2 = Instance.new("Sound", clone.Torso)
+				hit2.SoundId = "rbxassetid://131237241"
+				hit2.Volume = 0
+				hit3 = Instance.new("Sound", clone.Torso)
+				hit3.SoundId = "rbxassetid://278062209"
+				hit3.Volume = 0
+				hit3.TimePosition = 0.33
+				ded = Instance.new("Sound", clone.Torso)
+				ded.SoundId = "rbxassetid://418892870"
+				ded.Volume = 0
+				local leftarm = clone:findFirstChild("Left Arm")
+				local rightrm = clone:findFirstChild("Right Arm")
+				local leftleg = clone:findFirstChild("Left Leg")
+				local rightleg = clone:findFirstChild("Right Leg")
+				local head = clone:findFirstChild("Head")
+				for i, g in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+					if g.ClassName == "Part" then
+						g:destroy()
+					end
+				end
+				for i, h in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+					if h.ClassName == "Accesory" then
+						h:destroy()
+					end
+				end
+				game.Workspace.CurrentCamera.CameraSubject = head
+				if head then
+					local attachment = Instance.new("Attachment", clone.Head)
+					attachment.Position = Vector3.new(0, -0.5, 0)
+					attachment.Name = "lol"
+					attachment.Visible = false
+					clone.Torso.NeckAttachment.Visible = false
+					clone.Torso.NeckAttachment.Position = clone.Torso.NeckAttachment.Position + Vector3.new(0,0,0)
+					local ball = Instance.new("BallSocketConstraint", clone)
+					ball.Attachment0 = clone.Torso.NeckAttachment
+					ball.Attachment1 = attachment
+					ball.LimitsEnabled = true
+					ball.TwistLimitsEnabled = true
+					ball.UpperAngle = 90
+					ball.Restitution = 0.5
+					ball.TwistUpperAngle = 90
+					ball.TwistLowerAngle = -90
+					local  collidepartofleftleg = Instance.new("Part", clone.Torso)
+					collidepartofleftleg.Name = "Bone"
+					collidepartofleftleg.Size = Vector3.new(0.7,0.7,0.7)
+					collidepartofleftleg.Transparency = 1
+					collidepartofleftleg:BreakJoints()
+					local weeld = Instance.new("Weld", collidepartofleftleg)
+					weeld.Part0 = collidepartofleftleg
+					weeld.Part1 = clone["Head"]
+				end
+				if leftleg ~= nil then
+					local glue = Instance.new("Glue", clone.Torso)
+					glue.Part0 = clone.Torso
+					glue.Part1 = leftleg
+					glue.Name = "Left leg"
+					local collider = Instance.new("Part", leftleg)
+					collider.Position = Vector3.new(0,999,0)
+					collider.Size = Vector3.new(1.5, 1, 1)
+					collider.Shape = "Cylinder"
+					local weld = Instance.new("Weld", collider)
+					weld.Part0 = leftleg
+					weld.Part1 = collider
+					weld.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+					collider.TopSurface = "Smooth"
+					collider.BottomSurface = "Smooth"
+					collider.formFactor = "Symmetric"
+					glue.C0 = CFrame.new(-0.5, -1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+					glue.C1 = CFrame.new(-0, 1, 0, -0, -0, -1, 0, 1, 0, 1, 0, 0)
+					collider.Transparency = 1
+				end
+				------------
+				if rightleg ~= nil then
+					local glue1 = Instance.new("Glue", clone.Torso)
+					glue1.Part0 = clone.Torso
+					glue1.Part1 = rightleg
+					glue1.Name = "Right leg"
+					local collider1 = Instance.new("Part", rightleg)
+					collider1.Position = Vector3.new(0,999,0)
+					collider1.Size = Vector3.new(1.5, 1, 1)
+					collider1.Shape = "Cylinder"
+					local weld1 = Instance.new("Weld", collider1)
+					weld1.Part0 = rightleg
+					weld1.Part1 = collider1
+					weld1.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+					collider1.TopSurface = "Smooth"
+					collider1.BottomSurface = "Smooth"
+					collider1.formFactor = "Symmetric"
+					glue1.C0 = CFrame.new(0.5, -1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+					glue1.C1 = CFrame.new(0, 1, 0, 0, 0, 1, 0, 1, 0, -1, -0, -0)
+					collider1.Transparency = 1
+				end
+				------------
+				if rightrm ~= nil then
+					local glue11 = Instance.new("Glue", clone.Torso)
+					glue11.Part0 = clone.Torso
+					glue11.Part1 = rightrm
+					glue11.Name = "Right shoulder"
+					local collider11 = Instance.new("Part", rightrm)
+					collider11.Position = Vector3.new(0,9999,0)
+					collider11.Size = Vector3.new(1.5,1,1)
+					collider11.Shape = "Cylinder"
+					local weld11 = Instance.new("Weld", collider11)
+					weld11.Part0 = rightrm
+					weld11.Part1 = collider11
+					weld11.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+					collider11.TopSurface = "Smooth"
+					collider11.BottomSurface = "Smooth"
+					collider11.formFactor = "Symmetric"
+					glue11.C0 = CFrame.new(1.5, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+					glue11.C1 = CFrame.new(0, 0.5, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0)
+					collider11.Transparency = 1
+				end
+				------------
+				if leftarm ~= nil then
+					local glue111 = Instance.new("Glue", clone.Torso)
+					glue111.Part0 = clone.Torso
+					glue111.Part1 = leftarm
+					glue111.Name = "Left shoulder"
+					local collider111 = Instance.new("Part", leftarm)
+					collider111.Position = Vector3.new(0,9999,0)
+					collider111.Size = Vector3.new(1.5,1,1)
+					collider111.Shape = "Cylinder"
+					local weld111 = Instance.new("Weld", collider111)
+					weld111.Part0 = leftarm
+					weld111.Part1 = collider111
+					weld111.C0 = CFrame.new(0,-0.2,0) * CFrame.fromEulerAnglesXYZ(0, 0, math.pi/2)
+					collider111.TopSurface = "Smooth"
+					collider111.BottomSurface = "Smooth"
+					collider111.formFactor = "Symmetric"
+					glue111.C0 = CFrame.new(-1.5, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+					glue111.C1 = CFrame.new(0, 0.5, 0, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+					collider111.Transparency = 1
+					----------------
+					sensoring = Instance.new("Part", clone.Torso)
+					sensoring.Size = Vector3.new(1.2,1.1,0.8)
+					sensoring.CanCollide = false
+					sensoring.Position = clone.Torso.Position
+					local welder = Instance.new("Weld", sensoring)
+					welder.Part0 = clone.Torso
+					welder.Part1 = sensoring
+					welder.C0 = welder.C0 * CFrame.new(0,0,1.05)
+					sensoring.Transparency = 1
+					-----------------
+					sensoring1 = Instance.new("Part", clone.Torso)
+					sensoring1.Size = Vector3.new(1.2,1.1,0.8)
+					sensoring1.CanCollide = false
+					sensoring1.Position = clone.Torso.Position
+					local welder1 = Instance.new("Weld", sensoring)
+					welder1.Part0 = clone.Torso
+					welder1.Part1 = sensoring1
+					welder1.C0 = welder1.C0 * CFrame.new(0,0,-1.05)
+					sensoring1.Transparency = 1
+				end
+				clone.Name = game.Players.LocalPlayer.Character.Name.." (DEAD)"
+				ded:Play()
+				vel:destroy()
+				wait(0.5)
+				local function touch()
+					if not using then
+						using = true
+						local Math = math.random(1,4)
+						if Math == 1 then
+							hit:Play()
+						end
+						if Math == 2 then
+							hit1:Play()
+						end
+						if Math == 3 then
+							hit2:Play()
+						end
+						if Math == 4 then
+							hit3:Play()
+						end
+						wait(0.1)
+						using = false
+					end
+				end
+				sensoring.Touched:connect(touch)
+				sensoring1.Touched:connect(touch)
+				while true do
+					clone.Head.CanCollide = false
+					game:GetService("RunService").Stepped:wait()
+				end
+			end
+
+			game.Players.LocalPlayer.Character.Humanoid.Died:connect(ragdoll)
+
+			--di ent
+			Sound00:Play()
+			game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		end
+	end
+	mouse.Button1Down:connect(shoot)
+	mouse.KeyDown:connect(kys)
+	function look()
+		game.Players.LocalPlayer.Character.Torso.CFrame = CFrame.new(game.Players.LocalPlayer.Character.Torso.Position,Vector3.new(mouse.Hit.p.x, game.Players.LocalPlayer.Character.Torso.Position.y, mouse.Hit.p.z))
+	end
+	game:GetService("RunService").RenderStepped:connect(look)
+	while true do
+		if howmuch <= -1 then
+			howmuch = 0
+		end
+		if howmuch >= 4 then
+			howmuch = 0
+		end
+		if canwalk and howmuch < 1 then
+			for i = 0,1 , 0.01 do
+				if canwalk and howmuch < 1 then
+					weldf.C0 = weldf.C0:lerp(CFrame.new(-0.0861244202, -1.04447937, -0.182327271, -0.105800174, 0.219419539, -0.969882667, 0.973032475, -0.178225949, -0.146464914, -0.204995126, -0.959215224, -0.194644511),i)
+					humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,0,0),i)
+					headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.48563504, -0.102214813, 1, 6.31088724e-30, -1.00974196e-28, -2.5243549e-29, 0.990270674, 0.139171436, -5.04870979e-29, -0.139171436, 0.990270674),i)
+					llegweld.C0 = llegweld.C0:lerp(CFrame.new(-0.606146812, -2.0409379, 0.23392868, 0.994522691, 0.104527831, 4.48272353e-09, -0.10395515, 0.989075184, 0.104526937, 0.0109259691, -0.103954434, 0.994521797),i)
+					lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-1.56223869, 0.00435209274, 0, 0.997564316, 0.0697554871, 0, -0.0697554871, 0.997564316, 0, 0, 2.5243549e-29, 1),i)
+					rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(0.589343071, -2.06024575, -0.139556885, 0.997564077, -0.0693742931, 0.0072911568, 0.0697562397, 0.992102206, -0.104268931, 1.75914945e-08, 0.104523741, 0.994524658),i)
+					rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(1.61233902, 0.0157878399, 0, 0.990270674, -0.139171436, 5.04870979e-29, 0.139171436, 0.990270674, 2.01948392e-28, 1.00974196e-28, 2.27191941e-28, 1),i)
+					game:GetService("RunService").RenderStepped:wait()
+				end
+			end
+			for i = 0,0.3 , 0.004 do
+				if canwalk and howmuch < 1 then
+					humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0,0,0),i)
+					headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.5222218, -0.102214813, 1, 6.31088724e-30, -1.00974196e-28, -2.5243549e-29, 0.990270674, 0.139171436, -5.04870979e-29, -0.139171436, 0.990270674),i)
+					llegweld.C0 = llegweld.C0:lerp(CFrame.new(-0.606146812, -2.0409379, 0.23392868, 0.994522691, 0.104527831, 4.48272353e-09, -0.10395515, 0.989075184, 0.104526937, 0.0109259691, -0.103954434, 0.994521797),i)
+					lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-1.56223869, 0.0409388542, 0, 0.997564316, 0.0697554871, 0, -0.0697554871, 0.997564316, 0, 0, 2.5243549e-29, 1),i)
+					rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(0.589343071, -2.06024575, -0.139556885, 0.997564077, -0.0693742931, 0.0072911568, 0.0697562397, 0.992102206, -0.104268931, 1.75914945e-08, 0.104523741, 0.994524658),i)
+					rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(1.61233902, 0.0523746014, 0, 0.990270674, -0.139171436, 5.04870979e-29, 0.139171436, 0.990270674, 2.01948392e-28, 1.00974196e-28, 2.27191941e-28, 1),i)
+					game:GetService("RunService").RenderStepped:wait()
+				end
+			end
+		end
+		if canwalk and howmuch >= 1 then
+			if canwalk then
+				for i = 0,0.5 , 0.05 do
+					if canwalk and howmuch >= 1 then
+						weldf.C0 = weldf.C0:lerp(CFrame.new(0.405254364, -0.770187378, -0.0317382813, 0.916420221, 0.388018847, -0.0981012359, 0.181092858, -0.183419436, 0.966214538, 0.356913, -0.90321666, -0.238354743),i)
+						headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.5, 0, 1, -4.22829445e-28, 5.04870979e-28, -4.7962743e-28, 0.98481518, -0.173646927, 4.54383881e-28, 0.173646927, 0.98481518),i)
+						humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0, -0.0218505859, -0.207862854, 1, -2.65673535e-22, 5.23747954e-22, 1.5097504e-22, 0.978147745, 0.207910955, -5.67539301e-22, -0.207910955, 0.978147745),i)
+						llegweld.C0 = llegweld.C0:lerp(CFrame.new(-0.5, -1.35635376, 0.984832764, 1, -1.46412584e-27, -1.17303617e-26, 1.15615454e-26, -0.0348859876, 0.999391198, -1.61558713e-27, -0.999391198, -0.0348859876),i)
+						lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-1.2262764, 0.145446777, -0.484161377, 0.788011551, -0.578533888, 0.210562602, 0.411958992, 0.241324201, -0.878665209, 0.457523763, 0.779141247, 0.428498387),i)
+						rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(0.5, -1.81869507, -0.922622681, 1, -1.72713825e-22, -5.61306619e-22, -2.65673535e-22, 0.719345152, -0.694654465, 5.23747954e-22, 0.694656253, 0.719344676),i)
+						rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(1.39048004, 0.431030273, -0.798828125, 0.978150845, 0.207915336, -2.65673535e-22, -3.24998904e-22, 2.51171167e-22, -1, -0.207915336, 0.978150845, 3.13253081e-22),i)
+						game:GetService("RunService").RenderStepped:wait()
+					end
+				end
+			end
+			if canwalk then
+				for i = 0,0.5 , 0.05 do
+					if canwalk and howmuch >= 1 then
+						weldf.C0 = weldf.C0:lerp(CFrame.new(0.405254364, -0.770187378, -0.0317382813, 0.916420221, 0.388018847, -0.0981012359, 0.181092858, -0.183419436, 0.966214538, 0.356913, -0.90321666, -0.238354743),i)
+						headweld.C0 = headweld.C0:lerp(CFrame.new(0, 1.5, 0, 1, -4.22829445e-28, 5.04870979e-28, -4.7962743e-28, 0.98481518, -0.173646927, 4.54383881e-28, 0.173646927, 0.98481518),i)
+						humanoidrootpart.C0 = humanoidrootpart.C0:lerp(CFrame.new(0, -0.0218505859, -0.00492095947, 1, -2.65673535e-22, 5.23747954e-22, 1.5097504e-22, 0.978147686, 0.20791094, -5.67539301e-22, -0.20791094, 0.978147686),i)
+						llegweld.C0 = llegweld.C0:lerp(CFrame.new(-0.5, -1.86941528, -0.882217407, 1, -6.4421537e-26, 9.04728795e-26, 1.09784194e-25, 0.694650829, -0.71934706, -1.64587939e-26, 0.71934706, 0.694650829),i)
+						lhandweld.C0 = lhandweld.C0:lerp(CFrame.new(-1.2262764, 0.145446777, -0.484161377, 0.788011551, -0.578533888, 0.210562602, 0.411958992, 0.241324201, -0.878665209, 0.457523763, 0.779141247, 0.428498387),i)
+						rlegweld.C0 = rlegweld.C0:lerp(CFrame.new(0.5, -1.35365295, 1.16508484, 1, 5.03939593e-22, 3.01560673e-22, -2.65673358e-22, -0.0697558299, 0.997564077, 5.237476e-22, -0.997564077, -0.0697558299),i)
+						rhandweld.C0 = rhandweld.C0:lerp(CFrame.new(1.39048004, 0.431030273, -0.798828125, 0.978150845, 0.207915336, -2.65673535e-22, -3.24998904e-22, 2.51171167e-22, -1, -0.207915336, 0.978150845, 3.13253081e-22),i)
+						game:GetService("RunService").RenderStepped:wait()
+					end
+				end
+			end
+		end
+		game:GetService("RunService").RenderStepped:wait()
+	end
