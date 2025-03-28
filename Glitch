@@ -1,0 +1,872 @@
+	-- Created by Nebula_Zorua --
+	-- Glitch --
+	-- Smile for the ca-aaaaaa-amera~ --
+	-- Discord: Nebula the Zorua#6969
+	-- Youtube: https://www.youtube.com/channel/UCo9oU9dCw8jnuVLuy4_SATA
+
+
+	--// Initializing \\--
+	local S = setmetatable({},{__index = function(s,i) return game:service(i) end})
+	local Plrs = S.Players
+	local Plr = Plrs.LocalPlayer
+	local Char = Plr.Character
+	local Hum = Char:FindFirstChildOfClass'Humanoid'
+	local RArm = Char["Right Arm"]
+	local LArm = Char["Left Arm"]
+	local RLeg = Char["Right Leg"]
+	local LLeg = Char["Left Leg"]	
+	local Root = Char:FindFirstChild'HumanoidRootPart'
+	local Torso = Char.Torso
+	local Head = Char.Head
+	local NeutralAnims = true
+	local Attack = false
+	local BloodPuddles = {}
+	local Effects = {}
+	local Debounces = {Debounces={}}
+	local Mouse = Plr:GetMouse()
+	local Hit = {}
+	local Sine = 0
+	local Change = 1
+
+	Hum.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+	--// Debounce System \\--
+
+
+	function Debounces:New(name,cooldown)
+		local aaaaa = {Usable=true,Cooldown=cooldown or 2,CoolingDown=false,LastUse=0}
+		setmetatable(aaaaa,{__index = Debounces})
+		Debounces.Debounces[name] = aaaaa
+		return aaaaa
+	end
+
+	function Debounces:Use(overrideUsable)
+		assert(self.Usable ~= nil and self.LastUse ~= nil and self.CoolingDown ~= nil,"Expected ':' not '.' calling member function Use")
+		if(self.Usable or overrideUsable)then
+			self.Usable = false
+			self.CoolingDown = true
+			local LastUse = time()
+			self.LastUse = LastUse
+			delay(self.Cooldown or 2,function()
+				if(self.LastUse == LastUse)then
+					self.CoolingDown = false
+					self.Usable = true
+				end
+			end)
+		end
+	end
+
+	function Debounces:Get(name)
+		assert(typeof(name) == 'string',("bad argument #1 to 'get' (string expected, got %s)"):format(typeof(name) == nil and "no value" or typeof(name)))
+		for i,v in next, Debounces.Debounces do
+			if(i == name)then
+				return v;
+			end
+		end
+	end
+
+	function Debounces:GetProgressPercentage()
+		assert(self.Usable ~= nil and self.LastUse ~= nil and self.CoolingDown ~= nil,"Expected ':' not '.' calling member function Use")
+		if(self.CoolingDown and not self.Usable)then
+			return math.max(
+				math.floor(
+					(
+						(time()-self.LastUse)/self.Cooldown or 2
+					)*100
+				)
+			)
+		else
+			return 100
+		end
+	end
+
+	--// Shortcut Variables \\--
+	local CF = {N=CFrame.new,A=CFrame.Angles,fEA=CFrame.fromEulerAnglesXYZ}
+	local C3 = {N=Color3.new,RGB=Color3.fromRGB,HSV=Color3.fromHSV,tHSV=Color3.toHSV}
+	local V3 = {N=Vector3.new,FNI=Vector3.FromNormalId,A=Vector3.FromAxis}
+	local M = {C=math.cos,R=math.rad,S=math.sin,P=math.pi,RNG=math.random,MRS=math.randomseed,H=math.huge,RRNG = function(min,max,div) return math.rad(math.random(min,max)/(div or 1)) end}
+	local R3 = {N=Region3.new}
+	local De = S.Debris
+	local WS = workspace
+	local Lght = S.Lighting
+	local RepS = S.ReplicatedStorage
+	local IN = Instance.new
+	--// Instance Creation Functions \\--
+
+	function Sound(parent,id,pitch,volume,looped,effect,autoPlay)
+		local Sound = IN("Sound")
+		Sound.SoundId = "rbxassetid://".. tostring(id or 0)
+		Sound.Pitch = pitch or 1
+		Sound.Volume = volume or 1
+		Sound.Looped = looped or false
+		if(autoPlay)then
+			coroutine.wrap(function()
+				repeat wait() until Sound.IsLoaded
+				Sound.Playing = autoPlay or false
+			end)()
+		end
+		if(not looped and effect)then
+			Sound.Stopped:connect(function()
+				Sound.Volume = 0
+				Sound:destroy()
+			end)
+		elseif(effect)then
+			warn("Sound can't be looped and a sound effect!")
+		end
+		Sound.Parent =parent or Torso
+		return Sound
+	end
+	function Part(parent,color,material,size,cframe,anchored,cancollide)
+		local part = IN("Part")
+		part[typeof(color) == 'BrickColor' and 'BrickColor' or 'Color'] = color or C3.N(0,0,0)
+		part.Material = material or Enum.Material.SmoothPlastic
+		part.TopSurface,part.BottomSurface=10,10
+		part.Size = size or V3.N(1,1,1)
+		part.CFrame = cframe or CF.N(0,0,0)
+		part.Anchored = anchored or true
+		part.CanCollide = cancollide or false
+		part.Parent = parent or Char
+		return part
+	end
+	function Mesh(parent,meshtype,meshid,textid,scale,offset)
+		local part = IN("SpecialMesh")
+		part.MeshId = meshid or ""
+		part.TextureId = textid or ""
+		part.Scale = scale or V3.N(1,1,1)
+		part.Offset = offset or V3.N(0,0,0)
+		part.MeshType = meshtype or Enum.MeshType.Sphere
+		part.Parent = parent
+		return part
+	end
+
+	NewInstance = function(instance,parent,properties)
+		local inst = Instance.new(instance,parent)
+		if(properties)then
+			for i,v in next, properties do
+				pcall(function() inst[i] = v end)
+			end
+		end
+		return inst;
+	end
+
+
+
+	--// Extended ROBLOX tables \\--
+	local Instance = setmetatable({ClearChildrenOfClass = function(where,class,recursive) local children = (recursive and where:GetDescendants() or where:GetChildren()) for _,v in next, children do if(v:IsA(class))then v:destroy();end;end;end},{__index = Instance})
+	--// Customization \\--
+
+	local Frame_Speed = 60 -- The frame speed for swait. 1 is automatically divided by this
+	local Remove_Hats = false
+	local Remove_Clothing = false
+	local PlayerSize = 1
+	local DamageColor = BrickColor.new'Institutional white'
+	local MusicId = 1470848774
+	local Twitching = false
+	local ForcedTwitching =  false
+	local TwitchTime = 0
+	local Filter = true
+
+	local TimePos = 0
+	local ReverseTime = 0
+	--// Weapon and GUI creation, and Character Customization \\--
+
+	if(Remove_Hats)then Instance.ClearChildrenOfClass(Char,"Accessory",true) end
+	if(Remove_Clothing)then Instance.ClearChildrenOfClass(Char,"Clothing",true) Instance.ClearChildrenOfClass(Char,"ShirtGraphic",true) end
+	local Effects = IN("Folder",Char)
+	Effects.Name = "Effects"
+
+	Instance.ClearChildrenOfClass(Head,"Decal")
+
+	NewInstance("Decal",Head,{Texture='rbxassetid://1345127347',Face=Enum.NormalId.Front})
+	local Music = Sound(Torso,MusicId,1,3,true,false,true)
+
+	if(PlayerSize ~= 1)then
+		for _,v in next, Char:GetDescendats() do
+			if(v:IsA'BasePart')then
+				v.Size = v.Size * PlayerSize
+			end
+		end
+	end
+
+	--// Stop animations \\--
+	for _,v in next, Hum:GetPlayingAnimationTracks() do
+		v:Stop();
+	end
+
+	pcall(game.Destroy,Char:FindFirstChild'Animate')
+	pcall(game.Destroy,Hum:FindFirstChild'Animator')
+
+	--// Joints \\--
+
+	local LS = NewInstance('Motor',Char,{Part0=Torso,Part1=LArm,C0 = CF.N(-1.5 * PlayerSize,0.5 * PlayerSize,0),C1 = CF.N(0,.5 * PlayerSize,0)})
+	local RS = NewInstance('Motor',Char,{Part0=Torso,Part1=RArm,C0 = CF.N(1.5 * PlayerSize,0.5 * PlayerSize,0),C1 = CF.N(0,.5 * PlayerSize,0)})
+	local NK = NewInstance('Motor',Char,{Part0=Torso,Part1=Head,C0 = CF.N(0,1.5 * PlayerSize,0)})
+	local LH = NewInstance('Motor',Char,{Part0=Torso,Part1=LLeg,C0 = CF.N(-.5 * PlayerSize,-1 * PlayerSize,0),C1 = CF.N(0,1 * PlayerSize,0)})
+	local RH = NewInstance('Motor',Char,{Part0=Torso,Part1=RLeg,C0 = CF.N(.5 * PlayerSize,-1 * PlayerSize,0),C1 = CF.N(0,1 * PlayerSize,0)})
+	local RJ = NewInstance('Motor',Char,{Part0=Root,Part1=Torso})
+
+	local LSC0 = LS.C0
+	local RSC0 = RS.C0
+	local NKC0 = NK.C0
+	local LHC0 = LH.C0
+	local RHC0 = RH.C0
+	local RJC0 = RJ.C0
+
+	--// Artificial HB \\--
+
+	local ArtificialHB = IN("BindableEvent", script)
+	ArtificialHB.Name = "Heartbeat"
+
+	script:WaitForChild("Heartbeat")
+
+	local tf = 0
+	local allowframeloss = false
+	local tossremainder = false
+	local lastframe = tick()
+	local frame = 1/Frame_Speed
+	ArtificialHB:Fire()
+
+	game:GetService("RunService").Heartbeat:connect(function(s, p)
+		tf = tf + s
+		if tf >= frame then
+			if allowframeloss then
+				script.Heartbeat:Fire()
+				lastframe = tick()
+			else
+				for i = 1, math.floor(tf / frame) do
+					ArtificialHB:Fire()
+				end
+				lastframe = tick()
+			end
+			if tossremainder then
+				tf = 0
+			else
+				tf = tf - frame * math.floor(tf / frame)
+			end
+		end
+	end)
+
+	function swait(num)
+		if num == 0 or num == nil then
+			ArtificialHB.Event:wait()
+		else
+			for i = 0, num do
+				ArtificialHB.Event:wait()
+			end
+		end
+	end
+
+
+	--// Effect Function(s) \\--
+
+	local DownCharacters = {"̖","̗","̘","̙","̜","̝","̞","̟","̠","̤","̥","̦","̩","̪","̫","̬","̭","̮","̯","̰","̱","̲","̳","̹","̺","̻","̼","ͅ","͇","͈","͉","͍","͎","͓","͔","͕","͖","͙","͚","̣",}
+	local UpCharacters = {"̍","̎","̄","̅","̿","̑","̆","̐","͒","͗","͑","̇","̈","̊","͂","̓","̈́","͊","͋","͌","̃","̂","̌","͐","̀","́","̋","̏","̒","̓","̔","̽","̉","ͣ","ͤ","ͥ","ͦ","ͧ","ͨ","ͩ","ͪ","ͫ","ͬ","ͭ","ͮ","ͯ","̾","͛","͆","̚",}
+	local MidCharacters = {"̕","̛","̀","́","͘","̡","̢","̧","̨","̴","̵","̶","͏","͜","͝","͞","͟","͠","͢","̸","̷","͡","҉",}
+
+	function IsUnicode(c)
+		for i = 128, 255 do
+			if(string.char(i) == string.char(string.byte(c)))then
+				return true
+			end
+		end
+		return false
+	end
+
+	function IsZalgoChar(c)
+		for i = 1, #UpCharacters do
+			if(c == UpCharacters[i])then
+				return true
+			end
+		end
+		for i = 1, #DownCharacters do
+			if(c == DownCharacters[i])then
+				return true
+			end
+		end
+		for i = 1, #MidCharacters do
+			if(c == MidCharacters[i])then
+				return true
+			end
+		end
+		return false
+	end
+
+	function Zalgo(str,up,mid,down,streng)
+		local function rand(max)
+			return math.floor(M.RNG() * max);
+		end
+		local newTxt = "";
+		for i = 1, #str do
+			if(not IsZalgoChar(str:sub(i,i)))then
+				local upN,midN,downN = rand(8),rand(2),rand(8)
+				if(streng == 2)then
+					upN,midN,downN = rand(16)/2+1,rand(6)/2,rand(16)/2+1
+				elseif(streng == 3)then
+					upN,midN,downN = rand(64)/4+3,rand(16)/4+1,rand(64)/4+3
+				end
+				newTxt = newTxt..str:sub(i,i)
+				if(up)then
+					for j = 0, upN do
+						newTxt = newTxt..UpCharacters[M.RNG(1,#UpCharacters)]
+					end
+				end
+				if(mid)then
+					for j = 0, midN do
+						newTxt = newTxt..MidCharacters[M.RNG(1,#MidCharacters)]
+					end
+				end
+				if(down)then
+					for j = 0, downN do
+						newTxt = newTxt..DownCharacters[M.RNG(1,#DownCharacters)]
+					end
+				end
+			end
+		end
+		return newTxt
+	end
+
+	function Bezier(startpos, pos2, pos3, endpos, t)
+		local A = startpos:lerp(pos2, t)
+		local B  = pos2:lerp(pos3, t)
+		local C = pos3:lerp(endpos, t)
+		local lerp1 = A:lerp(B, t)
+		local lerp2 = B:lerp(C, t)
+		local cubic = lerp1:lerp(lerp2, t)
+		return cubic
+	end
+
+
+	function Effect(data)
+		local FX = data.Effect or 'Resize-AndFade'
+		local Parent = data.Parent or Effects
+		local Color = data.Color or C3.N(0,0,0)
+		local Size = data.Size or V3.N(1,1,1)
+		local MoveDir = data.MoveDirection or nil
+		local MeshData = data.Mesh or nil
+		local SndData = data.Sound or nil
+		local Frames = data.Frames or 45
+		local Manual = data.Manual or nil
+		local Material = data.Material or nil
+		local CFra = data.CFrame or Torso.CFrame
+		local Settings = data.FXSettings or {}
+		local Snd,Prt,Msh;
+		if(Manual and typeof(Manual) == 'Instance' and Manual:IsA'BasePart')then
+			Prt = Manual
+		else
+			Prt = Part(Parent,Color,Material,Size,CFra,true,false)
+		end
+		if(typeof(MeshData) == 'table')then
+			Msh = Mesh(Prt,MeshData.MeshType,MeshData.MeshId,MeshData.TextureId,MeshData.Scale,MeshData.Offset)
+		elseif(typeof(MeshData) == 'Instance')then
+			Msh = MeshData:Clone()
+			Msh.Parent = Prt
+		end
+		if(typeof(SndData) == 'table' or typeof(SndData) == 'Instance')then
+			Snd = Sound(Prt,SndData.SoundId,SndData.Pitch,SndData.Volume,false,false,true)
+		end
+		if(Snd)then
+			repeat wait() until Snd.Playing and Snd.IsLoaded and Snd.TimeLength > 0
+			Frames = Snd.TimeLength * Frame_Speed/Snd.Pitch
+		end
+		local MoveSpeed = nil;
+		if(MoveDir)then
+			MoveSpeed = (CFra.p - MoveDir).magnitude/Frames
+		end
+		local Inc = M.RNG()-M.RNG()
+		local Thingie = 0
+		local Thingie2 = M.RNG(50,100)/100
+
+		coroutine.wrap(function()
+			if(FX ~= 'Arc')then
+				for i = 1, Frames do
+					if(FX == 'Resize-AndFade')then
+						if(not Settings.EndSize)then
+							Settings.EndSize = V3.N(0,0,0)
+						end
+						local grow = (typeof(Settings.EndSize) == 'Vector3' and Settings.EndSize-Size or typeof(Settings.EndSize) == 'number' and V3.N(Settings.EndSize))
+						if(Settings.EndIsIncrement)then
+							Prt.Size = Prt.Size - Settings.EndSize					
+						else
+							Prt.Size = Prt.Size - grow/Frames
+						end 
+						Prt.Transparency = (i/Frames)
+					elseif(FX == 'Resize+AndFade')then
+						if(not Settings.EndSize)then
+							Settings.EndSize = Size*2
+						end
+						local grow = (typeof(Settings.EndSize) == 'Vector3' and Settings.EndSize-Size or typeof(Settings.EndSize) == 'number' and V3.N(Settings.EndSize))
+						if(Settings.EndIsIncrement)then
+							Prt.Size = Prt.Size + Settings.EndSize					
+						else
+							Prt.Size = Prt.Size + grow/Frames
+						end 
+						Prt.Transparency = (i/Frames)
+					elseif(FX == 'Fade')then
+						Prt.Transparency = (i/Frames)
+					end
+					if(Settings.RandomizeCFrame)then
+						Prt.CFrame = Prt.CFrame * CF.A(M.RRNG(-360,360),M.RRNG(-360,360),M.RRNG(-360,360))
+					end
+					if(MoveDir and MoveSpeed)then
+						local Orientation = Prt.Orientation
+						Prt.CFrame = CF.N(Prt.Position,MoveDir)*CF.N(0,0,-MoveSpeed)
+						Prt.Orientation = Orientation
+					end
+					if(swait and typeof(swait) == 'function')then
+						swait()
+					else
+						wait()
+					end
+				end
+				Prt:destroy() 
+			else
+				local start,third,fourth,endP = Settings.Start,Settings.Third,Settings.Fourth,Settings.End
+				if(not Settings.End and Settings.Home)then endP = Settings.Home.CFrame end
+				local quarter = third or start:lerp(endP, 0.25) * CF.N(M.RNG(-25,25),M.RNG(0,25),M.RNG(-25,25))
+				local threequarter = fourth or start:lerp(endP, 0.75) * CF.N(M.RNG(-25,25),M.RNG(0,25),M.RNG(-25,25))
+				assert(start ~= nil,"You need to specify a start point!")
+				assert(endP ~= nil,"You need to specify an end point!")
+				for i = 0, 1, Settings.Speed or 0.01 do
+					if(Settings.Home)then
+						endP = Settings.Home.CFrame
+					end
+					Prt.CFrame = Bezier(start, quarter, threequarter, endP, i)
+					if(swait and typeof(swait) == 'function')then
+						swait()
+					else
+						wait()
+					end
+				end
+				if(Settings.RemoveOnGoal)then
+					Prt:destroy()
+				end
+			end
+		end)()
+		return Prt,Msh,Snd
+	end	
+
+
+	function SoulSteal(whom)
+		local torso = (whom:FindFirstChild'Head' or whom:FindFirstChild'Torso' or whom:FindFirstChild'UpperTorso' or whom:FindFirstChild'LowerTorso' or whom:FindFirstChild'HumanoidRootPart')
+		print(torso)
+		if(torso and torso:IsA'BasePart')then
+			local Model = Instance.new("Model",Effects)
+			Model.Name = whom.Name.."'s Soul"
+			whom:BreakJoints()
+			local Soul = Part(Model,BrickColor.new'Really red','Glass',V3.N(.5,.5,.5),torso.CFrame,true,false)
+			Soul.Name = 'Head'
+			NewInstance("Humanoid",Model,{Health=0,MaxHealth=0})
+			Effect{
+				Effect="Arc",
+				Manual = Soul,
+				FXSettings={
+					Start=torso.CFrame,
+					Home = Torso,
+					RemoveOnGoal = true,
+				}
+			}
+			local lastPoint = Soul.CFrame.p
+
+			for i = 0, 1, 0.01 do 
+				local point = CFrame.new(lastPoint, Soul.Position) * CFrame.Angles(-math.pi/2, 0, 0)
+				local mag = (lastPoint - Soul.Position).magnitude
+				Effect{
+					Effect = "Fade",
+					CFrame = point * CF.N(0, mag/2, 0),
+					Size = V3.N(.5,mag+.5,.5),
+					Color = Soul.BrickColor
+				}
+				lastPoint = Soul.CFrame.p
+				swait()
+			end
+			for i = 1, 5 do
+				Effect{
+					Effect="Fade",
+					Color = BrickColor.new'Really red',
+					MoveDirection = (Torso.CFrame*CFrame.new(M.RNG(-40,40),M.RNG(-40,40),M.RNG(-40,40))).p
+				}	
+			end
+		end
+	end
+
+	--// Other Functions \\ --
+
+	function getRegion(point,range,ignore)
+		return workspace:FindPartsInRegion3WithIgnoreList(R3.N(point-V3.N(1,1,1)*range/2,point+V3.N(1,1,1)*range/2),ignore,100)
+	end
+
+	function clerp(startCF,endCF,alpha)
+		return startCF:lerp(endCF, alpha)
+	end
+
+	function GetTorso(char)
+		return char:FindFirstChild'Torso' or char:FindFirstChild'UpperTorso' or char:FindFirstChild'LowerTorso' or char:FindFirstChild'HumanoidRootPart'
+	end
+
+	function RandomEnum(enum)
+		local t = enum:GetEnumItems()
+		if(#t < 1)then t = 1 end
+		local choice = M.RNG(1,#t)
+		return t[choice]
+	end
+
+	function Chat(text)
+		coroutine.wrap(function()
+			if Char:FindFirstChild("TalkingBillBoard")~= nil then
+				Char:FindFirstChild("TalkingBillBoard"):destroy()
+			end
+			local oText = text;
+			text = ""
+			for i = 1, #oText do
+				local lol = M.RNG(1,24)
+				if(lol == 1 or lol == 2)then
+					text = text..(oText:sub(i,i):upper())
+				elseif(lol == 3 or lol == 4)then
+					text = text..Zalgo(oText:sub(i,i),M.RNG(1,2) == 1,true,M.RNG(1,2) == 1,M.RNG(1,3))
+				elseif(lol == 5 or lol == 6)then
+					text = text.." "..(oText:sub(i,i):lower())
+				elseif(lol == 7)then
+					text = text..(string.rep(oText:sub(i,i):lower(),M.RNG(5,9)))
+				else
+					text = text..(oText:sub(i,i):lower())
+				end
+			end
+			local Bill = Instance.new("BillboardGui",Char)
+			Bill.Size = UDim2.new(0,100,0,40)
+			Bill.StudsOffset = Vector3.new(0,3,0)
+			Bill.Adornee = Char.Head
+			Bill.Name = "TalkingBillBoard"
+			local Hehe = Instance.new("TextLabel",Bill)
+			Hehe.BackgroundTransparency = 1
+			Hehe.BorderSizePixel = 0
+			Hehe.Text = ""
+			Hehe.Font = "Bodoni"
+			Hehe.TextSize = 40
+			Hehe.TextStrokeTransparency = 0
+			Hehe.Size = UDim2.new(1,0,0.5,0)
+			coroutine.resume(coroutine.create(function()
+				while Hehe ~= nil do
+					swait()
+					Hehe.Font = RandomEnum(Enum.Font)
+					Hehe.Position = UDim2.new(math.random(-.4,.4),math.random(-5,5),.05,math.random(-5,5)) 
+					Hehe.Rotation = M.RNG(-M.RNG(5,15),M.RNG(5,15))
+					local aa = math.random(0, 255)/255
+					local bb = math.random(0, 255)/255
+					Hehe.TextColor3 = C3.N(aa,aa,aa)
+					Hehe.TextStrokeColor3 = C3.N(bb,bb,bb)
+				end
+			end))
+			for i = 1,string.len(text),1 do
+				if(not IsZalgoChar(text:sub(i,i)) and not IsUnicode(text:sub(i,i)))then swait(5) end
+				Hehe.Text = string.sub(text,1,i)
+			end
+			swait(90)
+			for i = 0, 1, .025 do
+				swait()
+				Hehe.TextStrokeTransparency = i
+				Hehe.TextTransparency = i
+				Bill.ExtentsOffset = Vector3.new(math.random(-i, i), math.random(-i, i), math.random(-i, i))
+			end
+			Bill:Destroy()
+		end)()
+	end
+
+	function ShowDamage(Pos, Text, Time, Color)
+		coroutine.wrap(function()
+			local Pos = (Pos or Vector3.new(0, 0, 0))
+			local Text = (Text or "")
+			local Time = (Time or 2)
+			local Color = (Color or Color3.new(1, 0, 1))
+			local EffectPart = NewInstance("Part",Effects,{
+				Material=Enum.Material.SmoothPlastic,
+				Reflectance = 0,
+				Transparency = 1,
+				BrickColor = BrickColor.new(Color),
+				Name = "Effect",
+				Size = Vector3.new(0,0,0),
+				Anchored = true
+			})
+			local BillboardGui = NewInstance("BillboardGui",EffectPart,{
+				Size = UDim2.new(1.25, 0, 1.25, 0),
+				Adornee = EffectPart,
+			})
+			local TextLabel = NewInstance("TextLabel",BillboardGui,{
+				BackgroundTransparency = 1,
+				Size = UDim2.new(1, 0, 1, 0),
+				Text = Text,
+				Font = "Arial",
+				TextColor3 = Color,
+				TextStrokeColor3 = Color3.new(0,0,0),
+				TextStrokeTransparency=0,
+				TextScaled = true,
+			})
+			EffectPart.Parent = game:GetService("Workspace")
+			delay(0, function()
+				local Frames = (Time / (1/Frame_Speed))
+				for Frame = 1, Frames do
+					swait()
+					local Percent = (Frame / Frames)
+					EffectPart.CFrame = CF.N(Pos+ V3.N(0, Percent, 0)) * CF.A(0,0,M.RRNG(-90,90))
+					TextLabel.Rotation = M.RNG(-6,6)
+					TextLabel.Position = UDim2.new(M.RNG(-1,1)/10,M.RNG(-1,1)/10,.05,M.RNG(-1,1)/10) 
+				end
+				for i = 0, 1, .025 do
+					swait()
+					TextLabel.TextStrokeTransparency = i
+					TextLabel.TextTransparency = i
+					TextLabel.Position = UDim2.new(M.RNG(-15,15)/10,M.RNG(-15,15)/10,M.RNG(-15,15)/10,M.RNG(-15,15)/10) 
+				end
+				if EffectPart and EffectPart.Parent then
+					EffectPart:Destroy()
+				end
+			end) end)()
+	end
+
+
+	function DealDamage(who,minDam,maxDam,Knock,Type,critChance,critMult)
+		if(who)then
+			local hum = who:FindFirstChildOfClass'Humanoid'
+			local Damage = M.RNG(minDam,maxDam)
+			local canHit = true
+			if(hum)then
+				for _, p in pairs(Hit) do
+					if p[1] == hum then
+						if(time() - p[2] < 0.1) then
+							canHit = false
+						else
+							Hit[_] = nil
+						end
+					end
+				end
+				if(canHit)then
+					if(hum.Health >= math.huge)then
+						who:BreakJoints()
+						if(who:FindFirstChild'Head' and hum.Health > 0)then
+							ShowDamage((who.Head.CFrame * CF.N(0, 0, (who.Head.Size.Z / 2)).p+V3.N(0,1.5,0)), "INSTANT", 1.5, C3.N(1,0,0))
+						end
+					else
+						local player = S.Players:GetPlayerFromCharacter(who)
+						if(Type == "Fire")then
+							--idk..
+						else
+							local  c = Instance.new("ObjectValue",hum)
+							c.Name = "creator"
+							c.Value = Plr
+							game:service'Debris':AddItem(c,0.35)
+							if(M.RNG(1,100) <= (critChance or 0))then
+								if(who:FindFirstChild'Head' and hum.Health > 0)then
+									ShowDamage((who.Head.CFrame * CF.N(0, 0, (who.Head.Size.Z / 2)).p+V3.N(0,1.5,0)), "[CRIT] "..Damage*(critMult or 2), 1.5, BrickColor.new'New Yeller'.Color)
+								end
+								hum.Health = hum.Health - Damage*(critMult or 2)
+							else
+								if(who:FindFirstChild'Head' and hum.Health > 0)then
+									ShowDamage((who.Head.CFrame * CF.N(0, 0, (who.Head.Size.Z / 2)).p+V3.N(0,1.5,0)), Damage, 1.5, DamageColor.Color)
+								end
+								hum.Health = hum.Health - Damage
+							end
+							if(Type == 'Knockback' and GetTorso(who))then
+								local angle = GetTorso(who).Position - Root.Position + Vector3.new(0, 0, 0).unit
+								local body = NewInstance('BodyVelocity',GetTorso(who),{
+									P = 500,
+									maxForce = V3.N(math.huge,0,math.huge),
+									velocity = Root.CFrame.lookVector * Knock + Root.Velocity / 1.05
+								})
+								game:service'Debris':AddItem(body,.5)	
+							elseif(Type == 'Knockdown' and GetTorso(who))then
+								local rek = GetTorso(who)
+								print(rek)
+								hum.PlatformStand = true
+								delay(1,function()
+									hum.PlatformStand = false
+								end)
+								local angle = (GetTorso(who).Position - (Root.Position + Vector3.new(0, 0, 0))).unit
+								local bodvol = NewInstance("BodyVelocity",rek,{
+									velocity = angle * Knock,
+									P = 5000,
+									maxForce = Vector3.new(8e+003, 8e+003, 8e+003),
+								})
+								local rl = NewInstance("BodyAngularVelocity",rek,{
+									P = 3000,
+									maxTorque = Vector3.new(500000, 500000, 500000) * 50000000000000,
+									angularvelocity = Vector3.new(math.random(-10, 10), math.random(-10, 10), math.random(-10, 10)),
+								})
+								game:GetService("Debris"):AddItem(bodvol, .5)
+								game:GetService("Debris"):AddItem(rl, .5)
+							end
+						end
+					end
+				end
+				table.insert(Hit,{hum,time()})
+			end
+		end
+	end
+
+	function AOEDamage(where,range,minDam,maxDam,Knock,Type)
+		for _,v in next, getRegion(where,range,{Char}) do
+			if(v.Parent and v.Parent:FindFirstChildOfClass'Humanoid')then
+				DealDamage(v.Parent,minDam,maxDam,Knock,Type)
+			end
+		end
+	end
+	function AOEHeal(where,range,amount)
+		local healed = {}
+		for _,v in next, getRegion(where,range,{Char}) do
+			local hum = (v.Parent and v.Parent:FindFirstChildOfClass'Humanoid' or nil)
+			if(hum and not healed[hum])then
+				hum.Health = hum.Health + amount
+				if(v.Parent:FindFirstChild'Head' and hum.Health > 0)then
+					ShowDamage((v.Parent.Head.CFrame * CF.N(0, 0, (v.Parent.Head.Size.Z / 2)).p+V3.N(0,1.5,0)), "+"..amount, 1.5, BrickColor.new'Lime green'.Color)
+				end
+			end
+		end
+	end
+
+	--// Wrap it all up \\--
+
+	pcall(function()
+		Char.ReaperShadowHead.Eye1.BrickColor = BrickColor.new'White'
+		Char.ReaperShadowHead.Eye2.BrickColor = BrickColor.new'White'
+	end)
+	Plr.Chatted:connect(function(text)
+		if(text == "/e filter")then
+			Filter = not Filter
+		else
+			if(Filter)then
+				local succ,text = pcall(function() return game:service'Chat':FilterStringForBroadcast(text,Plr) end)
+				if(not succ)then
+					text = string.rep("_",#text)
+				end
+				Chat(text)
+			else
+				Chat(text)
+			end
+		end
+	end)
+
+	coroutine.wrap(function()
+		while true do
+			swait(M.RNG(0,50)/100)
+			if(NeutralAnims and not Twitching)then
+				local GlitchEffect = M.RNG(1,200)
+				if(GlitchEffect == 1)then
+					TwitchTime = time()
+					Twitching = true
+					TimePos = Music.TimePosition
+					for _,v in next, Char:children() do
+						if(v:IsA'BasePart')then
+							Effect{
+								Effect='Fade',
+								Color = BrickColor.Random(),
+								Material = RandomEnum(Enum.Material),
+								Size = v.Size + V3.N(M.RNG(-75,75)/100,M.RNG(-75,75)/100,M.RNG(-75,75)/100),
+								CFrame=v.CFrame * CF.A(M.RRNG(-15,15),M.RRNG(-15,15),M.RNG(-15,15)),
+								Frames = M.RNG(35,120)
+							}
+						end
+					end
+				end
+			end
+			if(not ForcedTwitching and time()-TwitchTime > M.RNG(150,350)/100)then
+				Twitching = false
+			end
+		end
+	end)()
+
+
+	while true do
+		swait()
+		Sine = Sine + Change
+		Music.Parent = Char
+		Music.Playing = true
+		Music.Volume = 2
+		local hitfloor,posfloor = workspace:FindPartOnRay(Ray.new(Root.CFrame.p,((CFrame.new(Root.Position,Root.Position - Vector3.new(0,1,0))).lookVector).unit * 4), Char)
+		local State = ((math.abs(Root.Velocity.x) > 1 or math.abs(Root.Velocity.z) > 1) and "Walk" or "Idle")
+		local wsVal = 28 / (Hum.WalkSpeed/16)
+		if(State == 'Walk')then
+			Change = 3
+			RH.C1 = clerp(RH.C1,CF.N(0,1,0)*CF.N(0,0-.5*M.S(Sine/wsVal),.05+.15*M.C(Sine/wsVal))*CF.A(M.R(0+60*M.C(Sine/wsVal)+-M.S(Sine/wsVal)),0,0),.2*(Hum.WalkSpeed/16))
+			LH.C1 = clerp(LH.C1,CF.N(0,1,0)*CF.N(0,0+.5*M.S(Sine/wsVal),.05-.15*M.C(Sine/wsVal))*CF.A(M.R(0-60*M.C(Sine/wsVal)+M.S(Sine/wsVal)),0,0),.2*(Hum.WalkSpeed/16))
+		else
+			RH.C1 = clerp(RH.C1,CF.N(0,1,0),.1)
+			LH.C1 = clerp(LH.C1,CF.N(0,1,0),.1)
+		end
+		if(not Twitching)then
+			pcall(function()
+				Char.ReaperShadowHead.Eye1.Material = Enum.Material.Neon
+				Char.ReaperShadowHead.Eye2.Material = Enum.Material.Neon
+			end)
+			Hum.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+			Music.Pitch = 1
+			local lol = {0,3}
+			local lol2 = {-1,1}
+			RS.C1 = CF.N(0,.5,0)*CF.N(M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100)*CF.A(M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)))
+			LS.C1 = CF.N(0,.5,0)*CF.N(M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100)*CF.A(M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)))
+			NK.C1 = CF.N(M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100)*CF.A(M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)))
+		else
+			pcall(function()
+				Char.ReaperShadowHead.Eye1.Material = RandomEnum(Enum.Material)
+				Char.ReaperShadowHead.Eye2.Material = RandomEnum(Enum.Material)
+			end)
+			Hum.DisplayDistanceType = RandomEnum(Enum.HumanoidDisplayDistanceType)
+			Music.Pitch = 1.25
+			if(time()-ReverseTime >= 1)then
+				Music.TimePosition = TimePos
+				ReverseTime = time()
+				for _,v in next, Char:children() do
+					if(v:IsA'BasePart')then
+						Effect{
+							Effect='Fade',
+							Color = BrickColor.Random(),
+							Material = RandomEnum(Enum.Material),
+							Size = v.Size + V3.N(M.RNG(-75,75)/100,M.RNG(-75,75)/100,M.RNG(-75,75)/100),
+							CFrame=v.CFrame * CF.A(M.RRNG(-15,15),M.RRNG(-15,15),M.RNG(-15,15)),
+							Frames = M.RNG(35,120)
+						}
+					end
+				end
+			end
+			local lol = {5,12}
+			local lol2 = {-16,8}
+			RS.C1 = CF.N(0,.5,0)*CF.N(M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100)*CF.A(M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)))
+			LS.C1 = CF.N(0,.5,0)*CF.N(M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100)*CF.A(M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)))
+			NK.C1 = CF.N(M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100,M.RNG(unpack(lol))/100)*CF.A(M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)),M.RRNG(unpack(lol2)))
+		end
+		if(NeutralAnims)then	
+			if(Twitching)then
+				if(State == 'Walk')then
+					local Alpha = .3
+					RJ.C0 = clerp(RJ.C0,CFrame.new(3.20649757e-13, 0.00629579648, 1.42956924e-06, 0.999999225, 5.09317033e-11, 0, -4.38656264e-11, 0.999980271, -0.00628618058, 0, 0.00628617639, 0.999979496)*CF.N(0,0+.1*-M.C(Sine/(wsVal/2)),0)*CF.A(0,M.R(0-7*M.S(Sine/(wsVal))),0),Alpha)
+					LH.C0 = clerp(LH.C0,CFrame.new(-0.496493757, -0.99082166, 0.0216114372, 0.999877751, -4.38656264e-11, 0.0156119959, -9.81397825e-05, 0.999980271, 0.0062854127, -0.0156116877, -0.00628618058, 0.999858022),Alpha)
+					RH.C0 = clerp(RH.C0,CFrame.new(0.498526245, -0.990985215, 0.0154614942, 0.999877751, -4.38656264e-11, 0.0156119959, -9.81397825e-05, 0.999980271, 0.0062854127, -0.0156116877, -0.00628618058, 0.999858022),Alpha)
+					LS.C0 = clerp(LS.C0,CFrame.new(-1.39200604, 0.795008898, -0.00658137258, 0.819051921, 0.573506355, 0.0156119522, -0.573645532, 0.819079638, 0.0062854127, -0.00918270461, -0.0141038094, 0.999858022)*CF.A(0,0,M.RRNG(-25,45)),Alpha)
+					RS.C0 = clerp(RS.C0,CFrame.new(1.32559943, 0.709226727, 0.00863117818, 0.819051921, -0.573506355, 0.0156119522, 0.573484719, 0.819192171, 0.0062854127, -0.0163939148, 0.00380513305, 0.999858022)*CF.A(0,0,M.RRNG(-45,25)),Alpha)
+					NK.C0 = clerp(NK.C0,CFrame.new(4.20771539e-06, 1.49895704, -0.0143941138, 0.902309358, -0.0976699144, -0.419878155, 0.104237564, 0.994525492, -0.00733707333, 0.418296129, -0.0371467769, 0.907550335)*CF.A(M.RRNG(-5,15),M.RRNG(-5,15),M.RRNG(-5,15)),Alpha)
+				else
+					local Alpha = .3
+					RJ.C0 = clerp(RJ.C0,CFrame.new(3.20649757e-13, 0.00629579648, 1.42956924e-06, 0.999999225, 5.09317033e-11, 0, -4.38656264e-11, 0.999980271, -0.00628618058, 0, 0.00628617639, 0.999979496),Alpha)
+					LH.C0 = clerp(LH.C0,CFrame.new(-0.496493757, -0.99082166, 0.0216114372, 0.999877751, -4.38656264e-11, 0.0156119959, -9.81397825e-05, 0.999980271, 0.0062854127, -0.0156116877, -0.00628618058, 0.999858022),Alpha)
+					RH.C0 = clerp(RH.C0,CFrame.new(0.498526245, -0.990985215, 0.0154614942, 0.999877751, -4.38656264e-11, 0.0156119959, -9.81397825e-05, 0.999980271, 0.0062854127, -0.0156116877, -0.00628618058, 0.999858022),Alpha)
+					LS.C0 = clerp(LS.C0,CFrame.new(-1.39200604, 0.795008898, -0.00658137258, 0.819051921, 0.573506355, 0.0156119522, -0.573645532, 0.819079638, 0.0062854127, -0.00918270461, -0.0141038094, 0.999858022)*CF.A(0,0,M.RRNG(-25,45)),Alpha)
+					RS.C0 = clerp(RS.C0,CFrame.new(1.32559943, 0.709226727, 0.00863117818, 0.819051921, -0.573506355, 0.0156119522, 0.573484719, 0.819192171, 0.0062854127, -0.0163939148, 0.00380513305, 0.999858022)*CF.A(0,0,M.RRNG(-45,25)),Alpha)
+					NK.C0 = clerp(NK.C0,CFrame.new(4.20771539e-06, 1.49895704, -0.0143941138, 0.902309358, -0.0976699144, -0.419878155, 0.104237564, 0.994525492, -0.00733707333, 0.418296129, -0.0371467769, 0.907550335)*CF.A(M.RRNG(-5,15),M.RRNG(-5,15),M.RRNG(-5,15)),Alpha)
+				end
+			else
+				if(State == 'Idle')then
+					local Alpha = .3
+					RJ.C0 = clerp(RJ.C0,CFrame.new(-0.0055502113, 0.046844326, -0.355196595, 0.999991238, -0.00595695665, -0.00113933254, 0.0059490581, 0.926876307, 0.37534529, -0.00117987115, -0.375341475, 0.926886022),Alpha)
+					LH.C0 = clerp(LH.C0,CFrame.new(-0.497515112, -1.09223986, -0.0431248844, 0.984844744, 0.00594900129, 0.173336849, 0.0596322678, 0.926867485, -0.370622098, -0.162865102, 0.375341654, 0.91246587),Alpha)
+					RH.C0 = clerp(RH.C0,CFrame.new(0.497499257, -1.09597111, -0.0500149131, 0.991716266, 0.00594900129, -0.128311232, -0.0536306985, 0.926867485, -0.371538013, 0.116717227, 0.375341654, 0.919508636),Alpha)
+					LS.C0 = clerp(LS.C0,CFrame.new(-1.12519193, 0.738982558, -0.468318224, 0.769806862, -0.638114333, -0.014411577, -0.591974616, -0.705338001, -0.389954329, 0.238670424, 0.308720797, -0.920721531),Alpha)
+					RS.C0 = clerp(RS.C0,CFrame.new(1.20966697, 0.671781361, -0.540282011, 0.762095451, 0.647304416, -0.014411577, 0.591827035, -0.70546186, -0.389954329, -0.262585998, 0.288653284, -0.920721531),Alpha)
+					NK.C0 = clerp(NK.C0,CFrame.new(-0.00318176579, 1.58153725, -0.218282402, 0.99997586, -0.00669310382, -0.00194420572, 0.00678409031, 0.87074405, 0.49168992, -0.00159802474, -0.491691202, 0.870768249),Alpha)
+				elseif(State == 'Walk')then
+					local Alpha = .3
+					RJ.C0 = clerp(RJ.C0,CF.N(0,0+.1*-M.C(Sine/(wsVal/2)),0)*CF.A(0,M.R(0-7*M.S(Sine/(wsVal))),0),Alpha)
+					LS.C0 = clerp(LS.C0,CFrame.new(-1.12519193, 0.738982558, -0.468318224, 0.769806862, -0.638114333, -0.014411577, -0.591974616, -0.705338001, -0.389954329, 0.238670424, 0.308720797, -0.920721531),Alpha)
+					RS.C0 = clerp(RS.C0,CFrame.new(1.20966697, 0.671781361, -0.540282011, 0.762095451, 0.647304416, -0.014411577, 0.591827035, -0.70546186, -0.389954329, -0.262585998, 0.288653284, -0.920721531),Alpha)
+					NK.C0 = clerp(NK.C0,CFrame.new(-0.00318176579, 1.58153725, -0.218282402, 0.99997586, -0.00669310382, -0.00194420572, 0.00678409031, 0.87074405, 0.49168992, -0.00159802474, -0.491691202, 0.870768249),Alpha)
+					LH.C0 = clerp(LH.C0,LHC0*CF.N(0,0+.1*M.C(Sine/(wsVal/2)),0),Alpha)
+					RH.C0 = clerp(RH.C0,RHC0*CF.N(0,0+.1*M.C(Sine/(wsVal/2)),0),Alpha)
+				end
+			end
+		end
+	end
