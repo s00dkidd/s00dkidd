@@ -1,5 +1,5 @@
 local msg = Instance.new("Message",workspace)
-msg.Text = "Created by c00lkidd."
+msg.Text = "Created by team VRG."
 wait(2)
 msg:Destroy()
 pingudecal = "http://www.roblox.com/asset/?id=382332426"
