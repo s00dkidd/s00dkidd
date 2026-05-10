@@ -1,0 +1,455 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_4 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local TextButton_2 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local TextButton_3 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local TextButton_4 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local TextButton_5 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local TextButton_6 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local TextButton_7 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local TextButton_8 = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local ImageButton_2 = Instance.new("ImageButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(0, 234, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.203150913, 0, 0.210069448, 0)
+Frame.Size = UDim2.new(0, 571, 0, 333)
+
+UICorner.Parent = Frame
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0107565112, 0, 0.0180180185, 0)
+Frame_2.Size = UDim2.new(0, 559, 0, 320)
+
+UICorner_2.Parent = Frame_2
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0332749821, 0, 0.0390390381, 0)
+TextLabel.Size = UDim2.new(0, 371, 0, 50)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Vortex Fe Bypass"
+TextLabel.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner_3.Parent = TextLabel
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.033274956, 0, 0.21321322, 0)
+TextBox.Size = UDim2.new(0, 371, 0, 199)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.Unknown
+TextBox.MultiLine = true
+TextBox.Text = "Type fe serverside script here.."
+TextBox.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_4.Parent = TextBox
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.033274956, 0, 0.828828812, 0)
+TextButton.Size = UDim2.new(0, 120, 0, 43)
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = "Execute"
+TextButton.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+UICorner_5.Parent = TextButton
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0.267950952, 0, 0.828828812, 0)
+TextButton_2.Size = UDim2.new(0, 108, 0, 43)
+TextButton_2.Font = Enum.Font.Unknown
+TextButton_2.Text = "Clear"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+UICorner_6.Parent = TextButton_2
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0.478108585, 0, 0.828828812, 0)
+TextButton_3.Size = UDim2.new(0, 117, 0, 43)
+TextButton_3.Font = Enum.Font.Unknown
+TextButton_3.Text = "Inject"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+
+UICorner_7.Parent = TextButton_3
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(44, 44, 44)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.70402801, 0, 0.0390390381, 0)
+Frame_3.Size = UDim2.new(0, 153, 0, 306)
+
+UICorner_8.Parent = Frame_3
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.732049048, 0, 0.0600600615, 0)
+TextButton_4.Size = UDim2.new(0, 120, 0, 43)
+TextButton_4.Font = Enum.Font.Unknown
+TextButton_4.Text = "team8x8x8x8 Gui V9"
+TextButton_4.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+
+UICorner_9.Parent = TextButton_4
+
+TextButton_5.Parent = Frame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0.732049048, 0, 0.21321322, 0)
+TextButton_5.Size = UDim2.new(0, 120, 0, 43)
+TextButton_5.Font = Enum.Font.Unknown
+TextButton_5.Text = "c00lgui"
+TextButton_5.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+
+UICorner_10.Parent = TextButton_5
+
+TextButton_6.Parent = Frame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.BorderSizePixel = 0
+TextButton_6.Position = UDim2.new(0.732049048, 0, 0.363363355, 0)
+TextButton_6.Size = UDim2.new(0, 120, 0, 43)
+TextButton_6.Font = Enum.Font.Unknown
+TextButton_6.Text = "Kitchen Gun"
+TextButton_6.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14.000
+TextButton_6.TextWrapped = true
+
+UICorner_11.Parent = TextButton_6
+
+TextButton_7.Parent = Frame
+TextButton_7.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextButton_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_7.BorderSizePixel = 0
+TextButton_7.Position = UDim2.new(0.732049048, 0, 0.519519508, 0)
+TextButton_7.Size = UDim2.new(0, 120, 0, 43)
+TextButton_7.Font = Enum.Font.Unknown
+TextButton_7.Text = "k00pgui V9"
+TextButton_7.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextButton_7.TextScaled = true
+TextButton_7.TextSize = 14.000
+TextButton_7.TextWrapped = true
+
+UICorner_12.Parent = TextButton_7
+
+TextButton_8.Parent = Frame
+TextButton_8.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+TextButton_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_8.BorderSizePixel = 0
+TextButton_8.Position = UDim2.new(0.732049048, 0, 0.681681693, 0)
+TextButton_8.Size = UDim2.new(0, 120, 0, 43)
+TextButton_8.Font = Enum.Font.Unknown
+TextButton_8.Text = "Ro-Hex"
+TextButton_8.TextColor3 = Color3.fromRGB(0, 255, 255)
+TextButton_8.TextScaled = true
+TextButton_8.TextSize = 14.000
+TextButton_8.TextWrapped = true
+
+UICorner_13.Parent = TextButton_8
+
+ImageButton.Parent = Frame
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.784588456, 0, 0.828828812, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 36)
+ImageButton.Image = "rbxassetid://125307960166295"
+
+ImageButton_2.Parent = Frame
+ImageButton_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_2.BackgroundTransparency = 1.000
+ImageButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton_2.BorderSizePixel = 0
+ImageButton_2.Position = UDim2.new(0.870402813, 0, 0.828828812, 0)
+ImageButton_2.Size = UDim2.new(0, 41, 0, 36)
+ImageButton_2.Image = "rbxassetid://14721361292"
+
+-- Scripts:
+
+local function SSCOR_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		loadstring(script.Parent.Parent.TextBox.Text)()
+	end)
+end
+coroutine.wrap(SSCOR_fake_script)()
+local function BVECM_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local textBox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		local inputText = textBox.Text
+		if inputText == 'require(89696937133057).V9(plr.Name)' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/V9"))()
+		end
+	end)
+end
+coroutine.wrap(BVECM_fake_script)()
+local function SHCIX_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local textBox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		local inputText = textBox.Text
+		if inputText == 'require(36492680921219).c00l(plr.Name)' then
+			loadstring(game:GetObjects("rbxassetid://11801763945")[1].Source)()
+		end
+	end)
+end
+coroutine.wrap(SHCIX_fake_script)()
+local function RBCHCGY_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local textBox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		local inputText = textBox.Text
+		if inputText == 'require(86310767452232).kitchengun(plr.Name)' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Kitchen%20Gun"))()
+		end
+	end)
+end
+coroutine.wrap(RBCHCGY_fake_script)()
+local function NWBIWY_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local textBox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		local inputText = textBox.Text
+		if inputText == 'require(14829670677).EDITL0L(plr.Name)' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/lol"))()
+		end
+	end)
+end
+coroutine.wrap(NWBIWY_fake_script)()
+local function MPUTR_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	local button = script.Parent
+	local textBox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		local inputText = textBox.Text
+		if inputText == 'require(91554564866236).RoHex(plr.Name)' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Ro-Hex%203.0%20fefrefjnfjdivjikfjkinfjvfjknfkjvfvkjmjn%20hhhbhbfjnnjn%20jn%20jnhj%20hb%20hb%20h%20hb%20bh%20b%20hdbh%20b%20bbh%20bbh%20b%20b%20gv%20fc%20fc%20n%20km%20mk%20gv%20fc%20l%20k%20gf%20fc%20g%20mk%20mk%20b%20g%20%20j%20jil%20ljhg%20gv%20%20vfg%20%20jnk%20knm%20jiyg%20f%20fr%20%20bh%20h"))()
+		end
+	end)
+end
+coroutine.wrap(MPUTR_fake_script)()
+local function IVTCAK_fake_script() -- TextButton_2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_2)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.TextBox.Text = 'Cleared!'
+		wait(1)
+		script.Parent.Parent.TextBox.Text = ''
+	end)
+end
+coroutine.wrap(IVTCAK_fake_script)()
+local function TWIIFJM_fake_script() -- TextButton_3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_3)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local Hint = Instance.new("Message")
+		Hint.Parent = workspace
+		Hint.Text = "loading.."
+		wait(5)
+		Hint.Text = "Injected!"
+		wait(3)
+		Hint:Destroy()
+		script:Destroy()
+	end)
+end
+coroutine.wrap(TWIIFJM_fake_script)()
+local function JECLN_fake_script() -- TextButton_4.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_4)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.TextBox.Text = 'require(89696937133057).V9(plr.Name)'
+	end)
+end
+coroutine.wrap(JECLN_fake_script)()
+local function GQFUA_fake_script() -- TextButton_5.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_5)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.TextBox.Text = 'require(36492680921219).c00l(plr.Name)'
+	end)
+end
+coroutine.wrap(GQFUA_fake_script)()
+local function PZXZYRM_fake_script() -- TextButton_6.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_6)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.TextBox.Text = 'require(86310767452232).kitchengun(plr.Name)'
+	end)
+end
+coroutine.wrap(PZXZYRM_fake_script)()
+local function UVWB_fake_script() -- TextButton_7.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_7)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.TextBox.Text = 'require(14829670677).EDITL0L(plr.Name)'
+	end)
+end
+coroutine.wrap(UVWB_fake_script)()
+local function JRKFVBS_fake_script() -- TextButton_8.LocalScript 
+	local script = Instance.new('LocalScript', TextButton_8)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.TextBox.Text = 'require(91554564866236).RoHex(plr.Name)'
+	end)
+end
+coroutine.wrap(JRKFVBS_fake_script)()
+local function UBNIPYS_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Ro-Xploit%206.0"))()
+	end)
+end
+coroutine.wrap(UBNIPYS_fake_script)()
+local function IZBYJGW_fake_script() -- ImageButton_2.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton_2)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.ScreenGui:Destroy()
+	end)
+end
+coroutine.wrap(IZBYJGW_fake_script)()
+local function GDOZPVG_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		dragSpeed = 0.15
+		dragInput = nil
+		dragStart = nil
+		dragPos = nil
+		function updateInput(input)
+			Delta = input.Position - dragStart
+			Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.15), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	dragify(script.Parent)
+	
+end
+coroutine.wrap(GDOZPVG_fake_script)()
