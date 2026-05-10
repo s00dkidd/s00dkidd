@@ -62,7 +62,7 @@ local UICorner_23 = Instance.new("UICorner")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnDeath = false
+ScreenGui.ResetOnSpawn = false
 
 Frame.Name = "Frame"
 Frame.Parent = ScreenGui
