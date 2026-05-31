@@ -1,0 +1,1355 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local open = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+local UICorner_2 = Instance.new("UICorner")
+local frame = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local TextBox = Instance.new("TextBox")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner_6 = Instance.new("UICorner")
+local Execute = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Clear = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local button = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local button_2 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local button_3 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local button_4 = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local button_5 = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local button_6 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local button_7 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local button_8 = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local button_9 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local button_10 = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local button_11 = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local button_12 = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local button_13 = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local button_14 = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local Frame_3 = Instance.new("Frame")
+local UICorner_24 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+open.Name = "open"
+open.Parent = ScreenGui
+open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+open.BorderColor3 = Color3.fromRGB(0, 0, 0)
+open.BorderSizePixel = 0
+open.Position = UDim2.new(0.465036571, 0, 0.013906057, 0)
+open.Size = UDim2.new(0.0708409473, 0, 0.0954861119, 0)
+
+UICorner.CornerRadius = UDim.new(0, 19)
+UICorner.Parent = open
+
+ImageButton.Parent = open
+ImageButton.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.119999997, 0, 0.103, 0)
+ImageButton.Size = UDim2.new(0.758000016, 0, 0.763999999, 0)
+ImageButton.Image = "rbxassetid://4321867290"
+
+UICorner_2.CornerRadius = UDim.new(0, 19)
+UICorner_2.Parent = ImageButton
+
+frame.Name = "frame"
+frame.Parent = ScreenGui
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderSizePixel = 0
+frame.Position = UDim2.new(0.139396712, 0, 0.114338689, 0)
+frame.Size = UDim2.new(0.720978081, 0, 0.836805582, 0)
+frame.Visible = false
+
+UICorner_3.CornerRadius = UDim.new(0, 19)
+UICorner_3.Parent = frame
+
+Frame.Parent = frame
+Frame.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0188432261, 0, 0.0255356468, 0)
+Frame.Size = UDim2.new(0.960380375, 0, 0.962655604, 0)
+
+UICorner_4.CornerRadius = UDim.new(0, 19)
+UICorner_4.Parent = Frame
+
+TextBox.Parent = Frame
+TextBox.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.0297029708, 0, 0.0916496813, 0)
+TextBox.Size = UDim2.new(0.539603949, 0, 0.793103456, 0)
+TextBox.ClearTextOnFocus = false
+TextBox.Font = Enum.Font.Unknown
+TextBox.MultiLine = true
+TextBox.Text = "print(\"Hello World!\")"
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Left
+TextBox.TextYAlignment = Enum.TextYAlignment.Top
+
+UICorner_5.CornerRadius = UDim.new(0, 19)
+UICorner_5.Parent = TextBox
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0297029708, 0, 0.0122199589, 0)
+TextLabel.Size = UDim2.new(0.539603949, 0, 0.0646551698, 0)
+TextLabel.Font = Enum.Font.Gotham
+TextLabel.Text = "► Star Serverside"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.405964404, 0, -0.00203665998, 0)
+ImageLabel.Size = UDim2.new(0.0775577575, 0, 0.0948275849, 0)
+ImageLabel.Image = "rbxassetid://4321867290"
+
+UICorner_6.CornerRadius = UDim.new(0, 19)
+UICorner_6.Parent = ImageLabel
+
+Execute.Name = "Execute"
+Execute.Parent = Frame
+Execute.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Execute.BorderSizePixel = 0
+Execute.Position = UDim2.new(0.0297029708, 0, 0.898167014, 0)
+Execute.Size = UDim2.new(0.257425755, 0, 0.0905172378, 0)
+Execute.Font = Enum.Font.Gotham
+Execute.Text = "Execute"
+Execute.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute.TextScaled = true
+Execute.TextSize = 14.000
+Execute.TextWrapped = true
+
+UICorner_7.CornerRadius = UDim.new(0, 19)
+UICorner_7.Parent = Execute
+
+Clear.Name = "Clear"
+Clear.Parent = Frame
+Clear.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Clear.BorderSizePixel = 0
+Clear.Position = UDim2.new(0.300330043, 0, 0.898167014, 0)
+Clear.Size = UDim2.new(0.268976897, 0, 0.0905172378, 0)
+Clear.Font = Enum.Font.Gotham
+Clear.Text = "Clear"
+Clear.TextColor3 = Color3.fromRGB(255, 255, 255)
+Clear.TextScaled = true
+Clear.TextSize = 14.000
+Clear.TextWrapped = true
+
+UICorner_8.CornerRadius = UDim.new(0, 19)
+UICorner_8.Parent = Clear
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.589108825, 0, 0.0122199226, 0)
+Frame_2.Size = UDim2.new(0.389438957, 0, 0.976293087, 0)
+
+UICorner_9.CornerRadius = UDim.new(0, 19)
+UICorner_9.Parent = Frame_2
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.60231024, 0, 0.0305498987, 0)
+TextLabel_2.Size = UDim2.new(0.36138615, 0, 0.0646551698, 0)
+TextLabel_2.Font = Enum.Font.Gotham
+TextLabel_2.Text = "Require Scripts"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextWrapped = true
+
+button.Name = "button"
+button.Parent = Frame
+button.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button.BorderSizePixel = 0
+button.Position = UDim2.new(0.60231024, 0, 0.105906315, 0)
+button.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button.Font = Enum.Font.Gotham
+button.Text = "c00lgui"
+button.TextColor3 = Color3.fromRGB(255, 255, 255)
+button.TextScaled = true
+button.TextSize = 14.000
+button.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0, 19)
+UICorner_10.Parent = button
+
+button_2.Name = "button"
+button_2.Parent = Frame
+button_2.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_2.BorderSizePixel = 0
+button_2.Position = UDim2.new(0.795379519, 0, 0.105906315, 0)
+button_2.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_2.Font = Enum.Font.Gotham
+button_2.Text = "Ro-Hex"
+button_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_2.TextScaled = true
+button_2.TextSize = 14.000
+button_2.TextWrapped = true
+
+UICorner_11.CornerRadius = UDim.new(0, 19)
+UICorner_11.Parent = button_2
+
+button_3.Name = "button"
+button_3.Parent = Frame
+button_3.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_3.BorderSizePixel = 0
+button_3.Position = UDim2.new(0.60231024, 0, 0.203665987, 0)
+button_3.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_3.Font = Enum.Font.Gotham
+button_3.Text = "Ro-Xploit"
+button_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_3.TextScaled = true
+button_3.TextSize = 14.000
+button_3.TextWrapped = true
+
+UICorner_12.CornerRadius = UDim.new(0, 19)
+UICorner_12.Parent = button_3
+
+button_4.Name = "button"
+button_4.Parent = Frame
+button_4.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_4.BorderSizePixel = 0
+button_4.Position = UDim2.new(0.795379519, 0, 0.203665987, 0)
+button_4.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_4.Font = Enum.Font.Gotham
+button_4.Text = "k00pgui"
+button_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_4.TextScaled = true
+button_4.TextSize = 14.000
+button_4.TextWrapped = true
+
+UICorner_13.CornerRadius = UDim.new(0, 19)
+UICorner_13.Parent = button_4
+
+button_5.Name = "button"
+button_5.Parent = Frame
+button_5.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_5.BorderSizePixel = 0
+button_5.Position = UDim2.new(0.60231024, 0, 0.301425666, 0)
+button_5.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_5.Font = Enum.Font.Gotham
+button_5.Text = "Kitchen Gun"
+button_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_5.TextScaled = true
+button_5.TextSize = 14.000
+button_5.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0, 19)
+UICorner_14.Parent = button_5
+
+button_6.Name = "button"
+button_6.Parent = Frame
+button_6.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_6.BorderSizePixel = 0
+button_6.Position = UDim2.new(0.795379519, 0, 0.301425666, 0)
+button_6.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_6.Font = Enum.Font.Gotham
+button_6.Text = "Noot Noot"
+button_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_6.TextScaled = true
+button_6.TextSize = 14.000
+button_6.TextWrapped = true
+
+UICorner_15.CornerRadius = UDim.new(0, 19)
+UICorner_15.Parent = button_6
+
+button_7.Name = "button"
+button_7.Parent = Frame
+button_7.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_7.BorderSizePixel = 0
+button_7.Position = UDim2.new(0.60231024, 0, 0.404873937, 0)
+button_7.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_7.Font = Enum.Font.Gotham
+button_7.Text = "Your Determination"
+button_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_7.TextScaled = true
+button_7.TextSize = 14.000
+button_7.TextWrapped = true
+
+UICorner_16.CornerRadius = UDim.new(0, 19)
+UICorner_16.Parent = button_7
+
+button_8.Name = "button"
+button_8.Parent = Frame
+button_8.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_8.BorderSizePixel = 0
+button_8.Position = UDim2.new(0.795379519, 0, 0.404873937, 0)
+button_8.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_8.Font = Enum.Font.Gotham
+button_8.Text = "MLG Particles"
+button_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_8.TextScaled = true
+button_8.TextSize = 14.000
+button_8.TextWrapped = true
+
+UICorner_17.CornerRadius = UDim.new(0, 19)
+UICorner_17.Parent = button_8
+
+button_9.Name = "button"
+button_9.Parent = Frame
+button_9.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_9.BorderSizePixel = 0
+button_9.Position = UDim2.new(0.60231024, 0, 0.508322239, 0)
+button_9.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_9.Font = Enum.Font.Gotham
+button_9.Text = "Anti-Skid"
+button_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_9.TextScaled = true
+button_9.TextSize = 14.000
+button_9.TextWrapped = true
+
+UICorner_18.CornerRadius = UDim.new(0, 19)
+UICorner_18.Parent = button_9
+
+button_10.Name = "button"
+button_10.Parent = Frame
+button_10.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_10.BorderSizePixel = 0
+button_10.Position = UDim2.new(0.795379519, 0, 0.508322239, 0)
+button_10.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_10.Font = Enum.Font.Gotham
+button_10.Text = "Ban Hammer"
+button_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_10.TextScaled = true
+button_10.TextSize = 14.000
+button_10.TextWrapped = true
+
+UICorner_19.CornerRadius = UDim.new(0, 19)
+UICorner_19.Parent = button_10
+
+button_11.Name = "button"
+button_11.Parent = Frame
+button_11.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_11.BorderSizePixel = 0
+button_11.Position = UDim2.new(0.60231024, 0, 0.613925695, 0)
+button_11.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_11.Font = Enum.Font.Gotham
+button_11.Text = "Glitch"
+button_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_11.TextScaled = true
+button_11.TextSize = 14.000
+button_11.TextWrapped = true
+
+UICorner_20.CornerRadius = UDim.new(0, 19)
+UICorner_20.Parent = button_11
+
+button_12.Name = "button"
+button_12.Parent = Frame
+button_12.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_12.BorderSizePixel = 0
+button_12.Position = UDim2.new(0.795379519, 0, 0.613925695, 0)
+button_12.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_12.Font = Enum.Font.Gotham
+button_12.Text = "Awesome Builder"
+button_12.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_12.TextScaled = true
+button_12.TextSize = 14.000
+button_12.TextWrapped = true
+
+UICorner_21.CornerRadius = UDim.new(0, 19)
+UICorner_21.Parent = button_12
+
+button_13.Name = "button"
+button_13.Parent = Frame
+button_13.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_13.BorderSizePixel = 0
+button_13.Position = UDim2.new(0.60231024, 0, 0.717373967, 0)
+button_13.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_13.Font = Enum.Font.Gotham
+button_13.Text = "Ultra"
+button_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_13.TextScaled = true
+button_13.TextSize = 14.000
+button_13.TextWrapped = true
+
+UICorner_22.CornerRadius = UDim.new(0, 19)
+UICorner_22.Parent = button_13
+
+button_14.Name = "button"
+button_14.Parent = Frame
+button_14.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+button_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+button_14.BorderSizePixel = 0
+button_14.Position = UDim2.new(0.795379519, 0, 0.717373967, 0)
+button_14.Size = UDim2.new(0.168316826, 0, 0.0905172378, 0)
+button_14.Font = Enum.Font.Gotham
+button_14.Text = "Naruto"
+button_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+button_14.TextScaled = true
+button_14.TextSize = 14.000
+button_14.TextWrapped = true
+
+UICorner_23.CornerRadius = UDim.new(0, 19)
+UICorner_23.Parent = button_14
+
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(58, 58, 58)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.605610549, 0, 0.829741359, 0)
+Frame_3.Size = UDim2.new(0.358085811, 0, 0.137931034, 0)
+
+UICorner_24.CornerRadius = UDim.new(0, 19)
+UICorner_24.Parent = Frame_3
+
+TextLabel_3.Parent = Frame_3
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(-4.21902001e-07, 0, 0, 0)
+TextLabel_3.Size = UDim2.new(1, 0, 1, 0)
+TextLabel_3.Font = Enum.Font.Gotham
+TextLabel_3.Text = "Thanks for using this ss, hope you enjoy it!"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextWrapped = true
+
+-- Scripts:
+
+local function PLGCGM_fake_script() -- Execute.c00lgui 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(14125553864):Fire("' .. localplayer.Name .. '","c00lkidd")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/c00lgui%20(CLIENT)"))()
+		end
+	end)
+end
+coroutine.wrap(PLGCGM_fake_script)()
+local function KRUBA_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent.Parent.Execute
+	local textbox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		loadstring(script.Parent.Parent.TextBox.Text)()
+	end)
+end
+coroutine.wrap(KRUBA_fake_script)()
+local function AJWOJ_fake_script() -- Execute.rohex 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(996718573884523).RoHex("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Ro-Hex%203.0%20fefrefjnfjdivjikfjkinfjvfjknfkjvfvkjmjn%20hhhbhbfjnnjn%20jn%20jnhj%20hb%20hb%20h%20hb%20bh%20b%20hdbh%20b%20bbh%20bbh%20b%20b%20gv%20fc%20fc%20n%20km%20mk%20gv%20fc%20l%20k%20gf%20fc%20g%20mk%20mk%20b%20g%20%20j%20jil%20ljhg%20gv%20%20vfg%20%20jnk%20knm%20jiyg%20f%20fr%20%20bh%20h"))()
+		end
+	end)
+end
+coroutine.wrap(AJWOJ_fake_script)()
+local function DDCKY_fake_script() -- Execute.roxploit 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(96184029574075)("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Ro-Xploit%206.0"))()
+		end
+	end)
+end
+coroutine.wrap(DDCKY_fake_script)()
+local function CIKYKG_fake_script() -- Execute.k00pgui 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(17145849501).v9("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/lol"))()
+		end
+	end)
+end
+coroutine.wrap(CIKYKG_fake_script)()
+local function CYNHZ_fake_script() -- Execute.kitchengun 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(857373496743596).Kitchen("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Kitchen%20Gun"))()
+		end
+	end)
+end
+coroutine.wrap(CYNHZ_fake_script)()
+local function XZFXAYO_fake_script() -- Execute.nootnoot 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(5034863407).subtosyntax64("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/NOOT%20NOOT!"))()
+		end
+	end)
+end
+coroutine.wrap(XZFXAYO_fake_script)()
+local function HPCLPLB_fake_script() -- Execute.yourdetermination 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(258441672660410).Determination("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Your%20Determination"))()
+		end
+	end)
+end
+coroutine.wrap(HPCLPLB_fake_script)()
+local function HQTYE_fake_script() -- Execute.mlgparticles 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(381045010872185):MLG("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/MLG%20Particles"))()
+		end
+	end)
+end
+coroutine.wrap(HQTYE_fake_script)()
+local function DOXIS_fake_script() -- Execute.antiskid 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(700798982288688).Skid("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Anti-Skid"))()
+		end
+	end)
+end
+coroutine.wrap(DOXIS_fake_script)()
+local function MNMO_fake_script() -- Execute.banhammer 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(598291352391242).Hammer("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Ban%20Hammer%20V3"))()
+		end
+	end)
+end
+coroutine.wrap(MNMO_fake_script)()
+local function HVBGN_fake_script() -- Execute.glitch 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(14125553864):Glitch("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Glitch"))()
+		end
+	end)
+end
+coroutine.wrap(HVBGN_fake_script)()
+local function CEUNIZ_fake_script() -- Execute.awesomebuilder 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(687311602290719)("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Awesome%20Builder"))()
+		end
+	end)
+end
+coroutine.wrap(CEUNIZ_fake_script)()
+local function MXIBG_fake_script() -- Execute.ultra 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(578279246343299).Ultra("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Ultra"))()
+		end
+	end)
+end
+coroutine.wrap(MXIBG_fake_script)()
+local function VOEC_fake_script() -- Execute.naruto 
+	local script = Instance.new('LocalScript', Execute)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == 'require(779096511425450)("' .. localplayer.Name .. '")' then
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Naruto"))()
+		end
+	end)
+end
+coroutine.wrap(VOEC_fake_script)()
+local function BRFCJ_fake_script() -- Execute.LocalScript 
+	local script = Instance.new('LocalScript', Execute)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(BRFCJ_fake_script)()
+local function ATLE_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	local button = script.Parent.Parent.Clear
+	local textbox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'Cleared!'
+		wait(1)
+		textbox.Text = ''
+	end)
+end
+coroutine.wrap(ATLE_fake_script)()
+local function PLNKKJZ_fake_script() -- Clear.LocalScript 
+	local script = Instance.new('LocalScript', Clear)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(PLNKKJZ_fake_script)()
+local function HOMAZMP_fake_script() -- button.LocalScript 
+	local script = Instance.new('LocalScript', button)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(14125553864):Fire("' .. localplayer.Name .. '","c00lkidd")'
+	end)
+end
+coroutine.wrap(HOMAZMP_fake_script)()
+local function UNAIF_fake_script() -- button.LocalScript 
+	local script = Instance.new('LocalScript', button)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(UNAIF_fake_script)()
+local function PFPJFZZ_fake_script() -- button_2.LocalScript 
+	local script = Instance.new('LocalScript', button_2)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(996718573884523).RoHex("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(PFPJFZZ_fake_script)()
+local function MUZA_fake_script() -- button_2.LocalScript 
+	local script = Instance.new('LocalScript', button_2)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(MUZA_fake_script)()
+local function SEPOHLY_fake_script() -- button_3.LocalScript 
+	local script = Instance.new('LocalScript', button_3)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(96184029574075)("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(SEPOHLY_fake_script)()
+local function UQNAVO_fake_script() -- button_3.LocalScript 
+	local script = Instance.new('LocalScript', button_3)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(UQNAVO_fake_script)()
+local function BBDOBV_fake_script() -- button_4.LocalScript 
+	local script = Instance.new('LocalScript', button_4)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(17145849501).v9("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(BBDOBV_fake_script)()
+local function PRJJP_fake_script() -- button_4.LocalScript 
+	local script = Instance.new('LocalScript', button_4)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(PRJJP_fake_script)()
+local function ZSJZI_fake_script() -- button_5.LocalScript 
+	local script = Instance.new('LocalScript', button_5)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(857373496743596).Kitchen("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(ZSJZI_fake_script)()
+local function EJYS_fake_script() -- button_5.LocalScript 
+	local script = Instance.new('LocalScript', button_5)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(EJYS_fake_script)()
+local function LEXOPQK_fake_script() -- button_6.LocalScript 
+	local script = Instance.new('LocalScript', button_6)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(5034863407).subtosyntax64("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(LEXOPQK_fake_script)()
+local function CFKK_fake_script() -- button_6.LocalScript 
+	local script = Instance.new('LocalScript', button_6)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(CFKK_fake_script)()
+local function KTTLMV_fake_script() -- button_7.LocalScript 
+	local script = Instance.new('LocalScript', button_7)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(258441672660410).Determination("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(KTTLMV_fake_script)()
+local function WQDGQLO_fake_script() -- button_7.LocalScript 
+	local script = Instance.new('LocalScript', button_7)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(WQDGQLO_fake_script)()
+local function EYNYM_fake_script() -- button_8.LocalScript 
+	local script = Instance.new('LocalScript', button_8)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(381045010872185):MLG("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(EYNYM_fake_script)()
+local function IFCOLD_fake_script() -- button_8.LocalScript 
+	local script = Instance.new('LocalScript', button_8)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(IFCOLD_fake_script)()
+local function VWOI_fake_script() -- button_9.LocalScript 
+	local script = Instance.new('LocalScript', button_9)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(700798982288688).Skid("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(VWOI_fake_script)()
+local function QXIGZ_fake_script() -- button_9.LocalScript 
+	local script = Instance.new('LocalScript', button_9)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(QXIGZ_fake_script)()
+local function UCBWVJ_fake_script() -- button_10.LocalScript 
+	local script = Instance.new('LocalScript', button_10)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(598291352391242).Hammer("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(UCBWVJ_fake_script)()
+local function KQVOLGX_fake_script() -- button_10.LocalScript 
+	local script = Instance.new('LocalScript', button_10)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(KQVOLGX_fake_script)()
+local function JCSWLLT_fake_script() -- button_11.LocalScript 
+	local script = Instance.new('LocalScript', button_11)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(14125553864):Glitch("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(JCSWLLT_fake_script)()
+local function PXVAO_fake_script() -- button_11.LocalScript 
+	local script = Instance.new('LocalScript', button_11)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(PXVAO_fake_script)()
+local function RMINM_fake_script() -- button_12.LocalScript 
+	local script = Instance.new('LocalScript', button_12)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(687311602290719)("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(RMINM_fake_script)()
+local function FGXFQJW_fake_script() -- button_12.LocalScript 
+	local script = Instance.new('LocalScript', button_12)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(FGXFQJW_fake_script)()
+local function ZJHEN_fake_script() -- button_13.LocalScript 
+	local script = Instance.new('LocalScript', button_13)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(578279246343299).Ultra("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(ZJHEN_fake_script)()
+local function JUSZIP_fake_script() -- button_13.LocalScript 
+	local script = Instance.new('LocalScript', button_13)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(JUSZIP_fake_script)()
+local function ZVGM_fake_script() -- button_14.LocalScript 
+	local script = Instance.new('LocalScript', button_14)
+
+	local button = script.Parent
+	local textbox = script.Parent.Parent.TextBox
+	local localplayer = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'require(779096511425450)("' .. localplayer.Name .. '")'
+	end)
+end
+coroutine.wrap(ZVGM_fake_script)()
+local function ASZGSP_fake_script() -- button_14.LocalScript 
+	local script = Instance.new('LocalScript', button_14)
+
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end
+coroutine.wrap(ASZGSP_fake_script)()
+local function QANOS_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local gui = script.Parent
+	local frame = script.Parent.frame
+	local button = script.Parent.open.ImageButton
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = not frame.Visible
+	end)
+end
+coroutine.wrap(QANOS_fake_script)()
