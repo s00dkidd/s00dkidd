@@ -67,8 +67,8 @@ open.Parent = ScreenGui
 open.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 open.BorderColor3 = Color3.fromRGB(0, 0, 0)
 open.BorderSizePixel = 0
-open.Position = UDim2.new(0.465036571, 0, 0.013906057, 0)
-open.Size = UDim2.new(0.0708409473, 0, 0.0954861119, 0)
+open.Position = UDim2.new(0.486745894, 0, 0.0104338331, 0)
+open.Size = UDim2.new(0.03313528, 0, 0.0625, 0)
 
 UICorner.CornerRadius = UDim.new(0, 19)
 UICorner.Parent = open
@@ -474,7 +474,19 @@ TextLabel_3.TextWrapped = true
 
 -- Scripts:
 
-local function PLGCGM_fake_script() -- Execute.c00lgui 
+local function DOCJ_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local gui = script.Parent
+	local frame = script.Parent.frame
+	local button = script.Parent.open.ImageButton
+	
+	button.MouseButton1Click:Connect(function()
+		frame.Visible = not frame.Visible
+	end)
+end
+coroutine.wrap(DOCJ_fake_script)()
+local function TIWYPDR_fake_script() -- Execute.c00lgui 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -487,8 +499,8 @@ local function PLGCGM_fake_script() -- Execute.c00lgui
 		end
 	end)
 end
-coroutine.wrap(PLGCGM_fake_script)()
-local function KRUBA_fake_script() -- Execute.LocalScript 
+coroutine.wrap(TIWYPDR_fake_script)()
+local function TBUQAR_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent.Parent.Execute
@@ -498,8 +510,8 @@ local function KRUBA_fake_script() -- Execute.LocalScript
 		loadstring(script.Parent.Parent.TextBox.Text)()
 	end)
 end
-coroutine.wrap(KRUBA_fake_script)()
-local function AJWOJ_fake_script() -- Execute.rohex 
+coroutine.wrap(TBUQAR_fake_script)()
+local function GGGFAS_fake_script() -- Execute.rohex 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -512,8 +524,8 @@ local function AJWOJ_fake_script() -- Execute.rohex
 		end
 	end)
 end
-coroutine.wrap(AJWOJ_fake_script)()
-local function DDCKY_fake_script() -- Execute.roxploit 
+coroutine.wrap(GGGFAS_fake_script)()
+local function PLVDHBO_fake_script() -- Execute.roxploit 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -526,8 +538,8 @@ local function DDCKY_fake_script() -- Execute.roxploit
 		end
 	end)
 end
-coroutine.wrap(DDCKY_fake_script)()
-local function CIKYKG_fake_script() -- Execute.k00pgui 
+coroutine.wrap(PLVDHBO_fake_script)()
+local function XILVJJV_fake_script() -- Execute.k00pgui 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -540,8 +552,8 @@ local function CIKYKG_fake_script() -- Execute.k00pgui
 		end
 	end)
 end
-coroutine.wrap(CIKYKG_fake_script)()
-local function CYNHZ_fake_script() -- Execute.kitchengun 
+coroutine.wrap(XILVJJV_fake_script)()
+local function AXHUTP_fake_script() -- Execute.kitchengun 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -554,8 +566,8 @@ local function CYNHZ_fake_script() -- Execute.kitchengun
 		end
 	end)
 end
-coroutine.wrap(CYNHZ_fake_script)()
-local function XZFXAYO_fake_script() -- Execute.nootnoot 
+coroutine.wrap(AXHUTP_fake_script)()
+local function KCLI_fake_script() -- Execute.nootnoot 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -568,8 +580,8 @@ local function XZFXAYO_fake_script() -- Execute.nootnoot
 		end
 	end)
 end
-coroutine.wrap(XZFXAYO_fake_script)()
-local function HPCLPLB_fake_script() -- Execute.yourdetermination 
+coroutine.wrap(KCLI_fake_script)()
+local function QBJON_fake_script() -- Execute.yourdetermination 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -582,8 +594,8 @@ local function HPCLPLB_fake_script() -- Execute.yourdetermination
 		end
 	end)
 end
-coroutine.wrap(HPCLPLB_fake_script)()
-local function HQTYE_fake_script() -- Execute.mlgparticles 
+coroutine.wrap(QBJON_fake_script)()
+local function LMTP_fake_script() -- Execute.mlgparticles 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -596,8 +608,8 @@ local function HQTYE_fake_script() -- Execute.mlgparticles
 		end
 	end)
 end
-coroutine.wrap(HQTYE_fake_script)()
-local function DOXIS_fake_script() -- Execute.antiskid 
+coroutine.wrap(LMTP_fake_script)()
+local function PATIN_fake_script() -- Execute.antiskid 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -610,8 +622,8 @@ local function DOXIS_fake_script() -- Execute.antiskid
 		end
 	end)
 end
-coroutine.wrap(DOXIS_fake_script)()
-local function MNMO_fake_script() -- Execute.banhammer 
+coroutine.wrap(PATIN_fake_script)()
+local function SLKB_fake_script() -- Execute.banhammer 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -624,8 +636,8 @@ local function MNMO_fake_script() -- Execute.banhammer
 		end
 	end)
 end
-coroutine.wrap(MNMO_fake_script)()
-local function HVBGN_fake_script() -- Execute.glitch 
+coroutine.wrap(SLKB_fake_script)()
+local function DXAMKEC_fake_script() -- Execute.glitch 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -638,8 +650,8 @@ local function HVBGN_fake_script() -- Execute.glitch
 		end
 	end)
 end
-coroutine.wrap(HVBGN_fake_script)()
-local function CEUNIZ_fake_script() -- Execute.awesomebuilder 
+coroutine.wrap(DXAMKEC_fake_script)()
+local function JVQK_fake_script() -- Execute.awesomebuilder 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -652,8 +664,8 @@ local function CEUNIZ_fake_script() -- Execute.awesomebuilder
 		end
 	end)
 end
-coroutine.wrap(CEUNIZ_fake_script)()
-local function MXIBG_fake_script() -- Execute.ultra 
+coroutine.wrap(JVQK_fake_script)()
+local function CXEAQHJ_fake_script() -- Execute.ultra 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -666,8 +678,8 @@ local function MXIBG_fake_script() -- Execute.ultra
 		end
 	end)
 end
-coroutine.wrap(MXIBG_fake_script)()
-local function VOEC_fake_script() -- Execute.naruto 
+coroutine.wrap(CXEAQHJ_fake_script)()
+local function SXDO_fake_script() -- Execute.naruto 
 	local script = Instance.new('LocalScript', Execute)
 
 	local button = script.Parent
@@ -680,8 +692,8 @@ local function VOEC_fake_script() -- Execute.naruto
 		end
 	end)
 end
-coroutine.wrap(VOEC_fake_script)()
-local function BRFCJ_fake_script() -- Execute.LocalScript 
+coroutine.wrap(SXDO_fake_script)()
+local function CZMCKYF_fake_script() -- Execute.LocalScript 
 	local script = Instance.new('LocalScript', Execute)
 
 	-- Services
@@ -710,8 +722,8 @@ local function BRFCJ_fake_script() -- Execute.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(BRFCJ_fake_script)()
-local function ATLE_fake_script() -- Clear.LocalScript 
+coroutine.wrap(CZMCKYF_fake_script)()
+local function LHDFSI_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	local button = script.Parent.Parent.Clear
@@ -723,8 +735,8 @@ local function ATLE_fake_script() -- Clear.LocalScript
 		textbox.Text = ''
 	end)
 end
-coroutine.wrap(ATLE_fake_script)()
-local function PLNKKJZ_fake_script() -- Clear.LocalScript 
+coroutine.wrap(LHDFSI_fake_script)()
+local function QLTZW_fake_script() -- Clear.LocalScript 
 	local script = Instance.new('LocalScript', Clear)
 
 	-- Services
@@ -753,8 +765,8 @@ local function PLNKKJZ_fake_script() -- Clear.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(PLNKKJZ_fake_script)()
-local function HOMAZMP_fake_script() -- button.LocalScript 
+coroutine.wrap(QLTZW_fake_script)()
+local function MMULYAE_fake_script() -- button.LocalScript 
 	local script = Instance.new('LocalScript', button)
 
 	local button = script.Parent
@@ -765,8 +777,8 @@ local function HOMAZMP_fake_script() -- button.LocalScript
 		textbox.Text = 'require(14125553864):Fire("' .. localplayer.Name .. '","c00lkidd")'
 	end)
 end
-coroutine.wrap(HOMAZMP_fake_script)()
-local function UNAIF_fake_script() -- button.LocalScript 
+coroutine.wrap(MMULYAE_fake_script)()
+local function OHDXY_fake_script() -- button.LocalScript 
 	local script = Instance.new('LocalScript', button)
 
 	-- Services
@@ -795,8 +807,8 @@ local function UNAIF_fake_script() -- button.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(UNAIF_fake_script)()
-local function PFPJFZZ_fake_script() -- button_2.LocalScript 
+coroutine.wrap(OHDXY_fake_script)()
+local function BTBBD_fake_script() -- button_2.LocalScript 
 	local script = Instance.new('LocalScript', button_2)
 
 	local button = script.Parent
@@ -807,8 +819,8 @@ local function PFPJFZZ_fake_script() -- button_2.LocalScript
 		textbox.Text = 'require(996718573884523).RoHex("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(PFPJFZZ_fake_script)()
-local function MUZA_fake_script() -- button_2.LocalScript 
+coroutine.wrap(BTBBD_fake_script)()
+local function PCBK_fake_script() -- button_2.LocalScript 
 	local script = Instance.new('LocalScript', button_2)
 
 	-- Services
@@ -837,8 +849,8 @@ local function MUZA_fake_script() -- button_2.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(MUZA_fake_script)()
-local function SEPOHLY_fake_script() -- button_3.LocalScript 
+coroutine.wrap(PCBK_fake_script)()
+local function QMAEZ_fake_script() -- button_3.LocalScript 
 	local script = Instance.new('LocalScript', button_3)
 
 	local button = script.Parent
@@ -849,8 +861,8 @@ local function SEPOHLY_fake_script() -- button_3.LocalScript
 		textbox.Text = 'require(96184029574075)("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(SEPOHLY_fake_script)()
-local function UQNAVO_fake_script() -- button_3.LocalScript 
+coroutine.wrap(QMAEZ_fake_script)()
+local function VWMSU_fake_script() -- button_3.LocalScript 
 	local script = Instance.new('LocalScript', button_3)
 
 	-- Services
@@ -879,8 +891,8 @@ local function UQNAVO_fake_script() -- button_3.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(UQNAVO_fake_script)()
-local function BBDOBV_fake_script() -- button_4.LocalScript 
+coroutine.wrap(VWMSU_fake_script)()
+local function ENYXF_fake_script() -- button_4.LocalScript 
 	local script = Instance.new('LocalScript', button_4)
 
 	local button = script.Parent
@@ -891,8 +903,8 @@ local function BBDOBV_fake_script() -- button_4.LocalScript
 		textbox.Text = 'require(17145849501).v9("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(BBDOBV_fake_script)()
-local function PRJJP_fake_script() -- button_4.LocalScript 
+coroutine.wrap(ENYXF_fake_script)()
+local function LWODOM_fake_script() -- button_4.LocalScript 
 	local script = Instance.new('LocalScript', button_4)
 
 	-- Services
@@ -921,8 +933,8 @@ local function PRJJP_fake_script() -- button_4.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(PRJJP_fake_script)()
-local function ZSJZI_fake_script() -- button_5.LocalScript 
+coroutine.wrap(LWODOM_fake_script)()
+local function IWAZG_fake_script() -- button_5.LocalScript 
 	local script = Instance.new('LocalScript', button_5)
 
 	local button = script.Parent
@@ -933,8 +945,8 @@ local function ZSJZI_fake_script() -- button_5.LocalScript
 		textbox.Text = 'require(857373496743596).Kitchen("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(ZSJZI_fake_script)()
-local function EJYS_fake_script() -- button_5.LocalScript 
+coroutine.wrap(IWAZG_fake_script)()
+local function QRWG_fake_script() -- button_5.LocalScript 
 	local script = Instance.new('LocalScript', button_5)
 
 	-- Services
@@ -963,8 +975,8 @@ local function EJYS_fake_script() -- button_5.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(EJYS_fake_script)()
-local function LEXOPQK_fake_script() -- button_6.LocalScript 
+coroutine.wrap(QRWG_fake_script)()
+local function SNHXEB_fake_script() -- button_6.LocalScript 
 	local script = Instance.new('LocalScript', button_6)
 
 	local button = script.Parent
@@ -975,8 +987,8 @@ local function LEXOPQK_fake_script() -- button_6.LocalScript
 		textbox.Text = 'require(5034863407).subtosyntax64("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(LEXOPQK_fake_script)()
-local function CFKK_fake_script() -- button_6.LocalScript 
+coroutine.wrap(SNHXEB_fake_script)()
+local function SFCNGN_fake_script() -- button_6.LocalScript 
 	local script = Instance.new('LocalScript', button_6)
 
 	-- Services
@@ -1005,8 +1017,8 @@ local function CFKK_fake_script() -- button_6.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(CFKK_fake_script)()
-local function KTTLMV_fake_script() -- button_7.LocalScript 
+coroutine.wrap(SFCNGN_fake_script)()
+local function DEVTSP_fake_script() -- button_7.LocalScript 
 	local script = Instance.new('LocalScript', button_7)
 
 	local button = script.Parent
@@ -1017,8 +1029,8 @@ local function KTTLMV_fake_script() -- button_7.LocalScript
 		textbox.Text = 'require(258441672660410).Determination("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(KTTLMV_fake_script)()
-local function WQDGQLO_fake_script() -- button_7.LocalScript 
+coroutine.wrap(DEVTSP_fake_script)()
+local function VGNNJF_fake_script() -- button_7.LocalScript 
 	local script = Instance.new('LocalScript', button_7)
 
 	-- Services
@@ -1047,8 +1059,8 @@ local function WQDGQLO_fake_script() -- button_7.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(WQDGQLO_fake_script)()
-local function EYNYM_fake_script() -- button_8.LocalScript 
+coroutine.wrap(VGNNJF_fake_script)()
+local function OEVU_fake_script() -- button_8.LocalScript 
 	local script = Instance.new('LocalScript', button_8)
 
 	local button = script.Parent
@@ -1059,8 +1071,8 @@ local function EYNYM_fake_script() -- button_8.LocalScript
 		textbox.Text = 'require(381045010872185):MLG("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(EYNYM_fake_script)()
-local function IFCOLD_fake_script() -- button_8.LocalScript 
+coroutine.wrap(OEVU_fake_script)()
+local function MYGT_fake_script() -- button_8.LocalScript 
 	local script = Instance.new('LocalScript', button_8)
 
 	-- Services
@@ -1089,8 +1101,8 @@ local function IFCOLD_fake_script() -- button_8.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(IFCOLD_fake_script)()
-local function VWOI_fake_script() -- button_9.LocalScript 
+coroutine.wrap(MYGT_fake_script)()
+local function SUAHL_fake_script() -- button_9.LocalScript 
 	local script = Instance.new('LocalScript', button_9)
 
 	local button = script.Parent
@@ -1101,8 +1113,8 @@ local function VWOI_fake_script() -- button_9.LocalScript
 		textbox.Text = 'require(700798982288688).Skid("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(VWOI_fake_script)()
-local function QXIGZ_fake_script() -- button_9.LocalScript 
+coroutine.wrap(SUAHL_fake_script)()
+local function EPWAB_fake_script() -- button_9.LocalScript 
 	local script = Instance.new('LocalScript', button_9)
 
 	-- Services
@@ -1131,8 +1143,8 @@ local function QXIGZ_fake_script() -- button_9.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(QXIGZ_fake_script)()
-local function UCBWVJ_fake_script() -- button_10.LocalScript 
+coroutine.wrap(EPWAB_fake_script)()
+local function STZJG_fake_script() -- button_10.LocalScript 
 	local script = Instance.new('LocalScript', button_10)
 
 	local button = script.Parent
@@ -1143,8 +1155,8 @@ local function UCBWVJ_fake_script() -- button_10.LocalScript
 		textbox.Text = 'require(598291352391242).Hammer("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(UCBWVJ_fake_script)()
-local function KQVOLGX_fake_script() -- button_10.LocalScript 
+coroutine.wrap(STZJG_fake_script)()
+local function ZMWKJ_fake_script() -- button_10.LocalScript 
 	local script = Instance.new('LocalScript', button_10)
 
 	-- Services
@@ -1173,8 +1185,8 @@ local function KQVOLGX_fake_script() -- button_10.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(KQVOLGX_fake_script)()
-local function JCSWLLT_fake_script() -- button_11.LocalScript 
+coroutine.wrap(ZMWKJ_fake_script)()
+local function XOPWLSD_fake_script() -- button_11.LocalScript 
 	local script = Instance.new('LocalScript', button_11)
 
 	local button = script.Parent
@@ -1185,8 +1197,8 @@ local function JCSWLLT_fake_script() -- button_11.LocalScript
 		textbox.Text = 'require(14125553864):Glitch("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(JCSWLLT_fake_script)()
-local function PXVAO_fake_script() -- button_11.LocalScript 
+coroutine.wrap(XOPWLSD_fake_script)()
+local function RGBSX_fake_script() -- button_11.LocalScript 
 	local script = Instance.new('LocalScript', button_11)
 
 	-- Services
@@ -1215,8 +1227,8 @@ local function PXVAO_fake_script() -- button_11.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(PXVAO_fake_script)()
-local function RMINM_fake_script() -- button_12.LocalScript 
+coroutine.wrap(RGBSX_fake_script)()
+local function KNFL_fake_script() -- button_12.LocalScript 
 	local script = Instance.new('LocalScript', button_12)
 
 	local button = script.Parent
@@ -1227,8 +1239,8 @@ local function RMINM_fake_script() -- button_12.LocalScript
 		textbox.Text = 'require(687311602290719)("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(RMINM_fake_script)()
-local function FGXFQJW_fake_script() -- button_12.LocalScript 
+coroutine.wrap(KNFL_fake_script)()
+local function THDYUCT_fake_script() -- button_12.LocalScript 
 	local script = Instance.new('LocalScript', button_12)
 
 	-- Services
@@ -1257,8 +1269,8 @@ local function FGXFQJW_fake_script() -- button_12.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(FGXFQJW_fake_script)()
-local function ZJHEN_fake_script() -- button_13.LocalScript 
+coroutine.wrap(THDYUCT_fake_script)()
+local function FNIULC_fake_script() -- button_13.LocalScript 
 	local script = Instance.new('LocalScript', button_13)
 
 	local button = script.Parent
@@ -1269,8 +1281,8 @@ local function ZJHEN_fake_script() -- button_13.LocalScript
 		textbox.Text = 'require(578279246343299).Ultra("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(ZJHEN_fake_script)()
-local function JUSZIP_fake_script() -- button_13.LocalScript 
+coroutine.wrap(FNIULC_fake_script)()
+local function JTMBTKA_fake_script() -- button_13.LocalScript 
 	local script = Instance.new('LocalScript', button_13)
 
 	-- Services
@@ -1299,8 +1311,8 @@ local function JUSZIP_fake_script() -- button_13.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(JUSZIP_fake_script)()
-local function ZVGM_fake_script() -- button_14.LocalScript 
+coroutine.wrap(JTMBTKA_fake_script)()
+local function IOQH_fake_script() -- button_14.LocalScript 
 	local script = Instance.new('LocalScript', button_14)
 
 	local button = script.Parent
@@ -1311,8 +1323,8 @@ local function ZVGM_fake_script() -- button_14.LocalScript
 		textbox.Text = 'require(779096511425450)("' .. localplayer.Name .. '")'
 	end)
 end
-coroutine.wrap(ZVGM_fake_script)()
-local function ASZGSP_fake_script() -- button_14.LocalScript 
+coroutine.wrap(IOQH_fake_script)()
+local function RCNW_fake_script() -- button_14.LocalScript 
 	local script = Instance.new('LocalScript', button_14)
 
 	-- Services
@@ -1341,16 +1353,4 @@ local function ASZGSP_fake_script() -- button_14.LocalScript
 		leaveTween:Play()
 	end)
 end
-coroutine.wrap(ASZGSP_fake_script)()
-local function QANOS_fake_script() -- ScreenGui.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui)
-
-	local gui = script.Parent
-	local frame = script.Parent.frame
-	local button = script.Parent.open.ImageButton
-	
-	button.MouseButton1Click:Connect(function()
-		frame.Visible = not frame.Visible
-	end)
-end
-coroutine.wrap(QANOS_fake_script)()
+coroutine.wrap(RCNW_fake_script)()
