@@ -1,0 +1,128 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 9 | Scripts: 1 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.ScreenGui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.ScreenGui.frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Size"] = UDim2.new(0.72098, 0, 0.3316, 0);
+G2L["2"]["Position"] = UDim2.new(0.1394, 0, 0.33309, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[frame]];
+
+
+-- StarterGui.ScreenGui.frame.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 19);
+
+
+-- StarterGui.ScreenGui.frame.Frame
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["4"]["Size"] = UDim2.new(0.96038, 0, 0.93124, 0);
+G2L["4"]["Position"] = UDim2.new(0.01884, 0, 0.02554, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.frame.Frame.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+G2L["5"]["CornerRadius"] = UDim.new(0, 19);
+
+
+-- StarterGui.ScreenGui.frame.Frame.TextLabel
+G2L["6"] = Instance.new("TextLabel", G2L["4"]);
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextSize"] = 14;
+G2L["6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6"]["TextScaled"] = true;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["BackgroundTransparency"] = 1;
+G2L["6"]["Size"] = UDim2.new(0, 605, 0, 30);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[► Star Serverside]];
+
+
+-- StarterGui.ScreenGui.frame.Frame.TextButton
+G2L["7"] = Instance.new("TextButton", G2L["4"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 14;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["7"]["Size"] = UDim2.new(0, 585, 0, 109);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Inject]];
+G2L["7"]["Position"] = UDim2.new(0.0165, 0, 0.22198, 0);
+
+
+-- StarterGui.ScreenGui.frame.Frame.TextButton.Script
+G2L["8"] = Instance.new("LocalScript", G2L["7"]);
+G2L["8"]["Name"] = [[Script]];
+
+
+-- StarterGui.ScreenGui.frame.Frame.TextButton.UICorner
+G2L["9"] = Instance.new("UICorner", G2L["7"]);
+G2L["9"]["CornerRadius"] = UDim.new(0, 19);
+
+
+-- StarterGui.ScreenGui.frame.Frame.TextButton.Script
+local function C_8()
+local script = G2L["8"];
+	local button = script.Parent
+	local clicked = false
+	
+	button.MouseButton1Click:Connect(function()
+		if clicked then return end
+		clicked = true
+		button.Active = false
+	
+		script.Parent.Parent.TextButton.Text = "Injecting."
+		task.wait(1)
+		script.Parent.Parent.TextButton.Text = "Injecting.."
+		task.wait(1)
+		script.Parent.Parent.TextButton.Text = "Injecting..."
+		task.wait(1)
+		script.Parent.Parent.TextButton.Text = "Injecting."
+		task.wait(1)
+		script.Parent.Parent.TextButton.Text = "Injecting.."
+		task.wait(1)
+		script.Parent.Parent.TextButton.Text = "Injecting..."
+		task.wait(1)
+		script.Parent.Parent.TextButton.Text = "Injecting."
+		task.wait(1)
+		script.Parent.Parent.TextButton.Text = "Injecting.."
+		task.wait(1)
+		script.Parent.Parent.TextButton.Text = "Injecting..."
+		task.wait(5)
+		script.Parent.Parent.TextButton.Text = "Injected!"
+		task.wait(2)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Key"))()
+		task.wait(1)
+		script.Parent.Parent.Parent.Parent.Parent.ScreenGui:Destroy()
+	end)
+	
+	
+end;
+task.spawn(C_8);
+
+return G2L["1"], require;
