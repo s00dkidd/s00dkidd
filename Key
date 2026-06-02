@@ -1,0 +1,240 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 16 | Scripts: 4 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.ScreenGui
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.ScreenGui.frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Size"] = UDim2.new(0.72098, 0, 0.83681, 0);
+G2L["2"]["Position"] = UDim2.new(0.14283, 0, 0.10219, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[frame]];
+
+
+-- StarterGui.ScreenGui.frame.UICorner
+G2L["3"] = Instance.new("UICorner", G2L["2"]);
+G2L["3"]["CornerRadius"] = UDim.new(0, 19);
+
+
+-- StarterGui.ScreenGui.frame.Frame
+G2L["4"] = Instance.new("Frame", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(59, 59, 59);
+G2L["4"]["Size"] = UDim2.new(0.96038, 0, 0.96266, 0);
+G2L["4"]["Position"] = UDim2.new(0.01884, 0, 0.02554, 0);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.ScreenGui.frame.Frame.UICorner
+G2L["5"] = Instance.new("UICorner", G2L["4"]);
+G2L["5"]["CornerRadius"] = UDim.new(0, 19);
+
+
+-- StarterGui.ScreenGui.frame.Frame.TextBox
+G2L["6"] = Instance.new("TextBox", G2L["4"]);
+G2L["6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["TextWrapped"] = true;
+G2L["6"]["TextSize"] = 14;
+G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic);
+G2L["6"]["MultiLine"] = true;
+G2L["6"]["ClearTextOnFocus"] = false;
+G2L["6"]["Size"] = UDim2.new(0.95875, 0, 0.7931, 0);
+G2L["6"]["Position"] = UDim2.new(0.0297, 0, 0.09165, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Text"] = [[Type here key]];
+
+
+-- StarterGui.ScreenGui.frame.Frame.TextBox.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["6"]);
+G2L["7"]["CornerRadius"] = UDim.new(0, 19);
+
+
+-- StarterGui.ScreenGui.frame.Frame.TextLabel
+G2L["8"] = Instance.new("TextLabel", G2L["4"]);
+G2L["8"]["TextWrapped"] = true;
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["8"]["TextScaled"] = true;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["BackgroundTransparency"] = 1;
+G2L["8"]["Size"] = UDim2.new(0.65347, 0, 0.06466, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[► Star Serverside Key System]];
+G2L["8"]["Position"] = UDim2.new(0.0297, 0, 0.01222, 0);
+
+
+-- StarterGui.ScreenGui.frame.Frame.Execute
+G2L["9"] = Instance.new("TextButton", G2L["4"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextSize"] = 14;
+G2L["9"]["TextScaled"] = true;
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9"]["Size"] = UDim2.new(0.4835, 0, 0.09052, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[Check Key]];
+G2L["9"]["Name"] = [[Execute]];
+G2L["9"]["Position"] = UDim2.new(0.0297, 0, 0.89817, 0);
+
+
+-- StarterGui.ScreenGui.frame.Frame.Execute.LocalScript
+G2L["a"] = Instance.new("LocalScript", G2L["9"]);
+
+
+
+-- StarterGui.ScreenGui.frame.Frame.Execute.LocalScript
+G2L["b"] = Instance.new("LocalScript", G2L["9"]);
+
+
+
+-- StarterGui.ScreenGui.frame.Frame.Execute.UICorner
+G2L["c"] = Instance.new("UICorner", G2L["9"]);
+G2L["c"]["CornerRadius"] = UDim.new(0, 19);
+
+
+-- StarterGui.ScreenGui.frame.Frame.Clear
+G2L["d"] = Instance.new("TextButton", G2L["4"]);
+G2L["d"]["TextWrapped"] = true;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 14;
+G2L["d"]["TextScaled"] = true;
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d"]["Size"] = UDim2.new(0.4604, 0, 0.09052, 0);
+G2L["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d"]["Text"] = [[Clear]];
+G2L["d"]["Name"] = [[Clear]];
+G2L["d"]["Position"] = UDim2.new(0.52805, 0, 0.89817, 0);
+
+
+-- StarterGui.ScreenGui.frame.Frame.Clear.LocalScript
+G2L["e"] = Instance.new("LocalScript", G2L["d"]);
+
+
+
+-- StarterGui.ScreenGui.frame.Frame.Clear.LocalScript
+G2L["f"] = Instance.new("LocalScript", G2L["d"]);
+
+
+
+-- StarterGui.ScreenGui.frame.Frame.Clear.UICorner
+G2L["10"] = Instance.new("UICorner", G2L["d"]);
+G2L["10"]["CornerRadius"] = UDim.new(0, 19);
+
+
+-- StarterGui.ScreenGui.frame.Frame.Execute.LocalScript
+local function C_a()
+local script = G2L["a"];
+	local button = script.Parent.Parent.Execute
+	local textbox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		if textbox.Text == "Star" then
+			textbox.Text = "Correct Key!"
+			wait(3)
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/s00dkidd/s00dkidd/refs/heads/main/Star%20Serverside"))()
+			wait(1)
+			script.Parent.Parent.Parent.Parent.Parent.ScreenGui:Destroy()
+		end
+	end)
+end;
+task.spawn(C_a);
+-- StarterGui.ScreenGui.frame.Frame.Execute.LocalScript
+local function C_b()
+local script = G2L["b"];
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end;
+task.spawn(C_b);
+-- StarterGui.ScreenGui.frame.Frame.Clear.LocalScript
+local function C_e()
+local script = G2L["e"];
+	local button = script.Parent.Parent.Clear
+	local textbox = script.Parent.Parent.TextBox
+	
+	button.MouseButton1Click:Connect(function()
+		textbox.Text = 'Cleared!'
+		wait(1)
+		textbox.Text = ''
+	end)
+end;
+task.spawn(C_e);
+-- StarterGui.ScreenGui.frame.Frame.Clear.LocalScript
+local function C_f()
+local script = G2L["f"];
+	-- Services
+	local TweenService = game:GetService("TweenService")
+	
+	-- Variables
+	local button = script.Parent
+	local originalSize = button.Size
+	
+	-- Customization Settings
+	local hoverSize = UDim2.new(originalSize.X.Scale * 1.1, originalSize.X.Offset, originalSize.Y.Scale * 1.1, originalSize.Y.Offset)
+	local tweenInfo = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	-- Create Tweens
+	local hoverTween = TweenService:Create(button, tweenInfo, {Size = hoverSize})
+	local leaveTween = TweenService:Create(button, tweenInfo, {Size = originalSize})
+	
+	-- Connections
+	button.MouseEnter:Connect(function()
+		leaveTween:Cancel()
+		hoverTween:Play()
+	end)
+	
+	button.MouseLeave:Connect(function()
+		hoverTween:Cancel()
+		leaveTween:Play()
+	end)
+end;
+task.spawn(C_f);
+
+return G2L["1"], require;
