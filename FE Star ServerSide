@@ -55,7 +55,7 @@ G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["6"]["BackgroundTransparency"] = 1;
-G2L["6"]["Size"] = UDim2.new(0, 605, 0, 30);
+G2L["6"]["Size"] = UDim2.new(0.99835, 0, 0.16867, 0);
 G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["6"]["Text"] = [[► Star Serverside]];
 
@@ -69,7 +69,7 @@ G2L["7"]["TextScaled"] = true;
 G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["7"]["Size"] = UDim2.new(0, 585, 0, 109);
+G2L["7"]["Size"] = UDim2.new(0.96535, 0, 0.61282, 0);
 G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["7"]["Text"] = [[Inject]];
 G2L["7"]["Position"] = UDim2.new(0.0165, 0, 0.22198, 0);
